@@ -1,4 +1,4 @@
-[![REUSE status]()]()
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-docs/btp-continuous-integration-and-delivery)](https://api.reuse.software/info/github.com/SAP-docs/btp-continuous-integration-and-delivery)
 
 # Contributions to YOUR-DOCUMENTATION
 
