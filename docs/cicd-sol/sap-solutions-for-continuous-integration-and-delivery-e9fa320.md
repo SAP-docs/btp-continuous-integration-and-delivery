@@ -7,7 +7,7 @@ Get an overview of the solutions SAP provides for continuous integration and del
 > ### Note:  
 > For links to all SAP solutions for CI/CD, blog posts, presentations, and tutorials, have a look at our [Continuous Integration and Delivery by SAP](https://help.sap.com/viewer/product/CICD_OVERVIEW/Cloud/en-US?task=discover_task) overview.
 
-
+ 
 
 <a name="loioe9fa320181124fa9808d4446a1bf69dd__section_tlr_g4n_nkb"/>
 
