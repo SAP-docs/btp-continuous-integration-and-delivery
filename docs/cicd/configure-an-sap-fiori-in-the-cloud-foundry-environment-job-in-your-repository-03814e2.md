@@ -58,7 +58,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
       buildTool: "mta"
     
     service: 
-      buildToolVersion: "MBTJ11N14"           
+      buildToolVersion: "MBTJ17N18"
       cloudConnectors:                                  # optional, only relevant if you enable Compliance stage with "SonarQube" mode           
         sonarExecuteScan: 
           credentialId: "<name of your cloud connector credential>"
@@ -108,7 +108,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
     
     Enter the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-    If you don't define a build tool version, a default one \(`"MBTJ11N14"`\) is used.
+    If you don't define a build tool version, a default one \(`"MBTJ17N18"`\) is used.
     
     </td>
     </tr>
@@ -866,7 +866,7 @@ Depending on your configuration, your complete `config.yml` file should look as 
 >   buildTool: "mta"     
 > 
 > service: 
->   buildToolVersion: "MBTJ11N14"         
+>   buildToolVersion: "MBTJ17N18"
 > 
 > # Stages configuration
 > stages:

@@ -58,7 +58,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
       buildTool: "npm"
     
     service: 
-      buildToolVersion: "N14"           
+      buildToolVersion: "N18"
       cloudConnectors:
         transportRequestUploadCTS:
           credentialId: "<CredentialID>"
@@ -110,7 +110,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
     
     Enter the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-    If you don't define a build tool version, a default one \(`"N14"`\) is used.
+    If you don't define a build tool version, a default one \(`"N18"`\) is used.
     
     </td>
     </tr>
@@ -574,7 +574,7 @@ Depending on your configuration, your complete `config.yml` file should look as 
 >   buildTool: "npm"     
 > 
 > service: 
->   buildToolVersion: "N14"           
+>   buildToolVersion: "N18"
 >   cloudConnectors:
 >     transportRequestUploadCTS:
 >       credentialId: "<CredentialID>"

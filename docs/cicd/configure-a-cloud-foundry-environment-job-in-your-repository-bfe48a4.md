@@ -54,7 +54,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
       buildTool: "mta"                                  # "mta", "npm", or "maven" (default: "mta")
     
     service:
-      buildToolVersion: "MBTJ11N14"                     # depends on buildTool value, see table below
+      buildToolVersion: "MBTJ17N18"                     # depends on buildTool value, see table below
       cloudConnectors:                                  # optional, only relevant if you enable Compliance stage with "SonarQube" mode           
         sonarExecuteScan: 
           credentialId: "<name of your cloud connector credential>"
@@ -106,7 +106,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
     
     Choose the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-    If you don't define a build tool version, a default one \(`MBTJ11N14`\) is used.
+    If you don't define a build tool version, a default one \(`MBTJ17N18`\) is used.
     
     </td>
     </tr>
@@ -859,7 +859,7 @@ Depending on your configuration, your complete `config.yml` file should look as 
 >   buildTool: "mta"                         # "mta", "npm", or "maven"
 > 
 > service:
->   buildToolVersion: "MBTJ11N14"            # depends on buildTool value
+>   buildToolVersion: "MBTJ17N18"            # depends on buildTool value
 >   cloudConnectors:                         # optional, only relevant if you enable Compliance stage with "SonarQube" mode           
 >     sonarExecuteScan: 
 >       credentialId: "<name of your cloud connector credential>"

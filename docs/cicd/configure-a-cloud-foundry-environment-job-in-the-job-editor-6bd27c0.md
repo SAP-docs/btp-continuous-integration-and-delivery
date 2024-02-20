@@ -98,7 +98,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
         
         Choose the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-        If you don't define a build tool version, a default one \(`MBTJ11N14`\) is used.
+        If you don't define a build tool version, a default one \(`MBTJ17N18`\) is used.
         
         </td>
         </tr>
