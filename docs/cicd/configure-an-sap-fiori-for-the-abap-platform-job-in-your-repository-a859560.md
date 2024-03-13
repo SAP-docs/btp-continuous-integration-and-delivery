@@ -479,7 +479,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
     </td>
     <td valign="top">
     
-    You've set the `npmExecuteLint` parameter in the `Additional Unit Tests` stage to `true`.
+    --
     
     </td>
     </tr>
