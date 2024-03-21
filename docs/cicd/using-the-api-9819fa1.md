@@ -16,7 +16,7 @@ Discover, explore, and test the application programming interface \(API\) availa
 -   You’re an administrator of your global account and subaccount on SAP BTP.
 -   You have enabled SAP Continuous Integration and Delivery in your SAP BTP enterprise account. See [Enabling the Service](enabling-the-service-c8ed09d.md).
 
--   You have enabled API usage for SAP Continuous Integration and Delivery. See [\(Optional\) Enabling the API Usage](optional-enabling-the-api-usage-1aedc23.md).
+-   You have enabled API usage for SAP Continuous Integration and Delivery. See [Enabling the API Usage](enabling-the-api-usage-1aedc23.md).
 
 -   You have created a service key for your Cloud Foundry service instance or a service binding if your instance belongs to another environment. See [Creating Service Keys](https://help.sap.com/viewer/09cc82baadc542a688176dce601398de/Cloud/en-US/6fcac08409db4b0f9ad55a6acd4d31c5.html) or [Creating Service Bindings in Other Environments](https://help.sap.com/docs/service-manager/sap-service-manager/creating-service-bindings-in-other-environments?version=Cloud).
 

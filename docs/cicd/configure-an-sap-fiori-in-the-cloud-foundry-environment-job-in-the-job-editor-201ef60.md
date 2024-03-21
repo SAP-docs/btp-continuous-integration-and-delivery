@@ -12,6 +12,9 @@ Configure the stages of your SAP Fiori in the Cloud Foundry environment job dire
 
 ## Prerequisites
 
+> ### Caution:  
+> This pipeline type is deprecated. Please use the [Cloud Foundry Environment](cloud-foundry-environment-7c2a049.md) pipeline with the mta build tool, instead. All existing jobs will be migrated automatically.
+
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
 -   In your source code management system, you have an SAPUI5/SAP Fiori project for the Cloud Foundry environment. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).
@@ -101,7 +104,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         
         Choose the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-        If you don't define a build tool version, a default one \(`MBTJ11N14`\) is used.
+        If you don't define a build tool version, the latest one is used by default.
         
         </td>
         </tr>
@@ -345,7 +348,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against the Cloud Foundry API endpoint, create a Basic Authentication credential of a user, who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against the Cloud Foundry API endpoint, either create a Basic Authentication or a Basic Authentication for Custom IdP credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Use a technical user instead of your personal credentials.
@@ -419,7 +422,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        \(Optional\) To authenticate your pipeline against the application, create a Basic Authentication credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        \(Optional\) To authenticate your pipeline against the application, create a Basic Authentication credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Avoid using a technical user credential and create a special test user instead.
@@ -511,7 +514,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Avoid using a technical user credential and create a special test user instead.
@@ -660,7 +663,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against your SonarQube instance, create a *Secret Text* credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against your SonarQube instance, create a *Secret Text* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         In the *Secret* text field, paste the token that was generated when creating your SonarQube project. If you are unable to retrieve your token, generate a new one. See [Generating and Using Tokens](https://docs.sonarqube.org/latest/user-guide/user-token/).
 
@@ -781,7 +784,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against the Cloud Foundry API endpoint, create a Basic Authentication credential of a user, who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against the Cloud Foundry API endpoint, either create a Basic Authentication or a Basic Authentication for Custom IdP credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Use a technical user instead of your personal credentials.

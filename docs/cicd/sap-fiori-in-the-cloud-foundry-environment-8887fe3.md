@@ -4,8 +4,8 @@
 
 Configure a CI/CD pipeline for the development of SAPUI5/SAP Fiori applications in the Cloud Foundry environment.
 
-> ### Note:  
-> The SAP Fiori in the Cloud Foundry environment pipeline also supports HTML5 applications that don't need an own runtime infrastructure. For more information, see [Developing HTML5 Applications](https://help.sap.com/viewer/d1c8cd7a39bc4f24a0c65e2ae64d627c/1.0/en-US/00b074c1284e4520a75df52e25698522.html).
+> ### Caution:  
+> This pipeline type is deprecated. Please use the [Cloud Foundry Environment](cloud-foundry-environment-7c2a049.md) pipeline with the mta build tool, instead. All existing jobs will be migrated automatically.
 
 
 

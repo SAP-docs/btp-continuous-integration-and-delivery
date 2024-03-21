@@ -89,6 +89,198 @@ Continuous Integration & Delivery
 </td>
 <td valign="top">
 
+Custom IdP Users for Deployment to Cloud Foundry
+
+</td>
+<td valign="top">
+
+In the Acceptance and Release stages of your job, you can now use technical users from your custom identity provider for the deployment to a Cloud Foundry space.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+SAP Business Technology Platform
+
+</td>
+<td valign="top">
+
+2024-03-12
+
+</td>
+<td valign="top">
+
+2024-03-12
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Sorting, Grouping and Live-Searching for Credentials
+
+</td>
+<td valign="top">
+
+You can now use filters and sorting in the Credentials overview table. Additionally, when you type something into the search field, all columns are taken into account and filtered immediately.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+SAP Business Technology Platform
+
+</td>
+<td valign="top">
+
+2024-02-19
+
+</td>
+<td valign="top">
+
+2024-02-19
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Open Documentation Initiative
+
+</td>
+<td valign="top">
+
+You can now provide feedback and contribute content to our documentation by using the *Create issue* and *Edit* page buttons in the new *Feedback* drop-down list on each of our [documentation](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/what-is-sap-continuous-integration-and-delivery?language=en-US) pages.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+SAP Business Technology Platform
+
+</td>
+<td valign="top">
+
+2024-02-19
+
+</td>
+<td valign="top">
+
+2024-02-19
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
 Deprecation of the SAP Fiori in the Cloud Foundry Environment Pipeline
 
 </td>

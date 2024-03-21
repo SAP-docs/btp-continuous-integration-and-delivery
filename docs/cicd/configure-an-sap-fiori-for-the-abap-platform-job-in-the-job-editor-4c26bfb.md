@@ -104,7 +104,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
         
         Choose the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-        If you don't define a build tool version, a default one \(`N14`\) is used.
+        If you don't define a build tool version, the latest one is used by default.
         
         </td>
         </tr>

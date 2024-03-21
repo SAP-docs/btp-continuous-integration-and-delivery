@@ -2,10 +2,7 @@
 
 # Initial Setup
 
-Set up SAP Continuous Integration and Delivery.
-
-> ### Note:  
-> Only administrators of a global account and subaccount on SAP BTP can set up SAP Continuous Integration and Delivery.
+As an administrator of a global account and subaccount on SAP BTP, set up SAP Continuous Integration and Delivery.
 
 To set up the service, execute the following tasks:
 

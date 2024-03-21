@@ -12,6 +12,9 @@ Configure the stages of your SAP Fiori in the Cloud Foundry environment job in y
 
 ## Prerequisites
 
+> ### Caution:  
+> This pipeline type is deprecated. Please use the [Cloud Foundry Environment](cloud-foundry-environment-7c2a049.md) pipeline with the mta build tool, instead. All existing jobs will be migrated automatically.
+
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
 -   In your source code management system, you have an SAPUI5/SAP Fiori project for the Cloud Foundry environment. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).

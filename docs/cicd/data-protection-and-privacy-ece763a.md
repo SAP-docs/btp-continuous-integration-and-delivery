@@ -97,7 +97,7 @@ There are two options to export your data from SAP Continuous Integration and De
 
 -   The recommended way to retrieve data is to raise a customer incident and request a copy of your data. See [Support, Feature Requests, and Feedback](support-feature-requests-and-feedback-6e10ad4.md).
 
--   If you prefer to export your data on your own, you can utilize SAP Continuous Integration and Delivery's REST API. You can use it to access and download all your data. Since there is no single API endpoint to export your whole data, we recommend you to implement a small script to automate the sequence of API calls needed to retrieve the required data. For more information, see [\(Optional\) Enabling the API Usage](optional-enabling-the-api-usage-1aedc23.md) and [SAP API Buisness Hub](https://api.sap.com/api/CloudCiApiSuite/overview).
+-   If you prefer to export your data on your own, you can utilize SAP Continuous Integration and Delivery's REST API. You can use it to access and download all your data. Since there is no single API endpoint to export your whole data, we recommend you to implement a small script to automate the sequence of API calls needed to retrieve the required data. For more information, see [Enabling the API Usage](enabling-the-api-usage-1aedc23.md) and [SAP API Buisness Hub](https://api.sap.com/api/CloudCiApiSuite/overview).
 
 
 Due to security reasons, the secrets of credentials are not included in the exported data.

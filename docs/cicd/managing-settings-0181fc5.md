@@ -16,7 +16,7 @@ Maintain a list of the Cloud Foundry spaces that are allowed to request service 
 
 This section is relevant if you:
 
--   have enabled API usage for SAP Continuous Integration and Delivery and created a service instance in the Cloud Foundry runtime environment. See [\(Optional\) Enabling the API Usage](optional-enabling-the-api-usage-1aedc23.md).
+-   want to enable the API usage for SAP Continuous Integration and Delivery and create a service instance in the Cloud Foundry runtime environment. See [Enabling the API Usage](enabling-the-api-usage-1aedc23.md).
 -   are an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
 > ### Note:  

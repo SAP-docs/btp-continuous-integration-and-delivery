@@ -12,16 +12,16 @@ Configure credentials for connecting SAP Continuous Integration and Delivery to 
 
 ## Prerequisites
 
--   You set up SAP Continuous Integration and Delivery. See [Initial Setup](initial-setup-719acaf.md).
+-   You've set up SAP Continuous Integration and Delivery. See [Initial Setup](initial-setup-719acaf.md).
 
--   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
+-   You’re assigned the Administrator role for SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
 
 
 
 ## Context
 
-During each job, SAP Continuous Integration and Delivery connects to other services \(for example, to GitHub, GitLab, Bitbucket Server, or Azure DevOps to clone your sources, and to SAP BTP to deploy your built application\). To authenticate SAP Continuous Integration and Delivery against these services, you have to configure credentials that can be referenced by a job. Each credential is stored under a unique name in your subaccount.
+During each job, SAP Continuous Integration and Delivery connects to other services \(for example, to GitHub or another source code management system to clone your sources, and to SAP BTP to deploy your application\). To authenticate SAP Continuous Integration and Delivery against these services, you need to configure credentials that can be referenced by a job. Each credential is stored under a unique name in your subaccount.
 
 
 
@@ -30,8 +30,6 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
 1.  In the *Credentials* tab in SAP Continuous Integration and Delivery, choose :heavy_plus_sign:.
 
 2.  In the *Create Credentials* pop-up, enter the following values:
-
-    **Values for Creating Credentials in SAP Continuous Integration and Delivery**
 
 
     <table>
@@ -55,14 +53,14 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     </td>
     <td valign="top">
     
-    . SeeFreely choose a unique name for your credential, for example, "`this-is--an.example.name`".
+    Freely choose a unique name for your credential.
 
-    Valid credential names:
+    To provide a valid credential name, adhere to the following rules:
 
-    -   start and end with an alphanumeric character \(invalid: "`-name.`"\)
-    -   contain only lowercase letters, numbers, hyphens, and dots \(invalid: "`CamelCase`"\)
-    -   cannot contain dots next to each other or dots next to hyphens \(invalid: "`name..1`" or "`name-.-2`"\)
-    -   have a maximum length of 253 characters
+    -   Start and end with an alphanumeric character.
+    -   Only use lowercase letters, numbers, hyphens, and dots.
+    -   Do not use dots next to each other or dots next to hyphens.
+    -   Only use a maximum of 253 characters.
 
 
     
@@ -90,36 +88,13 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     
     From the drop-down list, choose the authentication type of your credential.
 
-    SAP Continuous Integration and Delivery supports the following authentication types:
-
-    -   Basic Authentication
-
-    -   OAuth
-
-    -   Service Key
-
-    -   Secret Text
-
-    -   Cloud Connector
-
-    -   Webhook Secret
-
-    -   Container Registry Configuration
-
-    -   Kubernetes Configuration
-
-
-    Different steps within a job require different credential types. For more information, see [Supported Pipelines](supported-pipelines-e293286.md).
+    For more information on which credential type is needed for which step within a job, see [Supported Pipelines](supported-pipelines-e293286.md).
     
     </td>
     </tr>
     </table>
     
-    Depending on which *Type* you choose, you're asked for additional values.
-
-3.  In the following table, look for your authentication type and enter the necessary values in the *Add Credential* popup.
-
-    **Additional Values per Authentication Type**
+3.  Depending on which type you choose, you're asked for additional values:
 
 
     <table>
@@ -166,6 +141,47 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     <td valign="top">
     
     Enter your password for the Basic Authentication credential.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top" rowspan="3">
+    
+    Basic Authentication for Custom IdP
+    
+    </td>
+    <td valign="top">
+    
+    Username
+    
+    </td>
+    <td valign="top">
+    
+    Enter your username for the Basic Authentication for Custom IdP credential.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Password
+    
+    </td>
+    <td valign="top">
+    
+    Enter your password for the Basic Authentication for Custom IdP credential.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Origin Key
+    
+    </td>
+    <td valign="top">
+    
+    Enter the origin key to connect to Cloud Foundry. You can find it in your subaccount in the SAP BTP cockpit under *Cloud Foundry* \> *Org Members* in the *Origin* column.
     
     </td>
     </tr>
@@ -244,7 +260,7 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     
     Create a service key in the space of the service instance to which you want to connect SAP Continuous Integration and Delivery. See [Creating Service Keys](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/4514a14ab6424d9f84f1b8650df609ce.html).
 
-    Copy and paste this service key in the json format into the *Service Key* text field.
+    Copy and paste this service key in the JSON format into the *Service Key* text field.
     
     </td>
     </tr>
@@ -298,9 +314,7 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     Freely enter a secret or choose the *Generate* button to generate a secret for your webhook.
 
     > ### Caution:  
-    > The secret will only be visible during the creation of the webhook credential.
-    > 
-    > Make sure to copy and store it some place safe before closing the dialog. You need this secret to create a webhook in your source code repository. See, for example, [Add a Webhook in GitHub](add-a-webhook-in-github-090d4aa.md).
+    > This secret is only visible during the creation of the webhook credential. Make sure to copy and save it before closing the dialog.
 
 
     
@@ -350,7 +364,7 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     
     This is a YAML document used by the Kubernetes client to authenticate a Kubernetes cluster.
 
-    Use a Kubernetes configuration that contains an access token for a suitable service account. If you need instructions on how to create the service account and the configuration, use this [tutorial](https://developers.sap.com/tutorials/kyma-create-service-account.html). The required permissions \(Kubernetes roles and cluster roles\) of the service account depend on the types of resources that are created or updated during the deployment.
+    Use a Kubernetes configuration that contains an access token for a suitable service account. For how to create the service account and the configuration, see [Create a Kyma service account](https://developers.sap.com/tutorials/kyma-create-service-account.html). The required permissions \(Kubernetes roles and cluster roles\) of the service account depend on the types of resources that are created or updated during the deployment.
 
     > ### Note:  
     > For Kyma environments, you can't use a Kubernetes configuration downloaded from the SAP BTP cockpit because it only supports interactive signon.

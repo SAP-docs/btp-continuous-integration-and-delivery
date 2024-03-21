@@ -35,7 +35,7 @@ Configure predefined CI/CD pipelines
 </b></dt>
 <dd>
 
-Configure predefined continuous integration and delivery pipelines for SAP Cloud Application Programming Model, SAP Fiori, SAP Cloud Integration and container-based applications projects.
+Configure predefined continuous integration and delivery pipelines for designated SAP development projects.
 
 
 
@@ -68,7 +68,7 @@ Run predefined CI/CD pipelines
 </b></dt>
 <dd>
 
-Run predefined continuous integration and delivery pipelines for SAP Cloud Application Programming Model, SAP Fiori, SAP Cloud Integration and container-based applications projects.
+Run predefined continuous integration and delivery pipelines for designated SAP development projects.
 
 
 

@@ -98,7 +98,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
         
         Choose the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
 
-        If you don't define a build tool version, a default one \(`MBTJ11N14`\) is used.
+        If you don't define a build tool version, the latest one is used by default.
         
         </td>
         </tr>
@@ -318,7 +318,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against the Cloud Foundry API endpoint, create a Basic Authentication credential of a user, who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against the Cloud Foundry API endpoint, either create a Basic Authentication or a Basic Authentication for Custom IdP credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Use a technical user instead of your personal credentials.
@@ -394,7 +394,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
         </td>
         <td valign="top">
         
-        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         Choose this credential from the dropdown list.
         
@@ -470,7 +470,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
         </td>
         <td valign="top">
         
-        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Avoid using a technical user credential and create a special test user instead.
@@ -740,7 +740,7 @@ Depending on your configuration, the Cloud Foundry Environment pipeline can comp
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against the Cloud Foundry API endpoint, create a Basic Authentication credential of a user, who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against the Cloud Foundry API endpoint, either create a Basic Authentication or a Basic Authentication for Custom IdP credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
 
         > ### Tip:  
         > Use a technical user instead of your personal credentials.
