@@ -556,7 +556,7 @@ The following steps will introduce [Karma](https://github.com/SAP/karma-ui5), a 
         config.set({
             frameworks: ["ui5"],
             ui5: {
-                configPath: "ui5-mock.yaml". // change to ui5.yaml if project does not exist.
+                configPath: "ui5-mock.yaml". // change to ui5.yaml if ui5-mock.yaml does not exist.
             },
             browsers: ["ChromeHeadless"],
             customLaunchers: {
