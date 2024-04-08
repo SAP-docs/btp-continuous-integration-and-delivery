@@ -551,31 +551,31 @@ The following steps will introduce [Karma](https://github.com/SAP/karma-ui5), a 
 
 4.  Add the following minimal configuration to your `karma.conf.js` file:
    
-     ```JS
-        module.exports = function(config) {
-            config.set({
-               frameworks: ["ui5"],
-               ui5: {
-                 configPath: "ui5-mock.yaml". // change to ui5.yaml if project does not exist.
-               },    
-               browsers: ["ChromeHeadless"],
-               customLaunchers: {
-                 ChromeHeadlessCustom: {
-                     base: 'ChromeHeadless',
-                     flags: ['--window-size=1920,1080']
-                 }
-             },
-               browserConsoleLogOptions: {
-                  level: "error"
-               },
-               singleRun: true,
-               proxies: {
-                 '/base/webapp/resources': 'http://127.0.0.1:' + config.port + '/resources',
-                 '/base/webapp/test-resources': 'http://127.0.0.1:' + config.port + '/test-resources'
-                 }
-            });
-        };
-     ```
+    ```JS
+    module.exports = function(config) {
+        config.set({
+            frameworks: ["ui5"],
+            ui5: {
+                configPath: "ui5-mock.yaml". // change to ui5.yaml if project does not exist.
+            },    
+            browsers: ["ChromeHeadless"],
+            customLaunchers: {
+                ChromeHeadlessCustom: {
+                    base: 'ChromeHeadless',
+                    flags: ['--window-size=1920,1080']
+                }
+            },
+            browserConsoleLogOptions: {
+                level: "error"
+            },
+            singleRun: true,
+            proxies: {
+                '/base/webapp/resources': 'http://127.0.0.1:' + config.port + '/resources',
+                '/base/webapp/test-resources': 'http://127.0.0.1:' + config.port + '/test-resources'
+            }
+        });
+    };
+    ```
 
     The `ui5` property is configured using `configPath` which is loading the default UI5 resources. If a mock server is later added to the project, the `configPath` should be updated to `ui5-mock.yaml` to reflect this new configuration, refer to [Installing MockServer Guide](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/253805578f04461a9741983a630ce4f1.html?locale=en-USstate%3DPRODUCTION)
      
