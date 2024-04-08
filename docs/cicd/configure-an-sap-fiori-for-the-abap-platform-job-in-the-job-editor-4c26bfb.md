@@ -587,7 +587,7 @@ The following steps will introduce [Karma](https://github.com/SAP/karma-ui5), a 
 
     Review the console log, the ChromeHeadless browser is now connected but no tests were executed since we haven't added a test plan yet.
     
-6. Refer to the [SAPUI5 Overview and Testing Strategy Guide](https://sapui5.hana.ondemand.com/sdk/#/topic/ab134ef3932c4b42898c79c10341e8b5) to add a unit and integration tests to your project.
+6. Refer to the [SAPUI5 Overview and Testing Strategy Guide](https://sapui5.hana.ondemand.com/sdk/#/topic/ab134ef3932c4b42898c79c10341e8b5) to add unit and integration tests to your project.
    
 
 
