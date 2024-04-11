@@ -1,6 +1,6 @@
 <!-- loio1d68ad98b6c845b189fbfcd9009a44a9 -->
 
-# Administering Repositories
+# Administrating Repositories
 
 Connect your repository with SAP Continuous Integration and Delivery.
 

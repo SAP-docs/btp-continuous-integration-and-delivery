@@ -29,7 +29,7 @@ Instead of defining one specific branch for each job, you can also use special c
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, configure a new job as described in [Create a Job](create-a-job-d748920.md).
+1.  In SAP Continuous Integration and Delivery, configure a new job as described in  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:3" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/d52d3caf559f46a4a977797e740d22c5.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 2.  For *Branch*, enter a common name base of the branches from which you want to receive push events. Use the following wildcard characters to replace the differing parts of your branch names:
 

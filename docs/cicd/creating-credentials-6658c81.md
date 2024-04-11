@@ -88,7 +88,7 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     
     From the drop-down list, choose the authentication type of your credential.
 
-    For more information on which credential type is needed for which step within a job, see [Supported Pipelines](supported-pipelines-e293286.md).
+    For more information on which credential type is needed for which step within a job, see [Configuring Jobs](configuring-jobs-e293286.md).
     
     </td>
     </tr>

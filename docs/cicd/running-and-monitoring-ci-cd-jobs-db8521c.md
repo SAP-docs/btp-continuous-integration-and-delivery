@@ -16,7 +16,7 @@ Trigger the build of a continuous integration and delivery job and monitor its o
 
 -   \(Optional\) You have configured a webhook between your repository and SAP Continuous Integration and Delivery to automate your builds.
 
--   You have configured a job for your Git repository and branch. See [Create a Job](create-a-job-d748920.md).
+-   You have configured a job for your Git repository and branch. See  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:2" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/db8521cc85924f78b7e92b1ea69fdf94.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 
 

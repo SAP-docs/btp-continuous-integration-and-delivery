@@ -12,7 +12,7 @@ Modify, copy, or delete an existing job in SAP Continuous Integration and Delive
 
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
--   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](administering-jobs-d581ab5.md).
+-   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](enhancing-jobs-d581ab5.md).
 
 
 

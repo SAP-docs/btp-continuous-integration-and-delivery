@@ -63,7 +63,7 @@ Depending on your configuration, the SAP Integration Suite Artifacts pipeline ca
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, configure a new job as described in [Create a Job](create-a-job-d748920.md). As *Pipeline*, choose *SAP Integration Suite Artifacts*.
+1.  In SAP Continuous Integration and Delivery, configure a new job as described in  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/3daf56d952c74c10b0be810d082e68ab.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> . As *Pipeline*, choose *SAP Integration Suite Artifacts*.
 
 2.  In the *Stages* tab, choose *Source Repository* from the *Configuration Mode* dropdown list.
 

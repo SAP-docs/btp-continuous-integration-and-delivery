@@ -1,6 +1,6 @@
 <!-- loio87cf47a7820d4a00abd8a8526366c129 -->
 
-# Configure a Container-Based Applications Job in the Job Editor
+# Configure a Container-Based Applications Job
 
 Configure the stages of your container-based applications job directly in the SAP Continuous Integration and Delivery service.
 
@@ -32,7 +32,7 @@ Depending on your configuration, the container-based applications pipeline can c
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, configure a new job as described in [Create a Job](create-a-job-d748920.md). As *Pipeline*, choose *Container-Based Applications*.
+1.  In SAP Continuous Integration and Delivery, configure a new job as described in  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:7" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/87cf47a7820d4a00abd8a8526366c129.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> . As *Pipeline*, choose *Container-Based Applications*.
 
 2.  In the *Stages* tab, choose *Job Editor* from the *Configuration Mode* dropdown list.
 
@@ -843,7 +843,7 @@ Depending on your configuration, the container-based applications pipeline can c
         
 
     > ### Note:  
-    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see [Advanced Pipeline Configuration](advanced-pipeline-configuration-c8314b6.md).
+    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see  <?sap-ot O2O class="- topic/xref " href="c8314b6c8e564f42925e9d10453bd541.xml" text="" desc="" xtrc="xref:12" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/87cf47a7820d4a00abd8a8526366c129.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 7.  Choose *Create*.
 

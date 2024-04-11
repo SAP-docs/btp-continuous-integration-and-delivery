@@ -1,6 +1,6 @@
 <!-- loio3d5573fab2ea432cb2cab8639395e51e -->
 
-# Configure an SAP Integration Suite Artifacts Job in the Job Editor
+# Configure an SAP Integration Suite Artifacts Job
 
 Configure the stages of your SAP Integration Suite Artifacts job directly in the SAP Continuous Integration and Delivery service.
 

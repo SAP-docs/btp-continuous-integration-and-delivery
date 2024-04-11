@@ -4,7 +4,7 @@
 
 # Assigning Roles and Permissions
 
-Administer the role assignment for SAP Continuous Integration and Delivery.
+Manage the authorization for SAP Continuous Integration and Delivery.
 
 
 
@@ -12,11 +12,14 @@ Administer the role assignment for SAP Continuous Integration and Delivery.
 
 ## Prerequisites
 
+> ### Note:  
+> If you are using this service as part of SAP Build Code, follow the [SAP Build Code Initial Setup](https://help.sap.com/docs/build_code/d0d8f5bfc3d640478854e6f4e7c7584a/07698d7c31284e4db370acdf017cfd14.html?version=SHIP) instructions instead.
+
 -   You’re an administrator of your global account and subaccount on SAP BTP.
 
 -   **If you use an enterprise account \(no trial account\):** You’re a User & Role Administrator of your subaccount on SAP BTP and can therefore view the :shield: *Security* section in its navigation pane. See [Managing Subaccounts Using the Cockpit](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/55d0b6d8b96846b8ae93b85194df0944.html).
 
--   You have enabled SAP Continuous Integration and Delivery. See [Enabling the Service](enabling-the-service-c8ed09d.md).
+-   You've enabled SAP Continuous Integration and Delivery. See [Enabling the Service](enabling-the-service-c8ed09d.md).
 
 
 
@@ -25,9 +28,9 @@ Administer the role assignment for SAP Continuous Integration and Delivery.
 
 ## Context
 
-For SAP Continuous Integration and Delivery, there are two different roles: **Administrator** and **Developer**. The following table provides an overview of their permissions:
+There are two different roles for SAP Continuous Integration and Delivery: **Administrator** and **Developer**.
 
-**Roles and Permissions for SAP Continuous Integration and Delivery**
+The following table provides an overview of their permissions:
 
 
 <table>
@@ -351,29 +354,28 @@ View a build log
 
 Corresponding to its roles, SAP Continuous Integration and Delivery comes with two predefined role collections: **CICD Service Administrator** and **CICD Service Developer**. The following procedure shows how you can assign them to your users.
 
-For more information about roles and permissions in the Cloud Foundry environment, see [Account Administration in the Cockpit](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/8061ecc529d74465b2b9566a634943ec.html).
-
 
 
 <a name="loioc679ebdbe76142bd9fb1071e5e53511d__steps_wmd_x42_ykb"/>
 
 ## Procedure
 
-1.  In your subaccount in the SAP BTP cockpit, choose :shield: *Security* \> *Trust Configuration*.
+1.  In your subaccount in the SAP BTP cockpit, choose :shield: *Security* \> *Users*.
 
-2.  Choose the name of your identity provider.
+2.  Choose the name of your user.
 
-3.  Enter the e-mail address of the user to which you want to assign a role collection.
+3.  From the *Role Collections* section, choose *...* \> *Assign Role Collection*.
 
-4.  Choose *Show Assignments*.
+4.  From the drop-down list, select either *CICD Service Administrator* or *CICD Service Developer*.
 
-5.  If the user is new to the subaccount, choose *Add User* in the *Confirmation* dialog.
-
-6.  Choose *Assign Role Collection*.
-
-7.  From the dropdown list, select the role you want to assign and confirm your choice with *Assign Role Collection*.
+5.  Confirm your choice with *Assign Role Collection*.
 
     > ### Note:  
     > When you assign roles or remove role assignments, it can take up to 60 minutes for changes to take effect. Log off and then log on again for changes to take effect immediately.
 
+
+**Related Information**  
+
+
+[Identity and Access Management](identity-and-access-management-bb2cd0a.md#loiobb2cd0a57fc54525888a6988a7ab704c "Obtain information about authorization and user roles in SAP Continuous Integration and Delivery.")
 

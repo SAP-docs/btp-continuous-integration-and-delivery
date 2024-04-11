@@ -12,7 +12,7 @@ Enable automatic triggering of notifications about build events using the SAP Al
 
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
--   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](administering-jobs-d581ab5.md).
+-   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](enhancing-jobs-d581ab5.md).
 
 -   You habe enabled the SAP Alert Notification service and created a service key to authenticate your pipeline against SAP Alert Notification service. See [Initial Setup](https://help.sap.com/docs/ALERT_NOTIFICATION?version=Cloud) and [Credential Management](https://help.sap.com/docs/ALERT_NOTIFICATION/5967a369d4b74f7a9c2b91f5df8e6ab6/80fe24f86bde4e3aac2903ac05511835.html?version=Cloud).
 
@@ -559,7 +559,7 @@ The unique name of the pipeline job.
 
 The pipeline name.
 
-For a full list of the supported pipelines, see [Supported Pipelines](supported-pipelines-e293286.md).
+For a full list of the supported pipelines, see [Configuring Jobs](configuring-jobs-e293286.md).
 
 </td>
 </tr>

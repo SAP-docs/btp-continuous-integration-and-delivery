@@ -7,7 +7,7 @@
 Add environment variables that store user-defined strings to the stages of your SAP Continuous Integration and Delivery jobs.
 
 > ### Note:  
-> You can use this feature for all scenarios listed in [Supported Pipelines](supported-pipelines-e293286.md) except for [SAP Integration Suite Artifacts](sap-integration-suite-artifacts-019ed68.md).
+> You can use this feature for all scenarios listed in [Configuring Jobs](configuring-jobs-e293286.md) except for  <?sap-ot O2O class="- topic/xref " href="019ed685a19b4efab4f7df0e108d1697.xml" text="" desc="" xtrc="xref:2" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/74fe5409efad4efaae017eb90fa64b95.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 You can configure environment variables either using the SAP Continuous Integration and Delivery job editor or using the configuration file in your source code management system.
 

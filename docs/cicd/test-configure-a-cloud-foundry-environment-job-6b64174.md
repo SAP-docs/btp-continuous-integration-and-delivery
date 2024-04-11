@@ -147,7 +147,7 @@ The following sections correspond to the stages of your Cloud Foundry Environmen
     If you want your build to fail if the lint check reveals any errors, check the *Fail on Error* checkbox.
 
 5.  > ### Restriction:  
-    > This step doesn't apply to the [SAP Integration Suite Artifacts](sap-integration-suite-artifacts-019ed68.md) pipeline.
+    > This step doesn't apply to the  <?sap-ot O2O class="- topic/xref " href="019ed685a19b4efab4f7df0e108d1697.xml" text="" desc="" xtrc="xref:13" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6b64174935494479807ef160da56f897.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?>  pipeline.
 
     \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
 
@@ -169,7 +169,7 @@ The following sections correspond to the stages of your Cloud Foundry Environmen
 2.  In the *npm Script* text field, enter the name of the test script in the `scripts` section of your `package.json` file to be executed.
 
 3.  > ### Restriction:  
-    > This step doesn't apply to the [SAP Integration Suite Artifacts](sap-integration-suite-artifacts-019ed68.md) pipeline.
+    > This step doesn't apply to the  <?sap-ot O2O class="- topic/xref " href="019ed685a19b4efab4f7df0e108d1697.xml" text="" desc="" xtrc="xref:17" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6b64174935494479807ef160da56f897.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?>  pipeline.
 
     \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
 

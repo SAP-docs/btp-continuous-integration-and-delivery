@@ -1,6 +1,6 @@
 <!-- loio0700ecb0e9a6475cb51759371a1e5c14 -->
 
-# Configure Kyma Runtime Job in the Job Editor
+# Configure a Kyma Runtime Job
 
 The Kyma Runtime pipeline allows you to build your SAP Cloud Application Programming Model \(CAP\) application, transform it into Docker images, and deploy it to the Kubernetes-based Kyma Runtime environment of SAP BTP. You can configure the stages of your Kyma Runtime job directly in the SAP Continuous Integration and Delivery service.
 

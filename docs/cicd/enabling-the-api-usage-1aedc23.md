@@ -27,7 +27,7 @@ Allow other SAP BTP services to access SAP Continuous Integration and Delivery.
 
 1.  In your subaccount in the SAP BTP cockpit, choose <span class="SAP-icons-V5"></span> *Services* \> *Service Marketplace* from the navigation pane.
 
-2.  Search for and select *Continuous Integration & Delivery*.
+2.  In the *Foundation / Cross Services* category, choose *Continuous Integration & Delivery*.
 
 3.  Choose *Create*.
 
@@ -35,9 +35,14 @@ Allow other SAP BTP services to access SAP Continuous Integration and Delivery.
 
 5.  Choose your *Runtime Environment* from the respective drop-down list.
 
-6.  Choose *Next*.
+    > ### Note:  
+    > If you use the *Cloud Foundry* runtime environment, you need to enable your space, first. See [Manage Allowed Spaces](managing-settings-0181fc5.md#loio0181fc51422e459fa79e717d433f94d4__section_s4k_nlv_qwb).
 
-7.  In the text field, specify the role parameter for the API usage of your service instance in JSON format. Choose one of the following options:
+6.  In the *Instance Name* text field, enter a name for your instance.
+
+7.  Choose *Next*.
+
+8.  In the text field, specify the role parameter for the API usage of your service instance in JSON format. Choose one of the following options:
 
     -   `{ "role" : "developer" }` for the Developer role
 
@@ -49,9 +54,9 @@ Allow other SAP BTP services to access SAP Continuous Integration and Delivery.
     > ### Note:  
     > If you don’t specify a role for the API usage of your service instance, it is assigned the Administrator role by default.
 
-8.  Choose *Create*.
+9.  Choose *Create*.
 
-9.  Depending on which runtime environment you chose, proceed as follows:
+10. Depending on which runtime environment you chose, proceed as follows:
 
     -   For the Cloud Foundry environment, create a service key. For more information, see [Service Keys](https://help.sap.com/docs/service-manager/sap-service-manager/creating-service-keys-in-cloud-foundry?version=Cloud).
 

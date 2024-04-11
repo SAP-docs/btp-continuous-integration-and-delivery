@@ -1,51 +1,43 @@
-<!-- loio201ef608e14c4ca483b2184b42e17e7f -->
+<!-- loio6bd27c07ee3b428f9ad5a2e89084f3a3 -->
 
 <link rel="stylesheet" type="text/css" href="css/sap-icons.css"/>
 
-# Configure an SAP Fiori in the Cloud Foundry Environment Job in the Job Editor
+# Configure a Cloud Foundry Environment Job
 
-Configure the stages of your SAP Fiori in the Cloud Foundry environment job directly in the SAP Continuous Integration and Delivery service.
+Configure the stages of your Cloud Foundry Environment job directly in the SAP Continuous Integration and Delivery service.
 
 
 
-<a name="loio201ef608e14c4ca483b2184b42e17e7f__prereq_dvs_hg3_xlb"/>
+<a name="loio6bd27c07ee3b428f9ad5a2e89084f3a3__prereq_gtz_fsj_x4b"/>
 
 ## Prerequisites
 
-> ### Caution:  
-> This pipeline type is deprecated. Please use the [Cloud Foundry Environment](cloud-foundry-environment-7c2a049.md) pipeline with the mta build tool, instead. All existing jobs will be migrated automatically.
-
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
--   In your source code management system, you have an SAPUI5/SAP Fiori project for the Cloud Foundry environment. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).
-
-
-> ### Note:  
-> The SAP Fiori in the Cloud Foundry environment pipeline also supports HTML5 applications that don't need an own runtime infrastructure. For more information, see [Developing HTML5 Applications](https://help.sap.com/viewer/d1c8cd7a39bc4f24a0c65e2ae64d627c/1.0/en-US/00b074c1284e4520a75df52e25698522.html).
+-   In your source code management system, you have an SAP Cloud Application Programming Model project with the recommended files and folders structure. See the [CAP documentation](https://cap.cloud.sap/docs/get-started/).
 
 
 
-<a name="loio201ef608e14c4ca483b2184b42e17e7f__context_cpj_32y_q4b"/>
+
+<a name="loio6bd27c07ee3b428f9ad5a2e89084f3a3__context_wgc_lsj_x4b"/>
 
 ## Context
 
-Depending on your configuration, the SAP Fiori in the Cloud Foundry environment pipeline can comprise the following stages:
+Depending on your configuration, the Cloud Foundry Environment pipeline can comprise the following stages:
 
 > ### Tip:  
 > Hover over the arrow shapes for a short description of each stage.
 
-![](images/UI5_Pipeline_Steps_ad534be.png)
+![](images/Cloud_SDK_Pipeline_Stages_2d26d26.png)
 
 > ### Note:  
 > Upon the completion of your pipeline’s run, an additional *Declarative: Post Actions* stage is executed to perform finalization tasks. The outcome of the *Declarative: Post Actions* stage does not influence the success of your build.
 
 
 
-<a name="loio201ef608e14c4ca483b2184b42e17e7f__steps_yz5_sh3_xlb"/>
-
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, configure a new job as described in [Create a Job](create-a-job-d748920.md). As *Pipeline*, choose *SAP Fiori in the Cloud Foundry environment*.
+1.  In SAP Continuous Integration and Delivery, configure a new job as described in  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6bd27c07ee3b428f9ad5a2e89084f3a3.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> . As *Pipeline*, choose *Cloud Foundry Environment*.
 
 2.  In the *Stages* tab, choose *Job Editor* from the *Configuration Mode* dropdown list.
 
@@ -78,19 +70,21 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </th>
         </tr>
         <tr>
-        <td valign="top" rowspan="3">
+        <td valign="top" rowspan="2">
         
          
         
         </td>
         <td valign="top">
         
-        State
+        Build Tool
         
         </td>
         <td valign="top">
         
-        Either switch the execution of the *Build* stage on or off.
+        From the dropdown list, choose the build tool \(`mta` , `npm` or `maven`\) you want to use.
+
+        If you don't define a build tool, a default one \(`mta`\) is used.
         
         </td>
         </tr>
@@ -111,17 +105,22 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         <tr>
         <td valign="top">
         
-        Application Name
+        Maven Static Code Checks
         
         </td>
         <td valign="top">
         
-        Optionally, enter a name for your application.
-
+        State
+        
+        </td>
+        <td valign="top">
+        
         > ### Note:  
-        > The build prefers the application name from your MTA descriptor file over the one entered in the user interface. If you don't define an application name \(neither in the `mta.yaml` file nor in the user interface\), a default one \(`ui5application`\) is used.
+        > This step can only be activated for the *mta* or *maven* build tool.
 
+        Either switch the execution of the *Maven Static Code Checks* step on or off.
 
+        Maven static code checks verify the syntax of your Java code.
         
         </td>
         </tr>
@@ -138,6 +137,9 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
+        > ### Note:  
+        > This step can only be activated for the *mta* or *maven* build tool.
+
         Either switch the execution of the *Lint Check* step on or off.
 
         The lint check verifies the syntax of your JavaScript code.
@@ -150,7 +152,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         
     2.  Configure the *Additional Unit Tests* stage.
 
-        **Actions for Configuring the Additional Unit Tests Stage**
+        **Actions for Configuring Additional Unit Tests**
 
 
         <table>
@@ -174,7 +176,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        Either switch the execution of the *Additional Unit Tests* stage on or off. If you switch it on, make sure that you have a `package.json` file on the root level, which points to the test sources that should be executed.
+        Either switch the execution of the *Additional Unit Tests* stage on or off.
         
         </td>
         </tr>
@@ -192,39 +194,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </tr>
         </table>
         
-    3.  Configure the *Malware Scan* stage.
-
-        **Actions for Configuring the Malware Scan Step**
-
-
-        <table>
-        <tr>
-        <th valign="top">
-
-        Parameter
-        
-        </th>
-        <th valign="top">
-
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        Either switch the execution of the *Malware Scan* stage on or off.
-        
-        </td>
-        </tr>
-        </table>
-        
-    4.  Configure the *Acceptance* stage.
+    3.  Configure the *Acceptance* stage
 
         **General Actions for the Acceptance Stage**
 
@@ -256,7 +226,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </tr>
         </table>
         
-        **Actions for Configuring the Deploy to Cloud Foundry Acceptance Space Step**
+        **Actions for Configuring the Deploy to Cloud Foundry Space Step**
 
 
         <table>
@@ -384,9 +354,11 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         <td valign="top">
         
         > ### Note:  
-        > **Please note that this step is deprecated and will be removed or replaced soon.** Even though existing tests will continue to work, we recommend that you remove the deprecated configurations. For more details, see [GitHub](https://github.com/SAP/ui5-uiveri5#readme).
+        > **Please note that this step is deprecated and replaced by WebdriverIO tests.** Please remove the deprecated configurations and configure the *WebdriverIO Test* step instead.
+        > 
+        > For more details, see [GitHub](https://github.com/SAP/ui5-uiveri5#readme).
 
-        Either switch the execution of the UIVeri5 test on or off.
+        Either switch the execution of the UIVeri5 test stage on or off.
         
         </td>
         </tr>
@@ -422,25 +394,9 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        \(Optional\) To authenticate your pipeline against the application, create a Basic Authentication credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
-
-        > ### Tip:  
-        > Avoid using a technical user credential and create a special test user instead.
+        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         Choose this credential from the dropdown list.
-
-        > ### Note:  
-        > If you chose to use application credentials, add the following code block to your `conf.js` file in your repository:
-        > 
-        > ```
-        > //Read environment variables
-        > const defaultParams = {
-        >     user: process.env.TEST_USER,
-        >     pass: process.env.TEST_PASS
-        > };
-        > ```
-
-
         
         </td>
         </tr>
@@ -519,6 +475,8 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         > ### Tip:  
         > Avoid using a technical user credential and create a special test user instead.
 
+        Choose this credential from the dropdown list.
+
         You can access the username and password in your individual test files by using:
 
         ```
@@ -534,7 +492,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </tr>
         </table>
         
-    5.  Configure the *Compliance* stage.
+    4.  Configure the *Compliance* stage
 
         **Actions for Configuring the Compliance Stage**
 
@@ -617,9 +575,12 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         
         Enter the full URL to your backend system:
 
-        -   For the `SonarCloud` mode, choose the URL from the dropdown list
+        -   For the SonarCloud mode, choose the URL from the dropdown list
 
-        -   For the `SonarQube` mode, enter the custom URL to your internet-facing SonarQube server
+        -   For the SonarQube mode, enter the custom URL to your internet-facing SonarQube server
+
+            > ### Note:  
+            > If you have configured your Cloud Connector, this must be an HTTP URL \(not HTTPS\).
 
 
         Before configuring the next parameters, make sure that you have created a project in your SonarQube instance. For more information, see the [SonarQube documentation](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/).
@@ -637,7 +598,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         Enter the organization that you provided for your project.
 
         > ### Note:  
-        > This step is only mantadory for the `SonarCloud` mode.
+        > This step is only mandatory for the `SonarCloud` mode.
 
 
         
@@ -663,7 +624,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against your SonarQube instance, create a *Secret Text* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against your SonarQube instance, create a *Secret Text* credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
         In the *Secret* text field, paste the token that was generated when creating your SonarQube project. If you are unable to retrieve your token, generate a new one. See [Generating and Using Tokens](https://docs.sonarqube.org/latest/user-guide/user-token/).
 
@@ -673,7 +634,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </tr>
         </table>
         
-    6.  Configure the *Release* stage.
+    5.  Configure the *Release* stage.
 
         **Actions for Configuring the Deploy to Cloud Foundry Space Step**
 
@@ -700,11 +661,6 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         <td valign="top">
         
         Either switch the execution of the *Deploy to Cloud Foundry Space* step on or off.
-
-        > ### Note:  
-        > If the *Deploy to Cloud Foundry Space* step is switched off, all corresponding entry fields are deactivated.
-
-
         
         </td>
         </tr>
@@ -716,7 +672,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        Enter the URL of your SAP BTP, Cloud Foundry API Endpoint. See [Regions and API Endpoints Available for the Cloud Foundry Environment](https://help.sap.com/viewer/3504ec5ef16548778610c7e89cc0eac3/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html#loiof344a57233d34199b2123b9620d0bb41).
+        Enter the URL of your SAP BTP, Cloud Foundry environment API endpoint. See [Regions and API Endpoints Available for the Cloud Foundry Environment](https://help.sap.com/viewer/3504ec5ef16548778610c7e89cc0eac3/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html#loiof344a57233d34199b2123b9620d0bb41).
         
         </td>
         </tr>
@@ -819,10 +775,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        Either switch the *Upload to Cloud Transport Management* stage on or off.
-
-        > ### Note:  
-        > If the *Upload to Cloud Transport Management* stage is switched off, all corresponding entry fields are deactivated.
+        Either switch the *Upload to Cloud Transport Management* step on or off.
 
         For more information on why and how to integrate SAP Cloud Transport Management into your continuous delivery process, see [\(Optional\) Integrate SAP Cloud Transport Management into Your Pipeline](configure-an-sap-fiori-in-the-neo-environment-job-in-your-repository-4f6185c.md#loio0b9c5d30aff3425c96a440dce60bd9c7).
         
@@ -848,7 +801,7 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         </td>
         <td valign="top">
         
-        To authenticate your pipeline against SAP Cloud Transport Management, create a Service Key. See [Creating Credentials](creating-credentials-6658c81.md).
+        To authenticate your pipeline against SAP Cloud Transport Management, create a *Service Key* credential. See [Creating Credentials](creating-credentials-6658c81.md).
 
         Choose this credential from the dropdown list.
         
@@ -858,125 +811,9 @@ Depending on your configuration, the SAP Fiori in the Cloud Foundry environment 
         
 
     > ### Note:  
-    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see [Advanced Pipeline Configuration](advanced-pipeline-configuration-c8314b6.md).
+    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see  <?sap-ot O2O class="- topic/xref " href="c8314b6c8e564f42925e9d10453bd541.xml" text="" desc="" xtrc="xref:31" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6bd27c07ee3b428f9ad5a2e89084f3a3.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 4.  Choose *Create*.
-
-
-<a name="loio642bcb08b27c4d7ab5008aa277225189"/>
-
-<!-- loio642bcb08b27c4d7ab5008aa277225189 -->
-
-## \(Optional\) Configure the Additional Unit Test Stage
-
-Before running the **Additional Unit Tests** stage in your job, add the test configuration to your project.
-
-
-
-<a name="loio642bcb08b27c4d7ab5008aa277225189__prereq_fgb_ctn_blb"/>
-
-## Prerequisites
-
--   You’re an administrator of SAP Continuous Integration and Delivery.
-
--   In your repository, you have an SAPUI5/SAP Fiori project. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).
-
-
-
-
-<a name="loio642bcb08b27c4d7ab5008aa277225189__steps_kmn_qtn_blb"/>
-
-## Procedure
-
-1.  Make sure that the following dependencies and scripts are part of your `package.json` file:
-
-    ```
-    {
-        (...)
-        "devDependencies": {
-            (...)
-            "karma": "^5.0.4",
-            "karma-chrome-launcher": "^3.1.0",
-            "karma-coverage": "^2.0.2",
-            "karma-ui5": "^2.1.0"
-        },
-        "scripts": {
-            (...)
-            "test": "karma start",
-        }
-    }
-    ```
-
-2.  To describe that the tests should use a custom web driver launcher to connect to a remote Chrome browser, add a file named `karma.conf.js` to the same folder as your `package.json` file.
-
-3.  Add the following minimal configuration to your `karma.conf.js` file:
-
-    ```
-     ```
-     module.exports = function(config) {
-         config.set({
-            frameworks: ["ui5"],
-            ui5: {
-               url: "https://ui5.sap.com"
-            },
-            browsers: ["ChromeHeadless"],
-            browserConsoleLogOptions: {
-               level: "error"
-            },
-            singleRun: true
-         });
-     };
-     ```
-    
-    ```
-
-4.  To report the coverage and see the coverage data in the logs, add the following additional configuration to the file:
-
-    ```
-    ```
-    module.exports = function(config) {
-      config.set({
-    
-        frameworks: ["ui5"],
-        ui5: {
-          url: "https://ui5.sap.com"
-        },
-        preprocessors: {
-    			"{webapp,webapp/!(test)}/!(mock*).js": ["coverage"]
-    		},
-        coverageReporter: {
-                includeAllSources: true,
-                reporters: [
-                    {
-                        type: "html",
-                        dir: "coverage"
-                    },
-                    {
-                        type: "text"
-                    }
-                ],
-        check: {
-           each: {
-                   statements: <THRESHOLD>,
-                   branches: <THRESHOLD>,
-                   functions: <THRESHOLD>,
-                   lines: <THRESHOLD>
-                    }
-                }
-            },
-         reporters: ["progress", "coverage"],
-    
-        browsers: ["ChromeHeadless"],
-        browserConsoleLogOptions: {
-             level: "error"
-        },
-        singleRun: true
-      });
-    };
-    ```					
-    ```
-
-    For `<THRESHOLD>`, enter the percentage of your code that you want to cover with tests. If the defined threshold isn’t met, the build breaks.
 
 
 <a name="loio0b9c5d30aff3425c96a440dce60bd9c7"/>

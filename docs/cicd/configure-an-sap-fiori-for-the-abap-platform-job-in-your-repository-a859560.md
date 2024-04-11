@@ -10,6 +10,9 @@ Configure the stages of your SAP Fiori for the ABAP platform job in your reposit
 
 ## Prerequisites
 
+> ### Restriction:  
+> This pipeline only works for on-premises scenarios.
+
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
 -   In your source code management system, you have an SAPUI5/SAP Fiori project for the ABAP platform. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).
@@ -39,7 +42,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, configure a new job as described in [Create a Job](create-a-job-d748920.md). As *Pipeline*, choose *SAP Fiori for ABAP platform*.
+1.  In SAP Continuous Integration and Delivery, configure a new job as described in  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:12" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/a859560bca4149488f8e94e9c9a9adad.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> . As *Pipeline*, choose *SAP Fiori for ABAP platform*.
 
 2.  In the *Stages* tab, choose *Source Repository* from the *Configuration Mode* dropdown list.
 
@@ -554,7 +557,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
     </table>
     
     > ### Note:  
-    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see [Advanced Pipeline Configuration](advanced-pipeline-configuration-c8314b6.md).
+    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see  <?sap-ot O2O class="- topic/xref " href="c8314b6c8e564f42925e9d10453bd541.xml" text="" desc="" xtrc="xref:19" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/a859560bca4149488f8e94e9c9a9adad.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
 
 8.  Commit and push your configuration.
 
@@ -643,7 +646,7 @@ Depending on your configuration, your complete `config.yml` file should look as 
 
 ## \(Optional\) Configure the Additional Unit Test Stage
 
-Before running the **Additional Unit Tests** stage in your job, add the test configuration to your project.
+Before running the **Additional Unit Tests** stage in your job, add the Karma test configuration to your project.
 
 
 
@@ -653,8 +656,16 @@ Before running the **Additional Unit Tests** stage in your job, add the test con
 
 -   You’re an administrator of SAP Continuous Integration and Delivery.
 
--   In your repository, you have an SAPUI5/SAP Fiori project. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).
+-   In your repository, you have an SAPUI5/SAP Fiori project. See [Create an SAP Fiori Project](https://developers.sap.com/tutorials/appstudio-fioriapps-create.html).
 
+
+
+
+<a name="loio642bcb08b27c4d7ab5008aa277225189__context_sgy_rjw_1bc"/>
+
+## Context
+
+The following steps will introduce [Karma](https://github.com/SAP/karma-ui5), a plugin to help test your SAPUI5 project.
 
 
 
@@ -662,94 +673,70 @@ Before running the **Additional Unit Tests** stage in your job, add the test con
 
 ## Procedure
 
-1.  Make sure that the following dependencies and scripts are part of your `package.json` file:
+1.  Append the following Karma dependencies to your project:
+
+    ```
+    npm install --save-dev karma karma-ui5 karma-chrome-launcher karma-coverage
+    ```
+
+2.  Append the following Karma script to your `package.json`:
 
     ```
     {
         (...)
-        "devDependencies": {
-            (...)
-            "karma": "^5.0.4",
-            "karma-chrome-launcher": "^3.1.0",
-            "karma-coverage": "^2.0.2",
-            "karma-ui5": "^2.1.0"
-        },
         "scripts": {
             (...)
-            "test": "karma start",
+            "test": "karma start"
         }
     }
     ```
 
-2.  To describe that the tests should use a custom web driver launcher to connect to a remote Chrome browser, add a file named `karma.conf.js` to the same folder as your `package.json` file.
+3.  To load and test the project, add a file called `karma.conf.js` to the same folder as your `package.json` file.
 
-3.  Add the following minimal configuration to your `karma.conf.js` file:
+4.  Add the following minimal configuration to your `karma.conf.js` file:
 
-    ```
-     ```
-     module.exports = function(config) {
-         config.set({
-            frameworks: ["ui5"],
-            ui5: {
-               url: "https://ui5.sap.com"
-            },
-            browsers: ["ChromeHeadless"],
-            browserConsoleLogOptions: {
-               level: "error"
-            },
-            singleRun: true
-         });
-     };
-     ```
-    
-    ```
-
-4.  To report the coverage and see the coverage data in the logs, add the following additional configuration to the file:
-
-    ```
     ```
     module.exports = function(config) {
-      config.set({
-    
-        frameworks: ["ui5"],
-        ui5: {
-          url: "https://ui5.sap.com"
-        },
-        preprocessors: {
-    			"{webapp,webapp/!(test)}/!(mock*).js": ["coverage"]
-    		},
-        coverageReporter: {
-                includeAllSources: true,
-                reporters: [
-                    {
-                        type: "html",
-                        dir: "coverage"
-                    },
-                    {
-                        type: "text"
-                    }
-                ],
-        check: {
-           each: {
-                   statements: <THRESHOLD>,
-                   branches: <THRESHOLD>,
-                   functions: <THRESHOLD>,
-                   lines: <THRESHOLD>
-                    }
+        config.set({
+            frameworks: ["ui5"],
+            ui5: {
+                configPath: "ui5-mock.yaml". // change to ui5.yaml if ui5-mock.yaml does not exist.
+            },
+            browsers: ["ChromeHeadless"],
+            customLaunchers: {
+                ChromeHeadlessCustom: {
+                    base: 'ChromeHeadless',
+                    flags: ['--window-size=1920,1080']
                 }
             },
-         reporters: ["progress", "coverage"],
-    
-        browsers: ["ChromeHeadless"],
-        browserConsoleLogOptions: {
-             level: "error"
-        },
-        singleRun: true
-      });
+            browserConsoleLogOptions: {
+                level: "error"
+            },
+            singleRun: true,
+            proxies: {
+                '/base/webapp/resources': 'http://127.0.0.1:' + config.port + '/resources',
+                '/base/webapp/test-resources': 'http://127.0.0.1:' + config.port + '/test-resources'
+            }
+        });
     };
-    ```					
     ```
 
-    For `<THRESHOLD>`, enter the percentage of your code that you want to cover with tests. If the defined threshold isn’t met, the build breaks.
+    The `ui5` property is configured using `configPath`, which loads the default SAPUI5 resources. If a mock server is later added to the project, the `configPath` should be updated to `ui5-mock.yaml`. See [Installing MockServer](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/253805578f04461a9741983a630ce4f1.html?locale=en-USstate%3DPRODUCTION).
 
+5.  To validate your configuration, run the new test script:
+
+    ```
+    npm run test
+    ```
+
+    In the console log, you can see that the ChromeHeadless browser is now connected, but as you haven’t added a test plan, yet,no tests were executed.
+
+
+
+
+<a name="loio642bcb08b27c4d7ab5008aa277225189__postreq_sjr_ylw_1bc"/>
+
+## Next Steps
+
+To add unit and integration tests to your project, refer to the [SAPUI5 Overview and Testing Strategy Guide](https://sapui5.hana.ondemand.com/sdk/#/topic/ab134ef3932c4b42898c79c10341e8b5).
 
