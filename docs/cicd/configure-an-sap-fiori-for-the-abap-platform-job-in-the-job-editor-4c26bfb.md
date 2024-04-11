@@ -511,9 +511,7 @@ Depending on your configuration, the SAP Fiori for the ABAP platform pipeline ca
 
 ## \(Optional\) Configure the Additional Unit Test Stage
 
-Before running the **Additional Unit Tests** stage in your job, add the test configuration to your project.
-
-
+Before running the **Additional Unit Tests** stage in your job, add the Karma test configuration to your project.
 
 <a name="loio642bcb08b27c4d7ab5008aa277225189__prereq_fgb_ctn_blb"/>
 
@@ -521,103 +519,75 @@ Before running the **Additional Unit Tests** stage in your job, add the test con
 
 -   You’re an administrator of SAP Continuous Integration and Delivery.
 
--   In your repository, you have an SAPUI5/SAP Fiori project. See [Create an SAP Fiori Project](https://help.sap.com/viewer/9d1db9835307451daa8c930fbd9ab264/Cloud/en-US/46664de4d6944471b6c29a0681bfd0fc.html).
+-   In your repository, you have an SAPUI5/SAP Fiori project. See [Create an SAP Fiori Project](https://developers.sap.com/tutorials/appstudio-fioriapps-create.html).
 
-
-
+-   Google Chrome installed, runnung headless Chrome is a way to run the Chrome browser in a headless environment without the full browser UI.
 
 <a name="loio642bcb08b27c4d7ab5008aa277225189__steps_kmn_qtn_blb"/>
 
 ## Procedure
 
-1.  Make sure that the following dependencies and scripts are part of your `package.json` file:
+The following steps will introduce [Karma](https://github.com/SAP/karma-ui5), a plugin to help test your SAPUI5 project.
 
+1.  Append the following Karma dependencies to your project:
+
+    ```BASH
+    npm install --save-dev karma karma-ui5 karma-chrome-launcher karma-coverage
     ```
+    
+2.  Append the following Karma script to your `package.json`:   
+
+    ```JSON
     {
         (...)
-        "devDependencies": {
-            (...)
-            "karma": "^5.0.4",
-            "karma-chrome-launcher": "^3.1.0",
-            "karma-coverage": "^2.0.2",
-            "karma-ui5": "^2.1.0"
-        },
         "scripts": {
             (...)
-            "test": "karma start",
+            "test": "karma start"
         }
     }
     ```
 
-2.  To describe that the tests should use a custom web driver launcher to connect to a remote Chrome browser, add a file named `karma.conf.js` to the same folder as your `package.json` file.
+3.  In order to load and test the project, add a file called `karma.conf.js` to the same folder as your `package.json` file.
 
-3.  Add the following minimal configuration to your `karma.conf.js` file:
-
-    ```
-     ```
-     module.exports = function(config) {
-         config.set({
+4.  Add the following minimal configuration to your `karma.conf.js` file:
+   
+    ```JS
+    module.exports = function(config) {
+        config.set({
             frameworks: ["ui5"],
             ui5: {
-               url: "https://ui5.sap.com"
+                configPath: "ui5-mock.yaml". // change to ui5.yaml if ui5-mock.yaml does not exist.
             },
             browsers: ["ChromeHeadless"],
-            browserConsoleLogOptions: {
-               level: "error"
-            },
-            singleRun: true
-         });
-     };
-     ```
-    
-    ```
-
-4.  To report the coverage and see the coverage data in the logs, add the following additional configuration to the file:
-
-    ```
-    ```
-    module.exports = function(config) {
-      config.set({
-    
-        frameworks: ["ui5"],
-        ui5: {
-          url: "https://ui5.sap.com"
-        },
-        preprocessors: {
-    			"{webapp,webapp/!(test)}/!(mock*).js": ["coverage"]
-    		},
-        coverageReporter: {
-                includeAllSources: true,
-                reporters: [
-                    {
-                        type: "html",
-                        dir: "coverage"
-                    },
-                    {
-                        type: "text"
-                    }
-                ],
-        check: {
-           each: {
-                   statements: <THRESHOLD>,
-                   branches: <THRESHOLD>,
-                   functions: <THRESHOLD>,
-                   lines: <THRESHOLD>
-                    }
+            customLaunchers: {
+                ChromeHeadlessCustom: {
+                    base: 'ChromeHeadless',
+                    flags: ['--window-size=1920,1080']
                 }
             },
-         reporters: ["progress", "coverage"],
-    
-        browsers: ["ChromeHeadless"],
-        browserConsoleLogOptions: {
-             level: "error"
-        },
-        singleRun: true
-      });
+            browserConsoleLogOptions: {
+                level: "error"
+            },
+            singleRun: true,
+            proxies: {
+                '/base/webapp/resources': 'http://127.0.0.1:' + config.port + '/resources',
+                '/base/webapp/test-resources': 'http://127.0.0.1:' + config.port + '/test-resources'
+            }
+        });
     };
-    ```					
     ```
 
-    For `<THRESHOLD>`, enter the percentage of your code that you want to cover with tests. If the defined threshold isn’t met, the build breaks.
+    The `ui5` property is configured using `configPath` which is loading the default UI5 resources. If a mock server is later added to the project, the `configPath` should be updated to `ui5-mock.yaml` to reflect this new configuration, refer to [Installing MockServer Guide](https://help.sap.com/docs/SAP_FIORI_tools/17d50220bcd848aa854c9c182d65b699/253805578f04461a9741983a630ce4f1.html?locale=en-USstate%3DPRODUCTION)
+     
+5. To validate everything is working, run the new `test` script;
+
+     ```BASH
+     npm run test
+     ```
+
+    Review the console log, the ChromeHeadless browser is now connected but no tests were executed since we haven't added a test plan yet.
+    
+6. Refer to the [SAPUI5 Overview and Testing Strategy Guide](https://sapui5.hana.ondemand.com/sdk/#/topic/ab134ef3932c4b42898c79c10341e8b5) to add unit and integration tests to your project.
+   
 
 
