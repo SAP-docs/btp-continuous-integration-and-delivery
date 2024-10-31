@@ -4,928 +4,434 @@
 
 # Configure a Cloud Foundry Environment Job
 
-Configure the stages of your Cloud Foundry Environment job directly in the SAP Continuous Integration and Delivery service.
+Create an SAP Continuous Integration and Delivery job for SAP Fiori and SAP Cloud Application Programming Model projects in the Cloud Foundry environment.
 
 
 
-<a name="loio6bd27c07ee3b428f9ad5a2e89084f3a3__prereq_gtz_fsj_x4b"/>
+<a name="loio6bd27c07ee3b428f9ad5a2e89084f3a3__prereq_acj_vkh_1zb"/>
 
 ## Prerequisites
 
--   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
+-   You've set up SAP Continuous Integration and Delivery. See [Initial Setup](initial-setup-719acaf.md).
 
--   In your source code management system, you have an SAP Cloud Application Programming Model project with the recommended files and folders structure. See the [CAP documentation](https://cap.cloud.sap/docs/get-started/).
+-   You're assigned the Administrator role for SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
+
+-   In your source code management system, you have an SAP Fiori or SAP Cloud Application Programming Model project.
 
 
 
 
-<a name="loio6bd27c07ee3b428f9ad5a2e89084f3a3__context_wgc_lsj_x4b"/>
+<a name="loio6bd27c07ee3b428f9ad5a2e89084f3a3__context_mxt_1s3_1zb"/>
 
 ## Context
 
-Depending on your configuration, the Cloud Foundry Environment pipeline can comprise the following stages:
+SAP Continuous Integration and Delivery offers predefined CI/CD pipelines for SAP-specific development scenarios. These pipelines consist of various stages, which are tasks executed sequentially. Your own configuration of a pipeline, including the stages you activate, is referred to as a 'job'.
+
+Depending on your configuration, your job for Cloud Foundry Environment scenarios can include the following stages:
 
 > ### Tip:  
-> Hover over the arrow shapes for a short description of each stage.
+> Hover over the arrow shapes for a brief description of each stage.
 
-![](images/Cloud_SDK_Pipeline_Stages_2d26d26.png)
-
-> ### Note:  
-> Upon the completion of your pipeline’s run, an additional *Declarative: Post Actions* stage is executed to perform finalization tasks. The outcome of the *Declarative: Post Actions* stage does not influence the success of your build.
+![](images/UI5_Pipeline_Steps_ad534be.png)
 
 
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, configure a new job as described in  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6bd27c07ee3b428f9ad5a2e89084f3a3.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> . As *Pipeline*, choose *Cloud Foundry Environment*.
+In the *Jobs* tab in SAP Continuous Integration and Delivery, choose :heavy_plus_sign:.
 
-2.  In the *Stages* tab, choose *Job Editor* from the *Configuration Mode* dropdown list.
+ > ### Note:  
+> The following sections correspond to the *Create Job* pane in SAP Continuous Integration and Delivery. Open them for more information.
+
+ <a name="task_yhq_dlh_1zb"/>
+
+<!-- task\_yhq\_dlh\_1zb -->
+
+## General Information
+
+
+
+<a name="task_yhq_dlh_1zb__steps_mq1_3lh_1zb"/>
+
+## Procedure
+
+1.  In the *Job Name* text field, enter a unique name for your job.
+
+    > ### Tip:  
+    > We recommend a name that contains both the name and the branch of your project in your source code management system.
+
+2.  In the *Description* text field, enter a meaningful description for your job.
+
+3.  Choose the *Repository* text field to open the *Select Repository* pop-up.
+
+    Either choose your repository from the list or choose *Add Repository* to add your project repository to SAP Continuous Integration and Delivery. See [Add a Repository](add-a-repository-fc55872.md).
+
+4.  In the *Branch* text field, enter the branch from which you want to receive push events.
+
+    You can also configure a job for multiple branches in your repository. See [Configure a Multi-Branch Job](configure-a-multi-branch-job-d52d3ca.md).
+
+5.  From the *Pipeline* drop-down list, choose *Cloud Foundry Environment*.
+
+6.  Skip the *Version* drop-down list.
+
+    If you create a new job, the latest version is selected by default. If you edit an existing job, you can change the version by choosing an option from the drop-down list.
+
+7.  To enable your job, choose *ON*.
+
+    By choosing *OFF*, you can deactivate your job without deleting its configuration.
 
     > ### Note:  
-    > After you have configured your job, you can export the editor-based configuration information to a YAML file by pressing the YML button. Press *Edit* and switch to *Source Repository* to move from editor-based configuration to the more advanced configuration in the source repository when necessary. For more information, see [\(Optional\) Export Job Configuration Data](https://help.sap.com/viewer/99c72101f7ee40d0b2deb4df72ba1ad3/Cloud/en-US/60a76d7b5a2a46f684515b18e9cbbc08.html).
-
-3.  In the *Stages* tab, perform the following actions:
-
-    1.  Configure the *Build* stage.
-
-        **Actions for Configuring the Build Stage**
+    > Jobs that are created in a trial account or using the Free service plan are automatically deactivated after remaining unchanged for one week. You can use this switch to reactivate them.
 
 
-        <table>
-        <tr>
-        <th valign="top">
+<a name="task_itb_zlh_1zb"/>
 
-        Step
-        
-        </th>
-        <th valign="top">
+<!-- task\_itb\_zlh\_1zb -->
 
-        Parameter
-        
-        </th>
-        <th valign="top">
-
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top" rowspan="2">
-        
-         
-        
-        </td>
-        <td valign="top">
-        
-        Build Tool
-        
-        </td>
-        <td valign="top">
-        
-        From the dropdown list, choose the build tool \(`mta` , `npm` or `maven`\) you want to use.
-
-        If you don't define a build tool, a default one \(`mta`\) is used.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Build Tool Version
-        
-        </td>
-        <td valign="top">
-        
-        Choose the build tool version you want to use. For more information, see [Supported Tools](supported-tools-5949283.md).
-
-        If you don't define a build tool version, the latest one is used by default.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Maven Static Code Checks
-        
-        </td>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        > ### Note:  
-        > This step can only be activated for the *mta* or *maven* build tool.
-
-        Either switch the execution of the *Maven Static Code Checks* step on or off.
-
-        Maven static code checks verify the syntax of your Java code.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Lint Check
-        
-        </td>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        > ### Note:  
-        > This step can only be activated for the *mta* or *maven* build tool.
-
-        Either switch the execution of the *Lint Check* step on or off.
-
-        The lint check verifies the syntax of your JavaScript code.
-
-        If you want your build to fail if the *Lint Check* reveals any errors, check the *Fail on Error* checkbox.
-        
-        </td>
-        </tr>
-        </table>
-        
-    2.  Configure the *Additional Unit Tests* stage.
-
-        **Actions for Configuring Additional Unit Tests**
+## Build Retention
 
 
-        <table>
-        <tr>
-        <th valign="top">
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+<a name="task_itb_zlh_1zb__steps_hst_yw3_1zb"/>
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        Either switch the execution of the *Additional Unit Tests* stage on or off.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        npm Script
-        
-        </td>
-        <td valign="top">
-        
-        \(Optional\) If in your `package.json` file, you have a `scripts` section, specify the name of the test script to be executed.
-        
-        </td>
-        </tr>
-        </table>
-        
-    3.  Configure the *Acceptance* stage
+## Procedure
 
-        **General Actions for the Acceptance Stage**
+1.  In the *Keep logs for* text field, enter the number of days after which your builds are automatically deleted. Choose a range between 1 and 28 days.
+
+2.  In the *Keep maximum* text field, enter the maximum number of builds you want to keep. If your number of builds exceeds this maximum, the oldest ones are deleted automatically. Choose a range between 1 and 99 builds.
 
 
-        <table>
-        <tr>
-        <th valign="top">
+<a name="task_zrm_zlh_1zb"/>
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+<!-- task\_zrm\_zlh\_1zb -->
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        Either switch the execution of the *Acceptance* stage on or off.
-        
-        </td>
-        </tr>
-        </table>
-        
-        **Actions for Configuring the Deploy to Cloud Foundry Space Step**
+## Stages
 
 
-        <table>
-        <tr>
-        <th valign="top">
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+<a name="task_zrm_zlh_1zb__steps_gzm_5x3_1zb"/>
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        API Endpoint
-        
-        </td>
-        <td valign="top">
-        
-        Enter the URL of your SAP BTP, Cloud Foundry API Endpoint. See [Regions and API Endpoints Available for the Cloud Foundry Environment](https://help.sap.com/viewer/3504ec5ef16548778610c7e89cc0eac3/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html#loiof344a57233d34199b2123b9620d0bb41).
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Org Name
-        
-        </td>
-        <td valign="top">
-        
-        Enter the name of your Cloud Foundry organization. You can find it in the overview of your subaccount in the SAP BTP cockpit.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Space
-        
-        </td>
-        <td valign="top">
-        
-        Enter the name of the Cloud Foundry space in which you want to test your application.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Deploy Type
-        
-        </td>
-        <td valign="top">
-        
-        From the dropdown list, choose the deployment type \(`standard` or `blue-green`\) you want to use.
+## Procedure
 
-        The default deployment type is `standard`. By using the `blue-green` deployment, you can deploy your application without downtime and with reduced risk.
+From the *Configuration Mode* drop-down list, choose *Job Editor*.
 
-        > ### Remember:  
-        > Before you use the blue-green deployment, please increase the memory quota for the Cloud Foundry runtime in your subaccount. Proceed as follows:
-        > 
-        > 1.  In the SAP BTP cockpit, navigate to your subaccount.
-        > 
-        > 2.  From the navigation pane, choose *Entitlements*.
-        > 
-        > 3.  \(Optional\) If there is no entry for the Cloud Foundry runtime, choose **Configure Entitlements** and **Add Service Plans**.
-        > 
-        > 4.  \(Optional\) In the popup, choose *Cloud Foundry Runtime*. Under *Available Service Plans*, select the checkbox *MEMORY* and choose *Add 1 Service Plan*.
-        > 
-        > 5.  Use *\+* to add quota for the *Cloud Foundry Runtime* service plan to the subaccount.
-        > 
-        > 
-        > For more information, see [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/5ba357b4fa1e4de4b9fcc4ae771609da.html).
+> ### Note:  
+> We recommend configuring SAP Continuous Integration and Delivery jobs using its Job Editor. You can, however, also configure them in your source repository. See [Configuring Jobs in Your Repository](configuring-jobs-in-your-repository-af397b1.md).
+
+The following sections correspond to the stages of your Cloud Foundry Environment job. Open them for more information.
+
+<a name="task_h1p_jx3_1zb"/>
+
+<!-- task\_h1p\_jx3\_1zb -->
+
+### Build
+
+In the **Build** stage, your application is packaged into a deployable archive. This stage is mandatory and executed with every build.
 
 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Credentials
-        
-        </td>
-        <td valign="top">
-        
-        To authenticate your pipeline against the Cloud Foundry API endpoint, either create a Basic Authentication or a Basic Authentication for Custom IdP credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
 
-        > ### Tip:  
-        > Use a technical user instead of your personal credentials.
+<a name="task_h1p_jx3_1zb__steps_mdt_l12_d1c"/>
 
-        Choose this credential from the dropdown list.
-        
-        </td>
-        </tr>
-        </table>
-        
-        **Actions for Configuring the UIVeri5 Test \(Deprecated\) Step**
+## Procedure
+
+1.  From the *Build Tool* drop-down list, choose the build tool you want to use.
+
+    If you don’t define a build tool, a default one \(`mta`\) is used.
+
+2.  From the *Build Tool Version* drop-down list, choose the build tool version you want to use. See [Supported Tools](supported-tools-5949283.md).
+
+    If you don’t define a build tool version, the latest one is used by default. See [Supported Tools](supported-tools-5949283.md).
+
+3.  **If you use the `mta` or `maven` build tool:** Either activate or deactivate the execution of *Maven Static Code Checks* that verify the syntax of your Java code.
+
+4.  **If you use the `mta` or `maven` build tool:** Either activate or deactivate the execution of a *Lint Check* that verifies the syntax of your JavaScript code.
+
+    If you want your build to fail if the lint check reveals any errors, check the *Fail on Error* checkbox.
+
+5.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
 
 
-        <table>
-        <tr>
-        <th valign="top">
+<a name="task_ny5_lx3_1zb"/>
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+<!-- task\_ny5\_lx3\_1zb -->
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        > ### Note:  
-        > **Please note that this step is deprecated and replaced by WebdriverIO tests.** Please remove the deprecated configurations and configure the *WebdriverIO Test* step instead.
-        > 
-        > For more details, see [GitHub](https://github.com/SAP/ui5-uiveri5#readme).
+### Additional Unit Tests
 
-        Either switch the execution of the UIVeri5 test stage on or off.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Configuration Path
-        
-        </td>
-        <td valign="top">
-        
-        Enter the path to the configuration file in your repository, for example: `.app/webapp/test/univeri5/conf.js` 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Base URL
-        
-        </td>
-        <td valign="top">
-        
-        Enter the URL of the application against which the UiVeri5 tests should be executed. See [Configuring Application URLs](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e623e372e6174f81af2b9b8ef8f6d6d3.html).
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Application Credentials
-        
-        </td>
-        <td valign="top">
-        
-        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
-
-        Choose this credential from the dropdown list.
-        
-        </td>
-        </tr>
-        </table>
-        
-        **Actions for Configuring the WebdriverIO Test Step**
+In the **Additional Unit Tests** stage, the tests you've implemented are executed.
 
 
-        <table>
-        <tr>
-        <th valign="top">
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+<a name="task_ny5_lx3_1zb__steps_kqz_wc2_d1c"/>
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        > ### Note:  
-        > The *WebdriverIO Test* step is available for build tool versions Node 16 and above. The WebdriverIO testing framework is no longer compatible with older Node.js versions.
+## Procedure
 
-        Either switch the execution of the *WebdriverIO Test* step on or off.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        npm Script
-        
-        </td>
-        <td valign="top">
-        
-        Enter the name of the test script to be executed. You can find it in the `scripts` section of your `package.json` file. If you don't define a name, a default one \("`wdi5`"\) is used.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Base URL
-        
-        </td>
-        <td valign="top">
-        
-        Enter the URL of the application against which the tests should be executed. See [Configuring Application URLs](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e623e372e6174f81af2b9b8ef8f6d6d3.html).
+1.  Either activate or deactivate the execution of the *Additional Unit Tests* stage.
+
+2.  In the *npm Script* text field, enter the name of the test script in the `scripts` section of your `package.json` file to be executed.
+
+3.  > ### Restriction:  
+    > This step doesn't apply to the  <?sap-ot O2O class="- topic/xref " href="019ed685a19b4efab4f7df0e108d1697.xml" text="" desc="" xtrc="xref:17" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6bd27c07ee3b428f9ad5a2e89084f3a3.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?>  pipeline.
+
+    \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
+
+
+<a name="task_chq_zmb_p1c"/>
+
+<!-- task\_chq\_zmb\_p1c -->
+
+### Malware Scan
+
+In the **Malware Scan** stage, your project files are scanned for malware and viruses.
+
+
+
+<a name="task_chq_zmb_p1c__steps_djz_bpb_p1c"/>
+
+## Procedure
+
+Either activate or deactivate the execution of the *Malware Scan* stage.
+
+<a name="task_fzk_nx3_1zb"/>
+
+<!-- task\_fzk\_nx3\_1zb -->
+
+### Acceptance
+
+In the **Acceptance** stage, automated end-to-end acceptance tests are executed.
+
+
+
+<a name="task_fzk_nx3_1zb__steps_cnq_xd2_d1c"/>
+
+## Procedure
+
+1.  Either activate or deactivate the execution of the *Acceptance* stage.
+
+    By switching on the *Acceptance* stage, you activate the *Deploy to Cloud Foundry Space* step.
+
+2.  In the *API Endpoint* text field, enter the URL of your SAP BTP, Cloud Foundry API Endpoint. See [Regions and API Endpoints Available for the Cloud Foundry Environment](https://help.sap.com/docs/btp/sap-business-technology-platform/regions?version=Cloud#loiof344a57233d34199b2123b9620d0bb41).
+
+3.  In the *Org Name* text field, enter the name of your Cloud Foundry organization. You can find it in the overview of your subaccount in the SAP BTP cockpit.
+
+4.  In the *Space* text field, enter the name of the Cloud Foundry space in which you want to test your application.
+
+5.  From the *Deploy Type* drop-down list, select the deployment type you want to use.
+
+    **If you use the mta build tool:** By using `blue-green` deployment, you can deploy your application without downtime and with reduced risk.
+
+    > ### Remember:  
+    > Before using blue-green deployment, increase the memory quota for the Cloud Foundry runtime in your subaccount as follows:
+    > 
+    > 1.  In the SAP BTP cockpit, navigate to your subaccount.
+    > 
+    > 2.  From the navigation pane, choose *Entitlements*.
+    > 
+    > 3.  Depending on if there already is an entry for the Cloud Foundry runtime, choose one of the following options:
+    > 
+    >     -   If there is no entry for the Cloud Foundry runtime, choose *Configure Entitlements* and *Add Service Plans*.
+    > 
+    >     -   If there already is an entry for the Cloud Foundry runtime, choose *Cloud Foundry Runtime*. Under *Available Service Plans*, select the checkbox *MEMORY* and choose *Add 1 Service Plan*.
+    > 
+    > 
+    > 4.  Choose *\+* to add quota for the *Cloud Foundry Runtime* service plan to your subaccount.
+    > 
+    > For more information, see [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts?version=Cloud).
+
+6.  To authenticate your job against the Cloud Foundry API endpoint, create a Basic Authentication credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+
+    Use a technical user instead of your personal credentials. For more information, see [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
+
+    Choose this credential from the *Credentials* drop-down list.
+
+7.  Either activate or deactivate the execution of the *WebdriverIO Test* step.
+
+    If you activate the *WebdriverIO Test* step, provide the following information:
+
+    1.  In the *npm Script* text field, enter the name of the test script in the `scripts` section of your `package.json` file to be executed.
+
+        If you don't define a name, a default one \(`wdi5`\) is used.
+
+    2.  In the *Base URL* text field, enter the URL of the application against which the tests should be executed. See [Configuring Application URLs in the Cloud Foundry CLI](https://help.sap.com/docs/btp/sap-business-technology-platform/configuring-application-urls?version=Cloud).
 
         > ### Tip:  
         > If you don't know the URL, you can deploy your application first. You will find the generated URL by navigating to *Subaccount*** \> ***Cloud Foundry Space*** \> **Overview page of the application** \> ***Application Routes*.
 
+    3.  \(Optional\) To authenticate your pipeline against the application, create a Basic Authentication credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Credentials
-        
-        </td>
-        <td valign="top">
-        
-        \(Optional\) To authenticate your pipeline against the application, create a *Basic Authentication* credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+        Use a technical user instead of your personal credentials. For more information, see [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
 
-        > ### Tip:  
-        > Avoid using a technical user credential and create a special test user instead.
+        Choose this credential from the *Credentials* drop-down list.
 
-        Choose this credential from the dropdown list.
-
-        You can access the username and password in your individual test files by using:
+        You can access the username and password in your individual test files by using the following variables:
 
         ```
-        
-            const usernameVar=process.env.e2e_username
-            const passwordVar=process.env.e2e_password
-        
+            const usernameVar=process.env.wdi5_username
+            const passwordVar=process.env.wdi5_password
         ```
 
 
-        
-        </td>
-        </tr>
-        </table>
-        
-    4.  Configure the *Compliance* stage
 
-        **Actions for Configuring the Compliance Stage**
+<a name="task_fbc_4x3_1zb"/>
 
+<!-- task\_fbc\_4x3\_1zb -->
 
-        <table>
-        <tr>
-        <th valign="top">
+### Compliance
 
-        Step
-        
-        </th>
-        <th valign="top">
-
-        Parameter
-        
-        </th>
-        <th valign="top">
-
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top" rowspan="7">
-        
-        SonarQube Scan
-        
-        </td>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        Either switch the execution of the *SonarQube Scan* step on or off.
-
-        This step enables you to integrate code quality and security analysis into your pipeline. If you choose to enable the *SonarQube Scan* step, make sure you have a running SonarQube server instance. See [SonarQube](https://www.sonarqube.org/). You can also use the public offering - SonarCloud.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Mode
-        
-        </td>
-        <td valign="top">
-        
-        Select the mode in which you want to analyze your application. The following options are displayed in a dropdown list:
-
-        -   `SonarCloud`
-        -   `SonarQube` 
+In the **Compliance** stage, automated code quality and security checks are executed.
 
 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Cloud Connector
-        
-        </td>
-        <td valign="top">
-        
-        \(Optional\) If you chose the SonarQube mode, you can additionally connect to on-premise systems using Cloud Connector. See [Cloud Connector](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/e6c7616abb5710148cfcf3e75d96d596.html).
 
-        From the dropdown list, either choose credentials that you've already defined in [Creating Credentials](creating-credentials-6658c81.md) or create new ones by choosing *Create Credentials*.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        URL
-        
-        </td>
-        <td valign="top">
-        
-        Enter the full URL to your backend system:
+<a name="task_fbc_4x3_1zb__steps_ih5_542_d1c"/>
 
-        -   For the SonarCloud mode, choose the URL from the dropdown list
+## Procedure
 
-        -   For the SonarQube mode, enter the custom URL to your internet-facing SonarQube server
+1.  Either activate or deactivate the execution of the *SonarQube Scan* step, which adds code quality and security analysis to your job.
 
-            > ### Note:  
-            > If you have configured your Cloud Connector, this must be an HTTP URL \(not HTTPS\).
+    For the *SonarQube Scan* step, you either need a running SonarQube server or SonarCloud instance. See [https://www.sonarsource.com/products/sonarqube/](https://www.sonarsource.com/products/sonarqube/).
 
+2.  From the *Mode* drop-down list, select the mode in which you want to analyze your application.
 
-        Before configuring the next parameters, make sure that you have created a project in your SonarQube instance. For more information, see the [SonarQube documentation](https://docs.sonarqube.org/latest/setup/get-started-2-minutes/).
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Organization
-        
-        </td>
-        <td valign="top">
-        
-        Enter the organization that you provided for your project.
+3.  **If you use the `SonarQube` mode:** To connect to on-premises systems using [Cloud Connector](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector?version=Cloud), in the *Select Credentials* pop-up, either choose credentials that you've already defined or create new ones by choosing *Create Credentials*. See [Creating Credentials](creating-credentials-6658c81.md).
+
+4.  In the *URL* text field, enter the full URL to your backend system as follows:
+
+    -   If you use the `SonarCloud` mode, choose the corresponding URL from the dropdown list.
+
+    -   If you use the `SonarQube` mode, enter the custom URL to your internet-facing SonarQube server.
+
+        If you've configured a Cloud Connector, this URL must be an HTTP URL \(not HTTPS\).
 
         > ### Note:  
-        > This step is only mandatory for the `SonarCloud` mode.
+        > Before configuring the following parameters, make sure that you've created a project in your SonarQube instance. For more information, see the [SonarQube documentation](https://docs.sonarsource.com/sonarqube/latest/try-out-sonarqube/).
 
 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Project Key
-        
-        </td>
-        <td valign="top">
-        
-        Enter the project key that you provided for your project.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        SonarQube Token Credentials
-        
-        </td>
-        <td valign="top">
-        
-        To authenticate your pipeline against your SonarQube instance, create a *Secret Text* credential of a user, who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
+5.  **If you use the `SonarCloud` mode:** In the *Organization* text field, enter the organization that you've provided for your project.
 
-        In the *Secret* text field, paste the token that was generated when creating your SonarQube project. If you are unable to retrieve your token, generate a new one. See [Generating and Using Tokens](https://docs.sonarqube.org/latest/user-guide/user-token/).
+6.  In the *Project Key* text field, enter the project key that you've provided for your project.
 
-        Choose this credential from the dropdown list.
-        
-        </td>
-        </tr>
-        </table>
-        
-    5.  Configure the *Release* stage.
+7.  To authenticate your pipeline against your SonarQube instance, create a Secret Text credential of a user who has the appropriate permissions. See [Creating Credentials](creating-credentials-6658c81.md).
 
-        **Actions for Configuring the Deploy to Cloud Foundry Space Step**
+    In the *Secret text* field, paste the token that was generated when creating your SonarQube project. If you are unable to retrieve your token, generate a new one. See [Generating and Using Tokens](https://docs.sonarsource.com/sonarqube/latest/user-guide/user-account/generating-and-using-tokens/).
+
+    Choose this credential from the *SonarQube Token Credentials* drop-down list.
+
+8.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
 
 
-        <table>
-        <tr>
-        <th valign="top">
+<a name="task_ujs_px3_1zb"/>
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+<!-- task\_ujs\_px3\_1zb -->
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        Either switch the execution of the *Deploy to Cloud Foundry Space* step on or off.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        API Endpoint
-        
-        </td>
-        <td valign="top">
-        
-        Enter the URL of your SAP BTP, Cloud Foundry environment API endpoint. See [Regions and API Endpoints Available for the Cloud Foundry Environment](https://help.sap.com/viewer/3504ec5ef16548778610c7e89cc0eac3/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html#loiof344a57233d34199b2123b9620d0bb41).
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Org Name
-        
-        </td>
-        <td valign="top">
-        
-        Enter the name of your Cloud Foundry organization. You can find it in the overview of your subaccount in the SAP BTP cockpit.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Space
-        
-        </td>
-        <td valign="top">
-        
-        Enter the name of the Cloud Foundry space to which you want to deploy your application.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Deploy Type
-        
-        </td>
-        <td valign="top">
-        
-        From the dropdown list, choose the deployment type \(`standard` or `blue-green`\) you want to use.
+### Release
 
-        The default deployment type is `standard`. By using the `blue-green` deployment, you can deploy your application without downtime and with reduced risk.
+In the **Release** stage, the changes are released to the targets you've defined.
+
+
+
+<a name="task_ujs_px3_1zb__steps_sb5_ct2_d1c"/>
+
+## Procedure
+
+1.  Either activate or deactivate the execution of the *Deploy to Cloud Foundry Space* step.
+
+    If you turn on the *Deploy to Cloud Foundry Space* step, provide the following information:
+
+    1.  In the *API Endpoint* tex field, enter the URL of your SAP BTP, Cloud Foundry API Endpoint. See [Regions and API Endpoints Available for the Cloud Foundry Environment](https://help.sap.com/docs/btp/sap-business-technology-platform/regions?version=Cloud#loiof344a57233d34199b2123b9620d0bb41).
+
+    2.  In the *Org Name* text field, enter the name of your Cloud Foundry organization. You can find it in the overview of your subaccount in the SAP BTP cockpit.
+
+    3.  In the *Space* text field, enter the name of the Cloud Foundry space to which you want to deploy your application.
+
+    4.  From the *Deploy Type* drop-down list, select the deployment type you want to use.
+
+        By using `blue-green` deployment, you can deploy your application without downtime and with reduced risk.
 
         > ### Remember:  
-        > Before you use the blue-green deployment, please increase the memory quota for the Cloud Foundry runtime in your subaccount. Proceed as follows:
+        > Before using blue-green deployment, increase the memory quota for the Cloud Foundry runtime in your subaccount as follows:
         > 
         > 1.  In the SAP BTP cockpit, navigate to your subaccount.
         > 
         > 2.  From the navigation pane, choose *Entitlements*.
         > 
-        > 3.  \(Optional\) If there is no entry for the Cloud Foundry runtime, choose **Configure Entitlements** and **Add Service Plans**.
+        > 3.  Depending on if there already is an entry for the Cloud Foundry runtime, choose one of the following options:
         > 
-        > 4.  \(Optional\) In the popup, choose *Cloud Foundry Runtime*. Under *Available Service Plans*, select the checkbox *MEMORY* and choose *Add 1 Service Plan*.
+        >     -   If there is no entry for the Cloud Foundry runtime, choose *Configure Entitlements* and *Add Service Plans*.
         > 
-        > 5.  Use *\+* to add quota for the *Cloud Foundry Runtime* service plan to the subaccount.
+        >     -   If there already is an entry for the Cloud Foundry runtime, choose *Cloud Foundry Runtime*. Under *Available Service Plans*, select the checkbox *MEMORY* and choose *Add 1 Service Plan*.
         > 
         > 
-        > For more information, see [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/BTP/65de2977205c403bbc107264b8eccf4b/5ba357b4fa1e4de4b9fcc4ae771609da.html).
+        > 4.  Choose *\+* to add quota for the *Cloud Foundry Runtime* service plan to your subaccount.
+        > 
+        > For more information, see [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts?version=Cloud).
+
+    5.  To authenticate your job against the Cloud Foundry API endpoint, create a Basic Authentication credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+
+        Use a technical user instead of your personal credentials. For more information, see [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
+
+        Choose this credential from the *Credentials* drop-down list.
 
 
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Credentials
-        
-        </td>
-        <td valign="top">
-        
-        To authenticate your pipeline against the Cloud Foundry API endpoint, either create a Basic Authentication or a Basic Authentication for Custom IdP credential of a user who has the appropriate permissions. The user must have the Space Developer role and be a member of the specified Cloud Foundry organization and space. See [Creating Credentials](creating-credentials-6658c81.md).
+2.  Either switch the *Cloud Transport Management* step on or off.
 
-        > ### Tip:  
-        > Use a technical user instead of your personal credentials.
+    For more information on why and how to integrate SAP Cloud Transport Management into your continuous delivery process, see [Integrate Cloud Transport Management into Your Job](integrate-cloud-transport-management-into-your-job-a0f029b.md).
 
-        Choose this credential from the dropdown list.
-        
-        </td>
-        </tr>
-        </table>
-        
-        **Actions for Configuring the Upload to Cloud Transport Management Step**
+    If you turn on the *Cloud Transport Management* step, provide the following information:
+
+    1.  From the *Transport Operation* drop-down list, select the action you want to execute to further distribute your deployable file along a transport route in SAP Cloud Transport Management:
+
+        -   *Export from:* Create a transport request that is added to the queue of the nodes that follow the export node. Choose this option for lifecycles driven by SAP Cloud ALM.
+
+        -   *Upload to:* Create a transport request that is added to the queue of the upload node in SAP Cloud Transport Management.
 
 
-        <table>
-        <tr>
-        <th valign="top">
+    2.  In the text field next to the *Transport Operation* drop-down list, enter the name of the node for the export from or upload to SAP Cloud Transport Management.
 
-        Parameter
-        
-        </th>
-        <th valign="top">
+    3.  To authenticate your job against SAP Cloud Transport Management, create a Service Key credential. See [Creating Credentials](creating-credentials-6658c81.md).
 
-        Action
-        
-        </th>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        State
-        
-        </td>
-        <td valign="top">
-        
-        Either switch the *Upload to Cloud Transport Management* step on or off.
-
-        For more information on why and how to integrate SAP Cloud Transport Management into your continuous delivery process, see [\(Optional\) Integrate SAP Cloud Transport Management into Your Pipeline](configure-an-sap-fiori-in-the-neo-environment-job-in-your-repository-4f6185c.md#loio0b9c5d30aff3425c96a440dce60bd9c7).
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Node Name
-        
-        </td>
-        <td valign="top">
-        
-        Enter the name of the node for the upload to SAP Cloud Transport Management.
-        
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        
-        Service Key
-        
-        </td>
-        <td valign="top">
-        
-        To authenticate your pipeline against SAP Cloud Transport Management, create a *Service Key* credential. See [Creating Credentials](creating-credentials-6658c81.md).
-
-        Choose this credential from the dropdown list.
-        
-        </td>
-        </tr>
-        </table>
-        
-
-    > ### Note:  
-    > You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see  <?sap-ot O2O class="- topic/xref " href="c8314b6c8e564f42925e9d10453bd541.xml" text="" desc="" xtrc="xref:31" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6bd27c07ee3b428f9ad5a2e89084f3a3.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
-
-4.  Choose *Create*.
+        Choose this credential from the *Service Key* dropdown list.
 
 
-<a name="loio0b9c5d30aff3425c96a440dce60bd9c7"/>
+3.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
 
-<!-- loio0b9c5d30aff3425c96a440dce60bd9c7 -->
 
-## \(Optional\) Integrate SAP Cloud Transport Management into Your Pipeline
+<a name="task_ptx_zlh_1zb"/>
 
-Upload your artifact to SAP Cloud Transport Management to implement a continuous delivery process for your project.
+<!-- task\_ptx\_zlh\_1zb -->
+
+## Build Notifications
 
 
 
-<a name="loio0b9c5d30aff3425c96a440dce60bd9c7__prereq_jst_qjl_3fb"/>
+<a name="task_ptx_zlh_1zb__prereq_vbc_2v2_d1c"/>
 
 ## Prerequisites
 
--   You have access to the SAP Cloud Transport Management service. See [Provide Access to SAP Cloud Transport Management](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/13894bed9e2d4b25aa34d03d002707f9.html).
-
--   You have set up the SAP Cloud Transport Management service. See [Set Up the Environment to Transport Content Archives directly in an Application](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/8d9490792ed14f1bbf8a6ac08a6bca64.html).
-
--   You’ve created a destination in the Cloud Foundry environment for each productive subaccount to which you want to transport an archive. See [Create Transport Destinations](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/c9905c142cf14aea86fe2451434faed9.html).
-
-
-> ### Note:  
-> In the following procedure, we assume a 2-stage landscape that consists of a development and production subaccount. However, it’s also valid for landscapes with more stages, if you define the additional nodes within the transport route accordingly.
+You've enabled the SAP Alert Notification service and created a service key to authenticate your job against it. See [Initial Setup](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/initial-setup?version=Cloud) and [Credential Management](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/credential-management?version=Cloud).
 
 
 
-<a name="loio0b9c5d30aff3425c96a440dce60bd9c7__context_ejk_yxj_kfb"/>
+<a name="task_ptx_zlh_1zb__context_l43_lv2_d1c"/>
 
 ## Context
 
-With **Build** and **Deploy** stages only, your pipeline only deploys to one space in the Cloud Foundry or subaccount in the Neo environment. A full-fledged continuous delivery process, however, requires a staged landscape with several spaces or subaccounts \(for example, development and production or development, test, and production\). With SAP Cloud Transport Management, you can define nodes and routes for such a staged landscape. For more information, see [Use the Transport Landscape Wizard](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/f14192ede8ac4603955b572537d6bec2.html).
-
-When combining SAP Continuous Integration and Delivery and SAP Cloud Transport Management, after being built, the artifact is deployed to your space or subaccount and, in an additional step in the job, uploaded to SAP Cloud Transport Management. The export of the multitarget application archive \(MTAR\) triggers its transport along the transport route you’ve defined. When it has reached the import queue of the production node, the release manager manually triggers its import to the production node in the user interface of SAP Cloud Transport Management.
-
-The following graphic shows this procedure:
-
-  
-  
-**Integration of SAP Cloud Transport Management**
-
-![Integration of the Transport Management Service](images/TMS_Integration_a844e6e.png "Integration of SAP Cloud Transport Management")
-
-Working with the integration of SAP Cloud Transport Management comprises the following steps:
-
-1.  Push your code changes to your source code management system or manually trigger a new build in SAP Continuous Integration and Delivery.
-
-2.  SAP Continuous Integration and Delivery builds, tests, and deploys your changes, and uploads them to SAP Cloud Transport Management. The artifact appears in the import queue.
-
-3.  Validation tests are executed on the application deployed in your QA node.
-
-4.  The release manager approves the import by selecting the transport to be imported.
-
-5.  The application is released to the production node.
-
-
-To integrate SAP Cloud Transport Management into SAP Continuous Integration and Delivery, perform the following tasks:
-
-<a name="task_zvp_q25_blb"/>
-
-<!-- task\_zvp\_q25\_blb -->
-
-### Create the Service Key Credential
-
-Create the Service Key credential for SAP Cloud Transport Management.
+If you enable build notifications in SAP Continuous Integration and Delivery, your job automatically sends notifications about build events to SAP Alert Notification service for SAP BTP. The Alert Notification service lets you manage your build notifications and consume them through a channel of your choice. For more information, see [SAP Alert Notification Service for SAP BTP](https://help.sap.com/docs/alert-notification?version=Cloud).
 
 
 
-<a name="task_zvp_q25_blb__steps_cgp_z25_blb"/>
+<a name="task_ptx_zlh_1zb__steps_w2g_gw2_d1c"/>
 
 ## Procedure
 
-1.  In the SAP BTP cockpit, navigate to the subaccount in which you’ve created an instance for SAP Cloud Transport Management.
+Either switch the option *Send Build Notifications via SAP Alert Notification Service* on or off.
 
-2.  From the navigation area, choose <span class="SAP-icons-V5"></span> *Spaces* and select your space in which you’ve created the Cloud Transport Management instance.
+If you turn on the *Send Build Notifications via SAP Alert Notification Service* option, provide the following information:
 
-3.  From the navigation area, choose <span class="SAP-icons-V5"></span> *Services* \> *Instances*.
+1.  To authenticate your job against SAP Alert Notification service, create a Service Key credential. See [Creating Credentials](creating-credentials-6658c81.md).
 
-4.  Choose the name of your service instance.
+    In the Service Key text field, enter the already created service key of your Alert Notification service instance.
 
-5.  From the navigation area, choose :key: *Service Keys*.
+    Choose this service key credential from the *Service Key* drop-down list.
 
-6.  Copy the entire service key.
-
-7.  In SAP Continuous Integration and Delivery, create a new Service Key credential and paste the copied service key into the respective text field. See [Creating Credentials](creating-credentials-6658c81.md).
-
-8.  When creating a job, use the newly created Service Key credential in the *Upload to Cloud Transport Management* stage.
-
-    For the *Node Name*, see the following section.
-
-
-<a name="task_rdg_pn5_blb"/>
-
-<!-- task\_rdg\_pn5\_blb -->
-
-### Create the Transport Nodes and Route
-
-Create nodes for your spaces or subaccounts, connect them through a transport route, and provide the respective data to SAP Continuous Integration and Delivery.
-
-
-
-<a name="task_rdg_pn5_blb__steps_g3s_sn5_blb"/>
-
-## Procedure
-
-1.  In SAP Cloud Transport Management, create a node for each of your development and production spaces or subaccounts. See [Create Transport Nodes](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/f71a4d5550cd453ea824d5b5c677969d.html).
-
-2.  Connect the nodes through a transport route. See [Create Transport Routes](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/dddb74937a014aea8d3d76d740180597.html).
-
-3.  In your job configuration in SAP Continuous Integration and Delivery, enter the name of your development node in the *Upload to SAP Cloud Transport Management* stage.
-
-4.  When you've finished your job creation, choose *Add*.
+2.  \(Optional\) In the *Custom Tag* text field, add a tag to the notification.
 
 

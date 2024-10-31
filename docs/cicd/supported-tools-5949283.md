@@ -85,6 +85,10 @@ Cloud MTA Build Tool \(MBT\)
 
 -   `MBTJ19N18` \(MBT with Java 19 and Node 18\)
 
+-   `MBTJ21N18` \(MBT with Java 21 and Node 18\)
+
+-   `MBTJ21N20` \(MBT with Java 21 and Node 20\)
+
 
 
 
@@ -93,11 +97,9 @@ Cloud MTA Build Tool \(MBT\)
 
 Use this build tool for developing the following applications:
 
--    <?sap-ot O2O class="- topic/xref " href="7c2a049670f64993b9d67c8f84ba0969.xml" text="" desc="" xtrc="xref:2" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [Cloud Foundry Environment](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--    <?sap-ot O2O class="- topic/xref " href="8887fe3c5445442b915d3c066c010d75.xml" text="" desc="" xtrc="xref:3" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
-
--    <?sap-ot O2O class="- topic/xref " href="1302e9ae408b4dc38d7109c75db9aa75.xml" text="" desc="" xtrc="xref:4" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [SAP Fiori in the Neo Environment](configure-an-sap-fiori-in-the-neo-environment-job-619a864.md#loio619a864813584bd1a433cafac1fb0c1e)
 
 
 
@@ -112,7 +114,7 @@ See [Cloud MTA Build Tool \(MBT\).](https://sap.github.io/cloud-mta-build-tool/)
 <tr>
 <td valign="top">
 
-Node.js
+npm
 
 </td>
 <td valign="top">
@@ -134,9 +136,9 @@ Node.js
 
 Use this build tool for developing the following applications:
 
--    <?sap-ot O2O class="- topic/xref " href="7c2a049670f64993b9d67c8f84ba0969.xml" text="" desc="" xtrc="xref:6" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [Cloud Foundry Environment](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--    <?sap-ot O2O class="- topic/xref " href="5a4ec31140e74970866fcd776cd856f1.xml" text="" desc="" xtrc="xref:7" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [SAP Fiori For the ABAP Platform](configure-an-sap-fiori-for-the-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
 
 
 
@@ -165,13 +167,15 @@ Maven
 
 -   `MVNJ17` \(Maven with Java 17\)
 
+-   `MVNJ21` \(Maven with Java 21\)
+
 
 
 
 </td>
 <td valign="top">
 
-Use this build tool for developing  <?sap-ot O2O class="- topic/xref " href="7c2a049670f64993b9d67c8f84ba0969.xml" text="" desc="" xtrc="xref:9" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?>  applications.
+Use this build tool for developing [Cloud Foundry Environment](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3) applications.
 
 </td>
 <td valign="top">
@@ -198,7 +202,7 @@ Docker
 </td>
 <td valign="top">
 
-Use this build tool for developing  <?sap-ot O2O class="- topic/xref " href="10970393828c46498806d1b322cf05a4.xml" text="" desc="" xtrc="xref:11" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> .
+Use this build tool for developing [Container-Based Applications](configure-a-container-based-applications-job-87cf47a.md).
 
 </td>
 <td valign="top">
@@ -253,13 +257,11 @@ sonar-scanner CLI. 4.7
 
 Use this testing tool for developing the following applications:
 
--    <?sap-ot O2O class="- topic/xref " href="7c2a049670f64993b9d67c8f84ba0969.xml" text="" desc="" xtrc="xref:13" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [Cloud Foundry Environment](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--    <?sap-ot O2O class="- topic/xref " href="8887fe3c5445442b915d3c066c010d75.xml" text="" desc="" xtrc="xref:14" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [SAP Fiori in the Neo Environment](configure-an-sap-fiori-in-the-neo-environment-job-619a864.md#loio619a864813584bd1a433cafac1fb0c1e)
 
--    <?sap-ot O2O class="- topic/xref " href="1302e9ae408b4dc38d7109c75db9aa75.xml" text="" desc="" xtrc="xref:15" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
-
--    <?sap-ot O2O class="- topic/xref " href="5a4ec31140e74970866fcd776cd856f1.xml" text="" desc="" xtrc="xref:16" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [SAP Fiori for the ABAP Platform](configure-an-sap-fiori-for-the-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
 
 
 
@@ -281,11 +283,9 @@ Chromium v114
 
 Use this testing tool for developing the following applications:
 
--    <?sap-ot O2O class="- topic/xref " href="7c2a049670f64993b9d67c8f84ba0969.xml" text="" desc="" xtrc="xref:17" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-   [Cloud Foundry Environment](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--    <?sap-ot O2O class="- topic/xref " href="8887fe3c5445442b915d3c066c010d75.xml" text="" desc="" xtrc="xref:18" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
-
--    <?sap-ot O2O class="- topic/xref " href="1302e9ae408b4dc38d7109c75db9aa75.xml" text="" desc="" xtrc="xref:19" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> 
+-    <?sap-ot O2O class="- topic/xref " href="1302e9ae408b4dc38d7109c75db9aa75.xml" text="" desc="" xtrc="xref:16" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/5949283e74cf4735ae59de4a4d3a9773.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> [SAP Fiori in the Neo Environment](configure-an-sap-fiori-in-the-neo-environment-job-619a864.md#loio619a864813584bd1a433cafac1fb0c1e)
 
 
 

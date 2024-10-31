@@ -4,7 +4,7 @@
 
 # Using the API
 
-Discover, explore, and test the application programming interface \(API\) available for SAP Continuous Integration and Delivery on SAP API Business Hub.
+Discover, explore, and test the application programming interface \(API\) available for SAP Continuous Integration and Delivery on SAP Business Accelerator Hub.
 
 
 
@@ -27,15 +27,15 @@ Discover, explore, and test the application programming interface \(API\) availa
 
 SAP Continuous Integration and Delivery provides an API that can be used to configure the service, serving as an alternative configuration method to the previously described UI-based one and allowing you to integrate the service with custom workflows.
 
-The various API requests and responses are documented on the SAP API Business Hub. You can also try them out to see if they meet your requirements. For more information, see [SAP API Business Hub](https://api.sap.com/getting-started).
+The various API requests and responses are documented on the SAP Business Accelerator Hub. You can also try them out to see if they meet your requirements. For more information, see [SAP Business Accelerator Hub](https://api.sap.com/getting-started).
 
-The steps below show how to configure an environment for SAP API Business Hub to try out the SAP Continuous Integration and Delivery API. See [Trying Out APIs](https://help.sap.com/viewer/e56a6c50d31541ea826021dc8e721a53/Cloud/en-US/de255b9e0c374ce68151f6b9ad517aba.html).
+The steps below show how to configure an environment for SAP Business Accelerator Hub to try out the SAP Continuous Integration and Delivery API. See [Trying Out APIs](https://help.sap.com/viewer/e56a6c50d31541ea826021dc8e721a53/Cloud/en-US/de255b9e0c374ce68151f6b9ad517aba.html).
 
 
 
 ## Procedure
 
-1.  Log on to the [SAP API Business Hub](https://api.sap.com/) home page and navigate to [Overview | SAP Continuous Integration and Delivery Service](https://api.sap.com/api/CloudCiApiSuite/overview).
+1.  Log on to the [SAP Business Accelerator Hub](https://api.sap.com/) home page and navigate to [Overview | SAP Continuous Integration and Delivery Service](https://api.sap.com/api/CloudCiApiSuite/overview).
 
 2.  Navigate to the *API Reference* section. The API resources are displayed on the left side, next to the corresponding API endpoints on the right side.
 
@@ -71,5 +71,5 @@ The steps below show how to configure an environment for SAP API Business Hub to
 
 ## Results
 
-You can now access the SAP Continuous Integration and Delivery API documentation and use the SAP API Business Hub *Try Out* feature to get an impression of it.
+You can now access the SAP Continuous Integration and Delivery API documentation and use the SAP Business Accelerator Hub *Try Out* feature to get an impression of it.
 

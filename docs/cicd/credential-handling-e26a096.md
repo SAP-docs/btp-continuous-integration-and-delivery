@@ -77,7 +77,7 @@ For more information, see SAP blog [Attacks on Open Source Supply Chains: How Ha
 
 ## Credential Lists
 
-If you configure SAP Continuous Integration and Delivery jobs in your repository, by default, all credentials defined in the service are passed to the [build](concepts-707017c.md#loio707017c681aa4bc09d0279f08115dcae__section_dxw_cp3_qnb). By configuring a credential list, however, you can specify which credentials are passed. See [\(Optional\) Configure a Credential List](optional-configure-a-credential-list-907b44a.md).
+If you configure SAP Continuous Integration and Delivery jobs in your repository, by default, all credentials defined in the service are passed to the [build](concepts-707017c.md#loio707017c681aa4bc09d0279f08115dcae__section_dxw_cp3_qnb). By configuring a credential list, however, you can specify which credentials are passed. See [Configure a Credential List](configure-a-credential-list-907b44a.md).
 
 <a name="loioa7c70ccc9ec24bb1bd2630cde60dedf9"/>
 
@@ -103,6 +103,6 @@ We strongly recommend that you put the following operational countermeasures in 
 
     SAP Continuous Integration and Delivery allows you to change credentials at any time without affecting the already running builds. Before changing your credentials, please verify that they are valid for the corresponding Git source repository or SAP BTP service.
 
--   Configure a credential list to specify which credentials to pass to the build. See [\(Optional\) Configure a Credential List](optional-configure-a-credential-list-907b44a.md).
+-   Configure a credential list to specify which credentials to pass to the build. See [Configure a Credential List](configure-a-credential-list-907b44a.md).
 
 

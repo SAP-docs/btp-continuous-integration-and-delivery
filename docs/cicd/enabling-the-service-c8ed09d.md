@@ -23,6 +23,8 @@ Enable SAP Continuous Integration and Delivery in the SAP BTP cockpit.
 
     **Partners:** You have a Test, Demonstration, and Development License. See [SAP Partner Licensing Services](https://partneredge.sap.com/en/partnership/licenses/tdd.html).
 
+-   You've assigned the **default \(Application\)** \(service technical name: `cicd-app`\) service plan of the **Continuous Integration & Delivery** service to your subaccount. See [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts).
+
 
 
 

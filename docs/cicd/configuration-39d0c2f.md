@@ -26,11 +26,11 @@ Configuring SAP Continuous Integration and Delivery comprises the following task
 
     Discover, test, and use the SAP Continuous Integration and Delivery API.
 
--   [**Managing Settings**](managing-settings-0181fc5.md)
+-   [**Managing Settings**](manage-allowed-spaces-0181fc5.md)
 
     View or edit relevant settings using the SAP Continuous Integration and Delivery settings dialog.
 
--   [**Configure a Credential List**](optional-configure-a-credential-list-907b44a.md)
+-   [**Configure a Credential List**](configure-a-credential-list-907b44a.md)
 
     Specify the credentials that are passed to the build.
 

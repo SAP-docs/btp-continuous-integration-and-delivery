@@ -15,9 +15,7 @@ Manage the authorization for SAP Continuous Integration and Delivery.
 > ### Note:  
 > If you are using this service as part of SAP Build Code, follow the [SAP Build Code Initial Setup](https://help.sap.com/docs/build_code/d0d8f5bfc3d640478854e6f4e7c7584a/07698d7c31284e4db370acdf017cfd14.html?version=SHIP) instructions instead.
 
--   You’re an administrator of your global account and subaccount on SAP BTP.
-
--   **If you use an enterprise account \(no trial account\):** You’re a User & Role Administrator of your subaccount on SAP BTP and can therefore view the :shield: *Security* section in its navigation pane. See [Managing Subaccounts Using the Cockpit](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/55d0b6d8b96846b8ae93b85194df0944.html).
+-   You’re assigned the Subaccount Administrator role collection. See [Managing Subaccounts Using the Cockpit](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/55d0b6d8b96846b8ae93b85194df0944.html).
 
 -   You've enabled SAP Continuous Integration and Delivery. See [Enabling the Service](enabling-the-service-c8ed09d.md).
 
@@ -345,6 +343,45 @@ View a build log
 <td valign="top">
 
 **Yes** 
+
+</td>
+</tr>
+<tr>
+<td valign="top" rowspan="2">
+
+Allowed Spaces
+
+</td>
+<td valign="top">
+
+View allowed spaces
+
+</td>
+<td valign="top">
+
+**Yes** 
+
+</td>
+<td valign="top">
+
+No
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Modify allowed spaces
+
+</td>
+<td valign="top">
+
+**Yes** 
+
+</td>
+<td valign="top">
+
+No
 
 </td>
 </tr>

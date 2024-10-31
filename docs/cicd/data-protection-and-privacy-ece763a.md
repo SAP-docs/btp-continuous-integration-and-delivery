@@ -12,15 +12,14 @@ Governments place legal requirements on industry to protect data and privacy. We
 The following sections provide information about SAP Continuous Integration and Delivery. For the central data protection and privacy statement for SAP BTP, see [Data Protection and Privacy](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/7e513d31704a4a87831191e504ca850a.html).
 
 > ### Caution:  
-> SAP Continuous Integration and Delivery does not provide the technical capabilities to support the collection, processing, and storage of personal data. To prioritize data privacy and protection, we recommend to minimize the amount of personal data processed by SAP Continuous Integration and Delivery.
+> SAP Continuous Integration and Delivery does not provide the technical capabilities to support the collection, processing, and storage of personal data.
 
-During a pipeline run, SAP Continuous Integration and Delivery copies and processes data from the assigned source code repositories. You as the data controller are legally responsible to apply best practices in protecting your personal data. We strongly advise you not to store any personal data in the source code repositories processed by SAP Continuous Integration and Delivery.
+> ### Caution:  
+> Please don’t enter personal data in fields such as job names, job descriptions, and job parameters like branch name, repository name, or additional commands. These fields aren’t intended to process personal data.
+> 
+> Credentials are required to securely connect to source code management and other services during a build. See [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9). If credentials are associated with a personal user, they must be considered personal data. Therefore, and from a general security perspective, we strongly recommend to use a technical user instead of a personal user when creating credentials. For more information, see *Security Recommendations* in [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
 
-Credentials are required to securely connect to source code management and other services during a pipeline run. See [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9). If credentials are associated with a personal user, they must be considered as personal data. Therefore, and from a general security perspective, it is strongly recommended to use a technical user instead of your personal user when creating credentials. For more information, see *Security Recommendations* in [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
-
-Please be aware that source code management systems may include your usernames and passwords in repository clone URLs. While SAP Continuous Integration and Delivery rejects URLs containing passwords, URLs containing usernames are accepted. However, a warning is displayed if a username is detected as part of a clone URL. To protect your personal data, we recommend omitting usernames from your clone URLs.
-
-The functionality of SAP Continuous Integration and Delivery requires to process some personal data. The following paragraphs provide transparency on the processing of personal data by SAP Continuous Integration and Delivery.
+The functionality of SAP Continuous Integration and Delivery requires to process some personal data. The following paragraphs provide transparency on this processing.
 
 <a name="loioca8276194a65407b80bae43b4faece47"/>
 
@@ -28,22 +27,18 @@ The functionality of SAP Continuous Integration and Delivery requires to process
 
 ## Processing of Personal Data
 
-Within a pipeline run, SAP Continuous Integration and Delivery processes and temporarily stores the following information to identify users:
+Within a build, SAP Continuous Integration and Delivery processes and temporarily stores the following information to identify users:
 
 -   **E-mail addresses of users who triggered a build**
 
-    To be able to trace who triggered a pipeline run, SAP Continuous Integration and Delivery stores the e-mail address of the corresponding user. It is also directly visible in the detailed view of your CI/CD build. Depending on how a job is triggered, SAP Continuous Integration and Delivery stores one of the following:
+    To be able to trace who triggered a build of a job, SAP Continuous Integration and Delivery stores the e-mail address of the corresponding user. Depending on how a job is triggered, SAP Continuous Integration and Delivery stores one of the following e-mail addresses:
 
-    -   The e-mail address of the SAP BTP user, if the job is triggered manually using the API or UI
+    -   If the build is triggered manually using the service user interface or API: The e-mail address of the SAP BTP user
 
-    -   The e-mail address of the commit author, if the job is triggered from the source code repisotory using a webhook
-
-        SAP Continuous Integration and Delivery is not the primary storage location of the e-mail addresses. The e-mail addresses are taken from the source code management system or an identity provider \(IdP\) connected to your SAP BTP subaccount.
+    -   If the build is triggered automatically through a webhook with the source code repository: The e-mail address of the commit author
 
 
--   **Usernames and e-mail addresses from commit events**
-
-    When fetching the sources from your repository, usernames and e-mail addresses of the commit authors will be obtained. However, this data is stored only temporarily for the duration of the job execution. Once the pipeline run is completed, this data will be deleted.
+    SAP Continuous Integration and Delivery is not the primary storage location of the e-mail addresses. They are retrieved from the source code management system or an identity provider \(IdP\) connected to your SAP BTP subaccount.
 
 
 <a name="loio499058c8dabd4ebba7218a90bffdd901"/>
@@ -52,27 +47,17 @@ Within a pipeline run, SAP Continuous Integration and Delivery processes and tem
 
 ## Information Retrieval
 
-The user information processed by SAP Continuous Integration and Delivery can be retrieved the following way for the two use cases:
+To retrieve the e-mail addresses stored by SAP Continuous Integration and Delivery, use one of the following options:
 
--   **E-mail addresses of users who triggered a build**
+-   In the service user interface, navigate to the detail view of your build.
 
-    The e-mail address of the user who triggered a build can be retrieved in the following manner:
+-   To retrieve build logs through the API, use the following endpoint:
 
-    -   Via the UI by navigating to the detail view of your build
+    ```
+    /{version}/jobs/{jobReference}/builds
+    ```
 
-    -   Via the API by using the `/{version}/jobs/{jobReference}/builds` endpoint. See SAP Continuous Integration and Delivery service on [SAP API Business Hub](https://api.sap.com/api/CloudCiApiSuite/overview).
-
-
--   **User names and e-mail addresses from commit events**
-
-    The build logs may contain personal data in the form of user names and e-mail addresses. They can be retrieved in the following manner:
-
-    -   Via the UI by navigating to the detail view of your build.
-
-        To access the build log data, select the build tile of the corresponding build and choose <span class="SAP-icons-V5"></span> \(Actions\)** \> *Show Full Log* in the *Build Stages* view. See [Running and Monitoring CI/CD Jobs](https://help.sap.com/viewer/SAP-Cloud-Platform-Continuous-Integration-and-Delivery/db8521cc85924f78b7e92b1ea69fdf94.html).
-
-    -   Via the API by using the `/{version}/jobs/{jobReference}/builds/{buildReference}/log` endpoint. See SAP Continuous Integration and Delivery service on [SAP API Business Hub](https://api.sap.com/api/CloudCiApiSuite/overview).
-
+    See [SAP Business Accelerator Hub](https://api.sap.com/getting-started).
 
 
 <a name="loiob9bc56a3041a4d0fae2d6c98320fd787"/>
@@ -83,9 +68,34 @@ The user information processed by SAP Continuous Integration and Delivery can be
 
 The project administrator can delete builds together with their metadata, and therefore all personal data that is stored in SAP Continuous Integration and Delivery. See [Modify, Copy, and Delete Jobs](modify-copy-and-delete-jobs-21fd276.md).
 
-By default, SAP Continuous Integration and Delivery stores builds and their logs for 7 days and keeps a maximum of 50 builds. You can adjust the maximum values in the pipeline configuration to a maximum of 28 days and 99 builds. See  <?sap-ot O2O class="- topic/xref " href="d748920175554221be1ba8b461ada030.xml" text="" desc="" xtrc="xref:2" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/b9bc56a3041a4d0fae2d6c98320fd787.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?> . If these numbers are exceeded, the oldest builds and their logs are deleted automatically.
+By default, SAP Continuous Integration and Delivery stores builds and their logs for 7 days and keeps a maximum of 50 builds. You can adjust the maximum values in the job configuration to a maximum of 28 days and 99 builds. If these numbers are exceeded, the oldest builds and their logs are deleted automatically.
 
 If you disable SAP Continuous Integration and Delivery in the SAP BTP cockpit, all data that belongs to your account is deleted automatically. Audit log data is automatically deleted after a defined retention period. For information, see [Audit Log Retention for the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/adaefa64228e49ddbe40c15f63a4f74b.html).
+
+<a name="loioce0c1c803600447dbcf41c891cb9fa0f"/>
+
+<!-- loioce0c1c803600447dbcf41c891cb9fa0f -->
+
+## Source Repositories and Personal Data
+
+During a build of a job, SAP Continuous Integration and Delivery copies and processes data from the assigned source code repository. Therefore, we strongly advise you not to store any personal data in the source code repositories processed by the service. Examples for this kind of data are user IDs as part of branch names or test data that contains personal information.
+
+If there is personal data in a source repository that is referenced by a job, this data is not only processed during the build process but may also be stored in the build logs.
+
+Please be aware that source code management systems may include your usernames and passwords in repository clone URLs. While SAP Continuous Integration and Delivery rejects URLs containing passwords, URLs containing usernames are accepted. However, a warning is displayed if a username is detected as part of a clone URL. To protect your personal data, we recommend omitting usernames from your clone URLs.
+
+To retrieve build logs, you can use one of the following options:
+
+-   In the service user interface, navigate to the detail view of your build. To access the build log data, select the build tile of the corresponding build and choose <span class="SAP-icons-V5"></span> \(Actions\)** \> *Show Full Log* in the *Build Stages* view. See [Running and Monitoring CI/CD Jobs](running-and-monitoring-ci-cd-jobs-db8521c.md).
+
+-   To retrieve build logs through the API, use the following endpoint:
+
+    ```
+    /{version}/jobs/{jobReference}/builds/{buildReference}/log
+    ```
+
+    See [SAP Business Accelerator Hub](https://api.sap.com/getting-started).
+
 
 <a name="loio3845cad34e294213be4f2335ceb0a05d"/>
 
@@ -97,7 +107,7 @@ There are two options to export your data from SAP Continuous Integration and De
 
 -   The recommended way to retrieve data is to raise a customer incident and request a copy of your data. See [Support, Feature Requests, and Feedback](support-feature-requests-and-feedback-6e10ad4.md).
 
--   If you prefer to export your data on your own, you can utilize SAP Continuous Integration and Delivery's REST API. You can use it to access and download all your data. Since there is no single API endpoint to export your whole data, we recommend you to implement a small script to automate the sequence of API calls needed to retrieve the required data. For more information, see [Enabling the API Usage](enabling-the-api-usage-1aedc23.md) and [SAP API Buisness Hub](https://api.sap.com/api/CloudCiApiSuite/overview).
+-   If you prefer to export your data on your own, you can utilize the SAP Continuous Integration and Delivery REST API. You can use it to access and download all your data. Since there is no single API endpoint to export your complete data, we recommend you to implement a small script to automate the sequence of API calls needed to retrieve the required data. For more information, see [Enabling the API Usage](enabling-the-api-usage-1aedc23.md) and [SAP Business Accelerator Hub](https://api.sap.com/getting-started).
 
 
 Due to security reasons, the secrets of credentials are not included in the exported data.

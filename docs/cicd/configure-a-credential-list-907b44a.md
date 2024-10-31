@@ -2,9 +2,9 @@
 
 <link rel="stylesheet" type="text/css" href="css/sap-icons.css"/>
 
-# \(Optional\) Configure a Credential List
+# Configure a Credential List
 
-Specify the credentials that are passed to the build.
+Specify the credentials that are passed to the build in repository-configured SAP Continuous Integration and Delivery jobs..
 
 
 
@@ -14,14 +14,16 @@ Specify the credentials that are passed to the build.
 
 -   You are assigned the Administrator role for SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
--   You have an existing job that you’ve configured in your repository.
+-   You have an existing job that you’ve configured in your repository. See [Configuring Jobs in Your Repository](configuring-jobs-in-your-repository-af397b1.md).
 
 
 
 
 ## Context
 
-If you configure SAP Continuous Integration and Delivery jobs in your repository, by default, all credentials defined in the service are passed to the [build](concepts-707017c.md#loio707017c681aa4bc09d0279f08115dcae__section_dxw_cp3_qnb). By configuring a credential list, however, you can specify which credentials are passed and at the same time, can’t be deleted in the user interface. If you create a credential list without specifying any credentials, no credential is passed to the build.
+If you configure SAP Continuous Integration and Delivery jobs in your repository, by default, all credentials defined in the service are passed to the [build](concepts-707017c.md). By configuring a credential list, however, you can specify which credentials are passed. At the same time, these credentials can’t be deleted in the user interface.
+
+If you create a credential list without specifying any credentials, no credential is passed to the build.
 
 
 

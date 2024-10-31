@@ -92,15 +92,9 @@ Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipel
 
 -   [**Cloud Foundry Environment**](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--   [**SAP Fiori in the Cloud Foundry Environment**](configure-an-sap-fiori-in-the-cloud-foundry-environment-job-201ef60.md#loio201ef608e14c4ca483b2184b42e17e7f)
-
--   [**SAP Fiori in the Neo Environment**](configure-an-sap-fiori-in-the-neo-environment-job-619a864.md#loio619a864813584bd1a433cafac1fb0c1e)
-
 -   [**SAP Fiori for the ABAP Platform**](configure-an-sap-fiori-for-the-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
 
 -   [**SAP Integration Suite Artifacts**](configure-an-sap-integration-suite-artifacts-job-3d5573f.md)
-
--   [**Container-Based Applications**](configure-a-container-based-applications-job-87cf47a.md)
 
 -   [**Kyma Runtime**](configure-a-kyma-runtime-job-0700ecb.md)
 
@@ -111,7 +105,7 @@ Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipel
 
 ## Regional Availability
 
-For information on the regional availability of SAP Continuous Integration and Delivery, see [SAP Discovery Center](https://help.sap.com/docs/link-disclaimer?site=https%3A%2F%2Fdiscovery-center.cloud.sap%2FserviceCatalog%2Fcontinuous-integration--delivery%3Fregion%3Dall%26tab%3Dservice_plan) and [Regions](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/350356d1dc314d3199dca15bd2ab9b0e.html).
+For information on the regional availability of SAP Continuous Integration and Delivery, see [Regional Availability](regional-availability-7510e25.md).
 
 
 

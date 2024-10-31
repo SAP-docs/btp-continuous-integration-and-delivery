@@ -4,7 +4,7 @@
 
 # Integrate Cloud Transport Management into Your Job
 
-Implement a continuous delivery process by integrating the functionality of the SAP Cloud Transport Management service into your job.
+Implement a continuous delivery process by integrating the SAP Cloud Transport Management functionality into your job.
 
 
 
@@ -14,6 +14,8 @@ Implement a continuous delivery process by integrating the functionality of the 
 
 -   You’ve either set up SAP Cloud Transport Management or SAP Cloud ALM. SAP Cloud ALM includes SAP Cloud Transport Management. See [Initial Setup of SAP Cloud Transport Management](https://help.sap.com/docs/cloud-transport-management/sap-cloud-transport-management/initial-setup) or [Required Setup for SAP Cloud ALM](https://help.sap.com/docs/cloud-alm/setup-administration/required-setup).
 
+-   You've set up an instance for the corresponding service and service key or service binding. See [SAP Cloud Transport Management](https://help.sap.com/docs/cloud-transport-management/sap-cloud-transport-management/creating-service-instance-and-service-key?version=Cloud) or [SAP Cloud ALM](https://help.sap.com/docs/cloud-alm/setup-administration/enabling-sap-cloud-alm-api).
+
 -   You’ve created a destination in the Cloud Foundry environment for each productive subaccount to which you want to transport an archive. See [Create Transport Destinations](https://help.sap.com/docs/cloud-transport-management/sap-cloud-transport-management/create-transport-destinations).
 
 
@@ -21,11 +23,12 @@ Implement a continuous delivery process by integrating the functionality of the 
 
 ## Context
 
-The SAP Cloud Transport Management service lets you define nodes and routes for a staged landscape with several spaces or subaccounts. Staged Landscapes are needed for a full-fledged continuous delivery process.
+The SAP Cloud Transport Management service lets you define nodes and routes for a staged landscape with several spaces or subaccounts, which is needed for full-fledged continuous delivery process.
 
 There are two ways to use the cloud transport management functionality together with SAP Continuous Integration and Delivery: You can either connect your job with SAP Cloud Transport Management itself or with SAP Cloud ALM, which includes the cloud transport management service.
 
-Depending on which option you choose, expand one of the following sections for more information:
+> ### Note:  
+> Depending on which option you choose, expand one of the following sections for more information.
 
 <a name="concept_hxf_qnz_y1c"/>
 
@@ -41,50 +44,53 @@ In the Release stage of your job, select your preferred transport operation and 
 
 ## Transport Operation
 
-If you connect the SAP Cloud Transport Management service with your job, you can choose between two different *Transport Operation* options: *Export from* and *Upload to*.
-
-The following example graphic illustrates the difference between these two transport operations:
+If you connect your job with the SAP Cloud Transport Management service, you can choose between two different *Transport Operation* options: *Export from* and *Upload to*.
 
   
   
 **Transport Operations with SAP Cloud Transport Management**
 
-![](images/TMS_Operations_9d45dce.png "Transport Operations with SAP Cloud Transport Management")
-
--   **Export from:**
-
-    1.  In the Release stage of your job, SAP Continuous Integration and Delivery accesses SAP Cloud Transport Management through a Service Key credential. For more information, see the Service Key section.
-
-    2.  The mtar file that has been created in the Build stage of your job is added to a transport request. This transport request can’t be changed anymore.
-
-    3.  The transport request containing the mtar file is exported from the export node to the import queue of the following node. In the example graphic, it is exported from the development node to the import queue of the quality assurance node.
+![Transport Operations with SAP Cloud Transport Management](images/TMS_Operations_9d45dce.png "Transport Operations with SAP Cloud Transport Management")
 
 
-    If you choose *Export from* as transport operation, enter the name of the export node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery.
 
--   **Upload to:**
+### Export from:
 
-    1.  In the Release stage of your job, SAP Continuous Integration and Delivery accesses SAP Cloud Transport Management through a Service Key credential. For more information, see the Service Key section.
+If you choose the *Export from* transport operation, the following tasks are executed in the Release stage of your job:
 
-    2.  The mtar file that has been created in the Build stage of your job is added to a transport request within the upload node in SAP Cloud Transport Management. In the example graphic, it is added to a transport request within the development node.
+1.  SAP Continuous Integration and Delivery accesses SAP Cloud Transport Management through a Service Key credential. For more information, see [Service Key](https://help.sap.com/docs/continuous-integration-and-delivery/continuous-integration-and-delivery-internal/integrate-cloud-transport-management-into-your-job?state=DRAFT#service-key).
+
+2.  The mtar file that has been created in the Build stage of your job is added to a transport request. This transport request can’t be changed anymore.
+
+3.  The transport request containing the mtar file is exported from the export node and added to the import queue of the following node. In the example graphic, it is exported from the development node and added to the import queue of the quality assurance node.
 
 
-    If you choose *Upload to* as transport operation, enter the name of the upload node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery
+If you choose *Export from* as transport operation, enter the name of the export node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery.
 
 
-<a name="task_bhy_xrz_y1c"/>
 
-<!-- task\_bhy\_xrz\_y1c -->
+### Upload to:
 
-### Service Key
+If you choose the *Upload to* transport operation, the following tasks are executed in the Release stage of your job:
+
+1.  SAP Continuous Integration and Delivery accesses SAP Cloud Transport Management through a Service Key credential. For more information, see [Service Key](https://help.sap.com/docs/continuous-integration-and-delivery/continuous-integration-and-delivery-internal/integrate-cloud-transport-management-into-your-job?state=DRAFT#service-key).
+
+2.  The mtar file that has been created in the Build stage of your job is added to a transport request within the upload node in SAP Cloud Transport Management. In the example graphic, it is added to a transport request within the development node.
+
+
+If you choose *Upload to* as transport operation, enter the name of the upload node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery
+
+
+
+<a name="concept_hxf_qnz_y1c__section_nzz_n11_z1c"/>
+
+## Service Key
 
 Create a Service Key credential to authenticate your job against SAP Cloud Transport Management.
 
 
 
-<a name="task_bhy_xrz_y1c__steps_cgp_z25_blb"/>
-
-## Procedure
+### Procedure
 
 1.  In the SAP BTP cockpit, navigate to the subaccount in which you’ve created an instance for SAP Cloud Transport Management.
 
@@ -107,7 +113,7 @@ Create a Service Key credential to authenticate your job against SAP Cloud Trans
 
 ## Connect Your Job with SAP Cloud ALM
 
-In the Release stage of your job, select the transport operation and create a service key credential to connect to SAP Cloud Transport Management.
+In the Release stage of your job, select the transport operation and create a service key credential to connect to SAP Cloud ALM.
 
 
 
@@ -115,44 +121,73 @@ In the Release stage of your job, select the transport operation and create a se
 
 ## Transport Operation
 
-If you connect SAP Cloud ALM with your job to access the SAP Cloud Transport Management functionality, choose*Export from* as *Transport Operation*.
+If you connect your job with SAP Cloud ALM to access the SAP Cloud Transport Management functionality, choose *Export from* as *Transport Operation*.
 
-The following example graphic illustrates the interplay between SAP Continuous Integration and Delivery, SAP Cloud ALM, and SAP Cloud Transport Management when using the *Export from* transport operation:
+With this transport operation, the following tasks are executed in the Release stage of your job:
 
   
   
 **Transport Operation with SAP Cloud ALM**
 
-![](images/TMS_with_SAP_Cloud_ALM_df57d96.png "Transport Operation with SAP Cloud ALM")
+![Transport Operation with SAP Cloud ALM](images/TMS_with_SAP_Cloud_ALM_df57d96.png "Transport Operation with SAP Cloud ALM")
 
-1.  In the Release stage of your job, SAP Continuous Integration and Delivery accesses SAP Cloud ALM through a Service Key credential. For more information, see the Service Key section.
+1.  SAP Continuous Integration and Delivery accesses SAP Cloud ALM through a Service Key credential. For more information, see [Service Key](https://help.sap.com/docs/continuous-integration-and-delivery/continuous-integration-and-delivery-internal/integrate-cloud-transport-management-into-your-job?state=DRAFT#service-key-0).
 
 2.  SAP Cloud ALM establishes the connection with SAP Cloud Transport Management.
 
 3.  The mtar file that has been created in the Build stage of your job is added to a transport request. This transport request can’t be changed anymore.
 
-    The transport request containing the mtar file is exported from the export node to the import queue of the following node. In the example graphic, it is exported from the development node to the import queue of the quality assurance node.
+4.  The transport request containing the mtar file is exported from the export node and added to the import queue of the following node. In the example graphic, it is exported from the development node and added to the import queue of the quality assurance node.
 
 
-Enter the name of the export node into the text field next to Transport Operation in SAP Continuous Integration and Delivery.
-
-<a name="task_y2d_kvz_y1c"/>
-
-<!-- task\_y2d\_kvz\_y1c -->
-
-### Service Key
-
-Create a Service Key credential to authenticate your job against SAP Cloud ALM.
+Enter the name of the export node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery.
 
 
 
-<a name="task_y2d_kvz_y1c__steps_z2d_kvz_y1c"/>
+<a name="concept_ztz_trz_y1c__section_hfn_2dv_cbc"/>
 
-## Procedure
+## Service Key
+
+Depending on whether your SAP Cloud ALM instance is in the Cloud Foundry environment or another environment, choose one of the following options:
+
+
+
+### Other Environments
+
+Create a Service Key credential to authenticate your job against an SAP Cloud ALM instance in another environment than Cloud Foundry.
+
+
+
+### Procedure
 
 1.  In the SAP BTP cockpit, navigate to the subaccount in which you’ve created an instance for SAP Cloud ALM.
 
-2.  From the navigation area, choose <span class="SAP-icons-V5"></span> *Spaces* and select the space in which you’ve created the SAP Cloud Transport Management instance.
+2.  From the navigation area, choose <span class="SAP-icons-V5"></span> *Services* \> *Instances and Subscriptions*.
+
+3.  Choose the name of your service instance.
+
+4.  From the navigation area, choose :key: *Service Bindings*.
+
+5.  Choose the name of your service binding.
+
+6.  In the *Credentials* pop-up window, choose *Copy JSON*.
+
+7.  In SAP Continuous Integration and Delivery, create a new Service Key credential and paste the copied JSON into the *Service Key* text field. See [Creating Credentials](creating-credentials-6658c81.md).
+
+
+
+
+### Cloud Foundry Environment
+
+Create a Service Key credential to authenticate your job against an SAP Cloud ALM instance in the Cloud Foundry environment.
+
+
+
+### Procedure
+
+1.  In the SAP BTP cockpit, navigate to the subaccount in which you’ve created an instance for SAP Cloud ALM.
+
+2.  From the navigation area, choose <span class="SAP-icons-V5"></span> *Spaces* and select the space in which you’ve created the SAP Cloud ALM instance.
 
 3.  From the navigation area, choose <span class="SAP-icons-V5"></span> *Services* \> *Instances*.
 

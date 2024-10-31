@@ -18,7 +18,7 @@ Allow other SAP BTP services to access SAP Continuous Integration and Delivery.
 
 -   You've enabled SAP Continuous Integration and Delivery in your SAP BTP enterprise account. See [Enabling the Service](enabling-the-service-c8ed09d.md).
 
--   You've assigned the **default** service plan of the **Continuous Integration & Delivery** service to your subaccount. See [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts).
+-   You've assigned the **default** \(service technical name: `cicd-service`\) service plan of the **Continuous Integration & Delivery** service to your subaccount. See [Configure Entitlements and Quotas for Subaccounts](https://help.sap.com/docs/btp/sap-business-technology-platform/configure-entitlements-and-quotas-for-subaccounts).
 
 
 
@@ -36,7 +36,7 @@ Allow other SAP BTP services to access SAP Continuous Integration and Delivery.
 5.  Choose your *Runtime Environment* from the respective drop-down list.
 
     > ### Note:  
-    > If you use the *Cloud Foundry* runtime environment, you need to enable your space, first. See [Manage Allowed Spaces](managing-settings-0181fc5.md#loio0181fc51422e459fa79e717d433f94d4__section_s4k_nlv_qwb).
+    > If you use the *Cloud Foundry* runtime environment, you need to enable your space, first. See [Manage Allowed Spaces](manage-allowed-spaces-0181fc5.md#loio0181fc51422e459fa79e717d433f94d4__section_s4k_nlv_qwb).
 
 6.  In the *Instance Name* text field, enter a name for your instance.
 

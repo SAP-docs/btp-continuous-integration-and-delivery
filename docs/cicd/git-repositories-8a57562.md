@@ -66,3 +66,18 @@ The source code repository plays a key role in SAP Continuous Integration and De
 -   Look for information on how to secure a specific source code repository supported by SAP Continuous Integration and Delivery in its respective documentation.
 
 
+
+
+<a name="loio8a57562c7d2d4f7db53a29b2f1e146e9__section_shw_3xp_ybc"/>
+
+## Trigger Jobs for Specific Commits
+
+With the API, you can trigger a job for a specific commit using the `commitToBeBuilt` parameter. See [Enabling the API Usage](enabling-the-api-usage-1aedc23.md) and [SAP Business Accelerator Hub](https://api.sap.com/api/CloudCiApiSuite/overview).
+
+If a specific Git branch is specified in the job configuration, SAP Continuous Integration and Delivery guarantees that the job is only executed if the commit passed through the API is reachable from the head of the specific branch \(for example, if the commit is an ancestor of the commit at the tip of the specified branch\). If this is not the case, the job fails in the Init stage.
+
+However, if the job is configured as a [multi-branch job](configure-a-multi-branch-job-d52d3ca.md), the job runs for the commit passed through the API, which could undermine security and compliance checks.
+
+> ### Tip:  
+> Based on your security and compliance requirements, define a policy that specifies for which scenarios multi-branch jobs are suitable.
+
