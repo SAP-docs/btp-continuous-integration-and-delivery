@@ -1,8 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: btp-continuous-integration-and-delivery
-Upstream-Contact: Sarah Lendle (sarah.lendle@sap.com)
-Source: https://github.com/sap-docs/btp-continuous-integration-and-delivery
-
-Files: *
-Copyright: 2024 SAP SE or an SAP affiliate company and btp-continuous-integration-and-delivery contributors
-License: CC-BY-4.0
