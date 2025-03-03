@@ -1,0 +1,10 @@
+version = 1
+SPDX-PackageName = "btp-continuous-integration-and-delivery"
+SPDX-PackageSupplier = "Sarah Lendle (sarah.lendle@sap.com)"
+SPDX-PackageDownloadLocation = "https://github.com/sap-docs/btp-continuous-integration-and-delivery"
+
+[[annotations]]
+path = "**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 SAP SE or an SAP affiliate company and btp-continuous-integration-and-delivery contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
