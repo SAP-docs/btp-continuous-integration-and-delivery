@@ -21,8 +21,6 @@ Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipel
 
 -   [**SAP Integration Suite Artifacts**](configure-an-sap-integration-suite-artifacts-job-in-your-repository-3daf56d.md)
 
--   [**Container-Based Applications**](configure-a-container-based-applications-job-in-your-repository-3552042.md)
-
 -   [**Kyma Runtime**](configure-a-kyma-runtime-job-in-your-repository-9f1c1e2.md)
 
 

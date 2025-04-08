@@ -126,7 +126,5 @@ For information on the tools and tool versions supported by SAP Continuous Integ
 
 [SAP Continuous Integration and Delivery in the SAP Discovery Center](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/continuous-integration--delivery?region=all "Learn more about the service in the SAP Discovery Center.")
 
-[Continuous Integration and Delivery by SAP](https://help.sap.com/viewer/product/CICD_OVERVIEW/Cloud/en-US?task=discover_task "Get an overview of CI/CD, discover SAP solutions that help you apply it, and find links to further information.")
-
 [What Are Continuous Integration and Continuous Delivery?](https://help.sap.com/viewer/ee5a61247061455ab232c19179fe4c3b/Cloud/en-US/5ba483a2c97b4ad5ab0148f4a6c5a9ee.html "Get an overview of the continuous integration and delivery concepts.")
 

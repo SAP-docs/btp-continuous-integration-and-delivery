@@ -25,6 +25,10 @@ Implement a continuous delivery process by integrating the SAP Cloud Transport M
 
 The SAP Cloud Transport Management service lets you define nodes and routes for a staged landscape with several spaces or subaccounts, which is needed for full-fledged continuous delivery process.
 
+The following video provides an overview of how to integrate the SAP Cloud Transport Management functionality into an SAP Continuous Integration and Delivery job:
+
+
+
 There are two ways to use the cloud transport management functionality together with SAP Continuous Integration and Delivery: You can either connect your job with SAP Cloud Transport Management itself or with SAP Cloud ALM, which includes the cloud transport management service.
 
 > ### Note:  
@@ -78,7 +82,7 @@ If you choose the *Upload to* transport operation, the following tasks are execu
 2.  The mtar file that has been created in the Build stage of your job is added to a transport request within the upload node in SAP Cloud Transport Management. In the example graphic, it is added to a transport request within the development node.
 
 
-If you choose *Upload to* as transport operation, enter the name of the upload node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery
+If you choose *Upload to* as transport operation, enter the name of the upload node into the text field next to *Transport Operation* in SAP Continuous Integration and Delivery.
 
 
 

@@ -40,7 +40,7 @@ Depending on your configuration, your job for Cloud Foundry Environment scenario
 
 In the *Jobs* tab in SAP Continuous Integration and Delivery, choose :heavy_plus_sign:.
 
- > ### Note:  
+ > ### Tip:  
 > The following sections correspond to the *Create Job* pane in SAP Continuous Integration and Delivery. Open them for more information.
 
  <a name="task_yhq_dlh_1zb"/>
@@ -148,7 +148,7 @@ In the **Build** stage, your application is packaged into a deployable archive. 
 
     If you want your build to fail if the lint check reveals any errors, check the *Fail on Error* checkbox.
 
-5.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
+5.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](add-additional-commands-to-stages-c05a252.md), [*Additional Credentials*](add-additional-credentials-to-stages-af2d1a2.md), and [*Additional Variables*](add-additional-variables-to-stages-74fe540.md).
 
 
 <a name="task_ny5_lx3_1zb"/>
@@ -172,7 +172,7 @@ In the **Additional Unit Tests** stage, the tests you've implemented are execute
 3.  > ### Restriction:  
     > This step doesn't apply to the  <?sap-ot O2O class="- topic/xref " href="019ed685a19b4efab4f7df0e108d1697.xml" text="" desc="" xtrc="xref:17" xtrf="file:/home/builder/src/dita-all/nyp1624030053288/loio3d9e638cafea4b6c8160689ae0af37c8_en-US/src/content/localization/en-us/6bd27c07ee3b428f9ad5a2e89084f3a3.xml" output-class="" outputTopicFile="file:/home/builder/tp.net.sf.dita-ot/2.3/plugins/com.elovirta.dita.markdown_1.3.0/xsl/dita2markdownImpl.xsl" ?>  pipeline.
 
-    \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
+    \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](add-additional-commands-to-stages-c05a252.md), [*Additional Credentials*](add-additional-credentials-to-stages-af2d1a2.md), and [*Additional Variables*](add-additional-variables-to-stages-74fe540.md).
 
 
 <a name="task_chq_zmb_p1c"/>
@@ -315,7 +315,7 @@ In the **Compliance** stage, automated code quality and security checks are exec
 
     Choose this credential from the *SonarQube Token Credentials* drop-down list.
 
-8.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
+8.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](add-additional-commands-to-stages-c05a252.md), [*Additional Credentials*](add-additional-credentials-to-stages-af2d1a2.md), and [*Additional Variables*](add-additional-variables-to-stages-74fe540.md).
 
 
 <a name="task_ujs_px3_1zb"/>
@@ -391,7 +391,7 @@ In the **Release** stage, the changes are released to the targets you've defined
         Choose this credential from the *Service Key* dropdown list.
 
 
-3.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](additional-commands-c05a252.md), [*Additional Credentials*](additional-credentials-af2d1a2.md), and [*Additional Variables*](additional-variables-74fe540.md).
+3.  \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](add-additional-commands-to-stages-c05a252.md), [*Additional Credentials*](add-additional-credentials-to-stages-af2d1a2.md), and [*Additional Variables*](add-additional-variables-to-stages-74fe540.md).
 
 
 <a name="task_ptx_zlh_1zb"/>

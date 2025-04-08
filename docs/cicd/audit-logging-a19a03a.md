@@ -6,11 +6,18 @@ SAP Continuous Integration and Delivery uses the built-in audit logging function
 
 The following information is recorded and stored in the SAP Audit Log service instance of your subaccount:
 
--   Creation and deletion of jobs and all modifications of a job resource
--   Creation and deletion of credentials and all modifications of a credential resource
--   Creation and deletion of repositories and all modifications of a repository resource
+-   Creation and deletion of jobs, and all modifications of a job resource
+
+-   Creation and deletion of credentials, and all modifications of a credential resource
+
+-   Creation and deletion of repositories, and all modifications of a repository resource
+
 -   Modifications to the allowed spaces list \(see [Manage Allowed Spaces](https://help.sap.com/docs/CONTINUOUS_DELIVERY/99c72101f7ee40d0b2deb4df72ba1ad3/0181fc51422e459fa79e717d433f94d4.html?version=Cloud#manage-allowed-spaces)\)
+
 -   Failed authorization checks
+
+-   Usage of credentials with each build
+
 
 The audit logs can be accessed via the Audit Log Retrieval API or viewed using the SAP Audit Log Viewer service. See [Audit Logging in the Cloud Foundry Environment](https://help.sap.com/products/BTP/65de2977205c403bbc107264b8eccf4b/f92c86ab11f6474ea5579d839051c334.html?version=Cloud).
 

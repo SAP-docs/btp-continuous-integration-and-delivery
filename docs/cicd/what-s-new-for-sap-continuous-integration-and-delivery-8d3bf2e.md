@@ -89,6 +89,1115 @@ Continuous Integration & Delivery
 </td>
 <td valign="top">
 
+Deprecation of Node 18-Based Build Tool Versions
+
+</td>
+<td valign="top">
+
+The following build tool versions based on Node 18 are now deprecated:
+
+-   Java 11 Node 18
+
+-   Java 17 Node 18
+
+-   Java 19 Node 18
+
+-   Java 21 Node 18
+
+-   Node 18
+
+
+We recommend using Java 21 Node 22 and the respective npm version based on Node 22 instead.
+
+</td>
+<td valign="top">
+
+Required
+
+</td>
+<td valign="top">
+
+Deprecated
+
+</td>
+<td valign="top">
+
+Announcement
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-30
+
+</td>
+<td valign="top">
+
+2025-04-30
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Enhanced Connectivity Configuration for On-Premises Systems
+
+</td>
+<td valign="top">
+
+You can now configure connectivity to your on-premises systems in multiple stages. This includes connecting to internal repositories such as Artifactory or Nexus during the build process. For more information, please refer to the following blog post: [New Use Cases for SAP Connectivity in SAP Continuous Integration and Delivery](https://community.sap.com/t5/technology-blogs-by-sap/new-use-cases-for-sap-connectivity-in-sap-continuous-integration-and/ba-p/14025368).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-02-20
+
+</td>
+<td valign="top">
+
+2025-02-20
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Build Tool Versions Supported
+
+</td>
+<td valign="top">
+
+New build tool versions are available for the MTA and npm build tools:
+
+-   Java 17 Node 22
+-   Java 21 Node 22
+-   Node 22
+
+For more information, see [Supported Build Tools](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/supported-tools?version=Cloud#supported-build-tools).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-02-20
+
+</td>
+<td valign="top">
+
+2025-02-20
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Deprecation of MTA Build Tool Version Java 8 Node 18
+
+</td>
+<td valign="top">
+
+The MTA build tool version Java 8 Node 18 is deprecated and has been removed.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-01-28
+
+</td>
+<td valign="top">
+
+2025-01-28
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Deprecation of the Container-Based Applications Pipeline
+
+</td>
+<td valign="top">
+
+The Container-Based Applications pipeline has been deprecated and is no longer available for use. While your existing jobs can still be viewed, you will not be able to run or edit them anymore.
+
+We recommend using the Kyma Runtime pipeline instead.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-01-28
+
+</td>
+<td valign="top">
+
+2025-01-28
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Sporadic Internal Server Errors Resolved
+
+</td>
+<td valign="top">
+
+A temporary issue that caused failed operations in the service user interface has been resolved.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-01-29
+
+</td>
+<td valign="top">
+
+2025-01-29
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Increased Quotas
+
+</td>
+<td valign="top">
+
+For the default and build-code service plans, the limit of job configurations and the maximum number of connected repositories have been increased from 500 to 1000.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-01-28
+
+</td>
+<td valign="top">
+
+2025-01-28
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Amazon Web Services region Canada \(Montreal\) as well as in the Microsoft Azure regions Australia \(Sydney\), Japan \(Tokyo\), and Singapore.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-02-11
+
+</td>
+<td valign="top">
+
+2025-02-11
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+CI/CD Overview Page on the SAP Help Portal
+
+</td>
+<td valign="top">
+
+The Continuous Integration and Delivery by SAP overview page has been removed from the SAP Help Portal. You can now find all relevant information about CI/CD by SAP on the product page of SAP Continuous Integration and Delivery. See [SAP Continuous Integration and Delivery](https://help.sap.com/docs/continuous-integration-and-delivery).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-01-10
+
+</td>
+<td valign="top">
+
+2025-01-10
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Bug Fix for Application Name in the SAP Fiori for ABAP Platform Pipeline
+
+</td>
+<td valign="top">
+
+For compatibility reasons, application names in ABAP systems can contain up to 30 characters. The service has now been updated to allow these longer application names in the *Application Name* field in the Release stage of the SAP Fiori for ABAP platform pipeline.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-12-17
+
+</td>
+<td valign="top">
+
+2024-12-17
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Deprecation of the SAP Fiori for the Neo Environment Pipeline
+
+</td>
+<td valign="top">
+
+Due to the legacy Neo environment sunset on December 31, 2028, the SAP Fiori in the Neo Environment pipeline has been deprecated and is no longer available for new jobs. Existing jobs will continue to wosolved that caused npm scripts in the Additional Unit Tests stage in the Kyma Runtime pipeline to be executed even when the stage was disabled. Now, the scripts will only be executed when thrk until March 31st, 2025.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Announcement
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-12-13
+
+</td>
+<td valign="top">
+
+2025-03-31
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Region
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Microsoft Azure region Brazil \(São Paulo\). See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-12-16
+
+</td>
+<td valign="top">
+
+2024-12-16
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Bug Fix for Additional Unit Tests Stage in Kyma Runtime Pipeline
+
+</td>
+<td valign="top">
+
+An issue was ree stage is enabled.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-12-13
+
+</td>
+<td valign="top">
+
+2024-12-13
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Fix in Compliance Stage for Maven Projects
+
+</td>
+<td valign="top">
+
+A fix has been released that enables addressing Java class files via the `sonar.java.binaries` parameter in the `sonar-project.properties` file.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-12-13
+
+</td>
+<td valign="top">
+
+2024-12-13
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Region
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Amazon Web Services region Asia Pacific \(Seoul\). See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-12-03
+
+</td>
+<td valign="top">
+
+2024-12-03
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Kingdom of Saudi Arabia \(Dammam\) and Australia \(Sydney\) regions. See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-11-29
+
+</td>
+<td valign="top">
+
+2024-11-29
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Region
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Switzerland \(Zurich\) and US East \(VA\) regions. See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-11-11
+
+</td>
+<td valign="top">
+
+2024-11-11
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
 Changed IP Addresses for SAP Connectivity Service
 
 </td>
@@ -219,6 +1328,136 @@ Continuous Integration & Delivery
 </td>
 <td valign="top">
 
+Deprecation of MTA Build Tool Version Java 8 Node 18
+
+</td>
+<td valign="top">
+
+The MTA build tool version Java 8 Node 18 is deprecated and will be removed soon.
+
+Action: Please upgrade Cloud Foundry Environment and SAP Fiori in the Neo Environment jobs that contain Java 8 Note 18 to newer build tool versions.
+
+</td>
+<td valign="top">
+
+Required
+
+</td>
+<td valign="top">
+
+Deprecated
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-10-28
+
+</td>
+<td valign="top">
+
+2024-12-31
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Bug Fix for Application Name in the SAP Fiori for ABAP Platform Pipeline
+
+</td>
+<td valign="top">
+
+In the release stage of the SAP Fiori for ABAP Platform pipeline, the namespace prefixes are available again.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-10-28
+
+</td>
+<td valign="top">
+
+2024-10-28
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
 New Regions
 
 </td>
@@ -265,6 +1504,70 @@ Not applicable
 <td valign="top">
 
 2024-10-23
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Security Update
+
+</td>
+<td valign="top">
+
+We have improved our security for our backend ingresses, which now exclusively allows TLS 1.3. This will impact customers who have configured the Cloud Connector for, for example, on-premises source code management systems or Sonar Server. Cloud Connectors running on older Java versions will not be able to connect anymore.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2024-10-18
+
+</td>
+<td valign="top">
+
+2024-10-18
 
 </td>
 </tr>

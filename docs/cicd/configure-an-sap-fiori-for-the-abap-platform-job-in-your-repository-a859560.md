@@ -154,15 +154,15 @@ In the Git repository in which your project sources reside, create a new file na
 > ```
 > # Project configuration
 > general:
->   buildTool: "npm"
+>   buildTool: "npm"     
 > 
 > service: 
 >   buildToolVersion: "N18"           
 >   cloudConnectors:
 >     transportRequestUploadCTS:
 >       credentialId: "<CredentialID>"
->     sonarExecuteScan:                                                                           # optional, only relevant if you enable Compliance stage with "SonarQube" mode           
->       credentialId: "<name of your cloud connector credential>"
+>     sonarExecuteScan: 
+>       credentialId: "<CredentialID>"                                                            # optional, only relevant if you enable Compliance stage with "SonarQube" mode
 > 
 > # Stage configuration
 > stages:
@@ -317,8 +317,8 @@ In the `.pipeline/config.yml` file in your repository, add the following configu
 > ### Sample Code:  
 > ```
 >   Additional Unit Tests:
->      karmaExecuteTests: false                                                                   # true, if you want to execute the Karma Test Runner (default: false) 
->      npmExecuteScripts: true                                                                    # true, if you want to execute test scripts that are defined in step npmExecuteScripts (default: false)
+>     karmaExecuteTests: false                                                                    # true, if you want to execute the Karma Test Runner (default: false) 
+>     npmExecuteScripts: true                                                                     # true, if you want to execute test scripts that are defined in step npmExecuteScripts (default: false)
 > ```
 
 **Details of the Additional Unit Tests Stage**
@@ -490,7 +490,7 @@ In the `.pipeline/config.yml` file in your repository, add the following configu
 > ### Sample Code:  
 > ```
 >   Malware Scan: 
->      malwareExecuteScan: true                                                                   # true, if you want your pipeline to execute malware scanning (default: false)
+>     malwareExecuteScan: true                                                                    # true, if you want your pipeline to execute malware scanning (default: false)
 > ```
 
 **Details of the Malware Scan Stage**
@@ -610,8 +610,9 @@ In the `.pipeline/config.yml` file in your repository, add the following configu
 
 > ### Sample Code:  
 > ```
-> Release:
->     transportRequestUploadCTS: true                                                             # true, if you want to upload your application to the ABAP platform
+>   Release:
+>     transportRequestUploadCTS: false                                                            # true, if you want to upload your artifact to CTS
+> 
 > ```
 
 **Details of the Release Stage**
@@ -671,7 +672,7 @@ In the `.pipeline/config.yml` file in your repository, add the following configu
 > ### Sample Code:  
 > ```
 > # Steps configuration
->  steps: 
+> steps: 
 > # Init stage step 
 >   artifactPrepareVersion: 
 >     versioningType: "cloud_noTag"                                                               # or "cloud", if you want your pipeline to write Git tags. In this case, you need to add the gitHttpsCredentialsId parameter
@@ -682,17 +683,17 @@ In the `.pipeline/config.yml` file in your repository, add the following configu
 > # Test stage step 
 >   npmExecuteScripts:                                                                            # only relevant, if you set the npmExecuteScripts parameter in the Additional Unit Tests stage to true
 >     runScripts: 
->       - "test"                                                                                  # list of script names in your package.json file to be executed 
+>       - "test"                                                                                  # list of script names in your package.json file to be executed
 > 
 > # Complaince stage steps 
 >   sonarExecuteScan:
 >     serverUrl: "<SONARQUBE SERVER URL>"                                                         # "https://sonarcloud.io" for SonarCloud and custom URL to your internet-facing SonarQube server for SonarQube
 >     organization: "<SONARCLOUD ORGANIZATION>"                                                   # only relevant for the SonarCloud configuration mode
->     projectKey: "<SONARQUBE PROJECT KEY>"                                                       # project key that you provided for your SonarQube project                                   
+>     projectKey: "<SONARQUBE PROJECT KEY>"                                                       # project key that you provided for your SonarQube project                                      
 >     sonarTokenCredentialsId: "<SONARQUBE CREDENTIAL>"                                           # credential of type "Secret Text", containing the token that was generated when creating your SonarQube project
 > 
 > # Release stage steps 
->   transportRequestUploadCts:                                                                    # only relevant, if you set the cloudFoundryDeploy parameter in the Release stage to true 
+>   transportRequestUploadCTS:                                                                    # only relevant, if you set the transportRequestUploadCTS parameter in the Release stage to true 
 >     endpoint: "<http://host:port>"                                                              # the URL of your ABAP server using the HTTP protocol (http://<host:port>)
 >     uploadCredentialsId: "<ABAP CREDENTIAL>"                                                    # credential of type "Basic Authentication" to authenticate your pipeline against your ABAP system
 >     abapPackage: "<ABAP PACKAGE NAME>"                                                          # the name of the ABAP package you want to upload your application to
@@ -840,21 +841,20 @@ Depending on your configuration, your complete `.pipeline/config.yml` file shoul
 >     npmExecuteLint: true                                                                        # true, if you want to run a lint check that verifies the syntax of your JavaScript code (default: false)
 >   
 >   Additional Unit Tests:
->      karmaExecuteTests: false                                                                   # true, if you want to execute the Karma Test Runner (default: false) 
->      npmExecuteScripts: true                                                                    # true, if you want to execute test scripts that are defined in step npmExecuteScripts (default: false)
+>     karmaExecuteTests: false                                                                    # true, if you want to execute the Karma Test Runner (default: false) 
+>     npmExecuteScripts: true                                                                     # true, if you want to execute test scripts that are defined in step npmExecuteScripts (default: false)
 > 
 >   Malware Scan: 
->      malwareExecuteScan: true                                                                   # true, if you want your pipeline to execute malware scanning (default: false) 
+>     malwareExecuteScan: true                                                                    # true, if you want your pipeline to execute malware scanning (default: false) 
 >  
 >   Compliance:
 >     sonarExecuteScan: false                                                                     # true, if you want to integrate continuous inspection of code quality (default: false). If you set this parameter to true, the 
 >                                                                                                 # sonarExecuteScan step is mandatory
-> 
 >   Release:
->   transportRequestUploadCTS: false                                                              # true, if you want to upload your artifact to CTS
+>     transportRequestUploadCTS: false                                                            # true, if you want to upload your artifact to CTS
 > 
 > # Steps configuration
->  steps: 
+> steps: 
 > # Init stage step 
 >   artifactPrepareVersion: 
 >     versioningType: "cloud_noTag"                                                               # or "cloud", if you want your pipeline to write Git tags. In this case, you need to add the gitHttpsCredentialsId parameter
@@ -875,7 +875,7 @@ Depending on your configuration, your complete `.pipeline/config.yml` file shoul
 >     sonarTokenCredentialsId: "<SONARQUBE CREDENTIAL>"                                           # credential of type "Secret Text", containing the token that was generated when creating your SonarQube project
 > 
 > # Release stage steps 
->   transportRequestUploadCts:                                                                    # only relevant, if you set the transportRequestUploadCTS parameter in the Release stage to true 
+>   transportRequestUploadCTS:                                                                    # only relevant, if you set the transportRequestUploadCTS parameter in the Release stage to true 
 >     endpoint: "<http://host:port>"                                                              # the URL of your ABAP server using the HTTP protocol (http://<host:port>)
 >     uploadCredentialsId: "<ABAP CREDENTIAL>"                                                    # credential of type "Basic Authentication" to authenticate your pipeline against your ABAP system
 >     abapPackage: "<ABAP PACKAGE NAME>"                                                          # the name of the ABAP package you want to upload your application to

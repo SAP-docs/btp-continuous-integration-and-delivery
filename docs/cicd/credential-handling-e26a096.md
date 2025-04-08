@@ -105,4 +105,6 @@ We strongly recommend that you put the following operational countermeasures in 
 
 -   Configure a credential list to specify which credentials to pass to the build. See [Configure a Credential List](configure-a-credential-list-907b44a.md).
 
+-   For deploying to Cloud Foundry in the Acceptance and/or Release stages of a [Cloud Foundry environment job](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9), we recommend using a Certificate-Based Authentication for Custom IdP credential. This type of credential avoids the need for sharing secrets and supports automatic credential rotation. For more information, see [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
+
 

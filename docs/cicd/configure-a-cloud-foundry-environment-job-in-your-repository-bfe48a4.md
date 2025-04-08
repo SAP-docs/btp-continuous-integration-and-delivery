@@ -868,8 +868,7 @@ In the `.pipeline/config.yml` file in your repository, add the following configu
 >     runScripts: 
 >       - "test"                                                                                  # list of script names in your package.json file to be executed 
 >   
-> # Acceptance stage steps 
->   cloudFoundryDeploy: false                                                                     # true, if you want to deploy to Cloud Foundry test space (default: false)
+> # Acceptance stage steps
 >   npmExecuteEndToEndTests:                                                                      # only relevant, if you set the npmExecuteEndToEndTests parameter in the Accepance stage to true
 >     runScript: "<wdi5>"                                                                         # enter the name of the test script to be executed (you can find it in the scripts section of your package.json file) (default: "wdi5")                      
 >     baseUrl: "<base url>"                                                                       # enter the URL from the Application Routes section of your application from your SAP, BTP subaccount                       														      								
@@ -1161,8 +1160,7 @@ Depending on your configuration, your complete `.pipeline/config.yml` file shoul
 >     runScripts:
 >         - "test"                                                                                # list of script names in your package.json file to be executed 
 > 
-> # Acceptance stage steps 
->   cloudFoundryDeploy: false                                                                     # true, if you want to deploy to Cloud Foundry test space (default: false)
+> # Acceptance stage steps
 >   npmExecuteEndToEndTests:                                                                      # only relevant, if you set the npmExecuteEndToEndTests parameter in the Accepance stage to true
 >     runScript: "<wdi5>"                                                                         # enter the name of the test script to be executed (you can find it in the scripts section of your package.json file) (default: "wdi5")                      
 >     baseUrl: "<base url>"                                                                       # enter the URL from the Application Routes section of your application from your SAP, BTP subaccount                       														      								

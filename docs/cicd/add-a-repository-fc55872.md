@@ -36,6 +36,10 @@ The following graphic shows the connection between your repository and SAP Conti
 ![Relation between Your Repository and SAP Continuous Integration and Delivery](images/Repositories_6796338.png "Relation between Your Repository and SAP Continuous Integration and
                             Delivery")
 
+Have a look at the following demo video for an overview of how to add a repository to SAP Continuous Integration and Delivery:
+
+
+
 
 
 <a name="loiofc55872ed1f04e7fb78bdee01a977d5a__steps_hwt_flv_znb"/>

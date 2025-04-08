@@ -20,7 +20,7 @@ Users with write permissions to an associated repository can manipulate build an
 
 ## Additional Commands
 
-With the Additional Commands feature, users with the administrator role can define arbitrary command sequences that will be executed before or after a given stage. See [Additional Commands](additional-commands-c05a252.md).
+With the Additional Commands feature, users with the administrator role can define arbitrary command sequences that will be executed before or after a given stage. See [Add Additional Commands to Stages](add-additional-commands-to-stages-c05a252.md).
 
 Due to length limitations and for the sake of simplicity, administrators could decide to add references to more complex scripts located in Git repositories. In this case, however, users who only have write access in the Git repository could edit the scripts that are executed as part of the additional command.
 

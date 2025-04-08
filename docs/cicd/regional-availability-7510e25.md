@@ -79,6 +79,426 @@ Amazon Web Services
 </td>
 <td valign="top">
 
+ca10
+
+</td>
+<td valign="top">
+
+Canada \(Montreal\)
+
+</td>
+<td valign="top">
+
+cf-ca10
+
+</td>
+<td valign="top">
+
+ca-central-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Canada \(Montreal\)
+
+</td>
+<td valign="top">
+
+ca-central-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+ap20
+
+</td>
+<td valign="top">
+
+Australia \(Sydney\)
+
+</td>
+<td valign="top">
+
+cf-ap20
+
+</td>
+<td valign="top">
+
+Australia East
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Australia \(Sydney\)
+
+</td>
+<td valign="top">
+
+ap-southeast-2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+jp20
+
+</td>
+<td valign="top">
+
+Japan \(Tokyo\)
+
+</td>
+<td valign="top">
+
+cf-jp20
+
+</td>
+<td valign="top">
+
+Japan East
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Japan \(Tokyo\)
+
+</td>
+<td valign="top">
+
+ap-northeast-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+ap21
+
+</td>
+<td valign="top">
+
+Singapore
+
+</td>
+<td valign="top">
+
+cf-ap21
+
+</td>
+<td valign="top">
+
+Southeast Asia
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Singapore\)
+
+</td>
+<td valign="top">
+
+ap-southeast-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+ch20
+
+</td>
+<td valign="top">
+
+Switzerland \(Zurich\) EU Access
+
+</td>
+<td valign="top">
+
+cf-ch20
+
+</td>
+<td valign="top">
+
+Switzerland North
+
+</td>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+Switzerland \(Zurich\)
+
+</td>
+<td valign="top">
+
+switzerlandnorth
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+us21
+
+</td>
+<td valign="top">
+
+US East \(VA\)
+
+</td>
+<td valign="top">
+
+cf-us21
+
+</td>
+<td valign="top">
+
+East US
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+US East \(VA\)
+
+</td>
+<td valign="top">
+
+us-east-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+sa30
+
+</td>
+<td valign="top">
+
+KSA \(Dammam\)
+
+</td>
+<td valign="top">
+
+cf-sa30
+
+</td>
+<td valign="top">
+
+me-central2
+
+</td>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+KSA \(Dammam\)
+
+</td>
+<td valign="top">
+
+me-central2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+ap30
+
+</td>
+<td valign="top">
+
+Australia \(Sydney\)
+
+</td>
+<td valign="top">
+
+cf-ap30
+
+</td>
+<td valign="top">
+
+australia-southeast1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Sydney\)
+
+</td>
+<td valign="top">
+
+ap-southeast-2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+ap12
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Seoul\)
+
+</td>
+<td valign="top">
+
+cf-ap12
+
+</td>
+<td valign="top">
+
+ap-northeast-2
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Seoul\)
+
+</td>
+<td valign="top">
+
+ap-northeast-2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+br20
+
+</td>
+<td valign="top">
+
+Brazil \(São Paulo\)
+
+</td>
+<td valign="top">
+
+cf-br20
+
+</td>
+<td valign="top">
+
+Brazil South
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+South America \(São Paulo\)
+
+</td>
+<td valign="top">
+
+sa-east-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
 eu10
 
 </td>
@@ -126,7 +546,7 @@ eu11
 </td>
 <td valign="top">
 
-Europe \(Frankfurt\)
+Europe \(Frankfurt\) EU Access
 
 </td>
 <td valign="top">

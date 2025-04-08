@@ -186,6 +186,54 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     </td>
     </tr>
     <tr>
+    <td valign="top" rowspan="3">
+    
+    Certificate-Based Authentication for Custom IdP
+
+    > ### Note:  
+    > To use this credential type, you must configure your custom identity provider \(IdP\). Once your credential is created, you can find the necessary information \(the *Pattern to Match the Distinguished Name \(DN\) Against* and the *Root Certificate*\) in the detail view of your credential. To access the detail view of your credential, go to the *Credentials* tab and click on the entry for your credential in the table.
+    > 
+    > For more information, see [Configure X.509 Client Certificates for User Authentication](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/configure-x-509-client-certificates-for-user-authentication).
+
+
+    
+    </td>
+    <td valign="top">
+    
+    Email Address
+    
+    </td>
+    <td valign="top">
+    
+    Enter an email address to identify the technical user.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Hostname
+    
+    </td>
+    <td valign="top">
+    
+    Enter the hostname of your custom identity provider.
+    
+    </td>
+    </tr>
+    <tr>
+    <td valign="top">
+    
+    Origin Key
+    
+    </td>
+    <td valign="top">
+    
+    Enter the origin key to connect to Cloud Foundry. You can find it in your subaccount in the SAP BTP cockpit under *Cloud Foundry* \> *Org Members* in the *Origin* column.
+    
+    </td>
+    </tr>
+    <tr>
     <td valign="top" rowspan="4">
     
     OAuth

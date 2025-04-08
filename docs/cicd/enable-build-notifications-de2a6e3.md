@@ -12,9 +12,9 @@ Enable automatic triggering of notifications about build events using the SAP Al
 
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
--   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](enhancing-jobs-d581ab5.md).
+-   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring Jobs](configuring-jobs-e293286.md).
 
--   You habe enabled the SAP Alert Notification service and created a service key to authenticate your pipeline against SAP Alert Notification service. See [Initial Setup](https://help.sap.com/docs/ALERT_NOTIFICATION?version=Cloud) and [Credential Management](https://help.sap.com/docs/ALERT_NOTIFICATION/5967a369d4b74f7a9c2b91f5df8e6ab6/80fe24f86bde4e3aac2903ac05511835.html?version=Cloud).
+-   You have enabled the SAP Alert Notification service and created a service key to authenticate your pipeline against SAP Alert Notification service. See [Initial Setup](https://help.sap.com/docs/ALERT_NOTIFICATION?version=Cloud) and [Credential Management](https://help.sap.com/docs/ALERT_NOTIFICATION/5967a369d4b74f7a9c2b91f5df8e6ab6/80fe24f86bde4e3aac2903ac05511835.html?version=Cloud).
 
 
 
@@ -22,6 +22,10 @@ Enable automatic triggering of notifications about build events using the SAP Al
 ## Context
 
 When you enable build notifications in SAP Continuous Integration and Delivery, the pipeline will automatically send notifications about build events to SAP Alert Notification service. Use the Alert Notification service to manage the build notifications and consume them using the system of your choice, such as email, Slack, and other channels. For more information, see [SAP Alert Notification service for SAP BTP](https://help.sap.com/docs/ALERT_NOTIFICATION?version=Cloud).
+
+The following video demonstrates how to integrate the functionality of the SAP Alert Notification service for SAP BTP into an SAP Continuous Integration and Delivery job:
+
+
 
 
 

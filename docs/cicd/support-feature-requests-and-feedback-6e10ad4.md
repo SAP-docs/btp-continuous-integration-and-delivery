@@ -12,7 +12,7 @@ Learn how to get product support, request new features, and provide feedback for
 
 ## Support
 
-If in our [Guided Answers](https://ga.support.sap.com/dtp/viewer/index.html#/tree/2828/actions/41364), you can't find a solution to your issue, please report your incident in the incident creation application. See [Product Support](https://support.sap.com/en/my-support/product-support.html#section_249481993). Depending on what kind of issue you are facing, provide the following information in the *Description* of your issue:
+If in our [Troubleshooting](troubleshooting-b5d82cd.md), you can't find a solution to your issue, please report your incident in the incident creation application. See [Product Support](https://support.sap.com/en/my-support/product-support.html#section_249481993). Depending on what kind of issue you are facing, provide the following information in the *Description* of your issue:
 
 **Necessary Information When Creating an Incident for SAP Continuous Integration and Delivery**
 
