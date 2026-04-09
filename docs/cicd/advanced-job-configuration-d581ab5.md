@@ -1,16 +1,16 @@
 <!-- loiod581ab5f93354221b584f8e582f4f2b1 -->
 
-# Enhancing Jobs
+# Advanced Job Configuration
 
-Extend your SAP Continuous Integration and Delivery jobs through additional configuration options.
+Expand your job's functionality with additional configuration options.
 
 You can use the following options to enhance your jobs:
 
--   [**Additional Commands**](add-additional-commands-to-stages-c05a252.md)
+-   [**Additional Commands**](adding-additional-commands-to-stages-c05a252.md)
 
     Configure additional commands in the stages of your SAP Continuous Integration and Delivery jobs.
 
--   [**Additional Credentials**](add-additional-credentials-to-stages-af2d1a2.md)
+-   [**Additional Credentials**](adding-additional-credentials-to-stages-af2d1a2.md)
 
     Add environment variables that store values injected from credentials to the stages of your SAP Continuous Integration and Delivery jobs.
 

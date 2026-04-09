@@ -68,29 +68,18 @@ Create a job for SAP Cloud Application Programming Model projects in the Kyma Ru
 
 6.  From the *Pipeline* drop-down list, choose *Kyma Runtime*.
 
-7.  Skip the *Version* drop-down list.
+7.  In the *Keep logs for* text field in the *Build Retention* section, enter the number of days \(between 1 and 28\) after which your builds are automatically deleted.
 
-    If you create a new job, the latest version is selected by default. If you edit an existing job, you can change the version by choosing an option from the drop-down list.
+8.  In the *Keep maximum* text field, enter the maximum number of builds \(between 1 and 99\) you want to keep. If your number of builds exceeds this maximum, the oldest ones are deleted automatically.
 
-8.  To enable your job, choose *ON*.
-
-    By choosing *OFF*, you can deactivate your job without deleting its configuration.
-
-    > ### Note:  
-    > Jobs that are created in a trial account or using the Free service plan are automatically deactivated after remaining unchanged for one week. You can use this switch to reactivate them.
-
-9.  In the *Keep logs for* text field in the *Build Retention* section, enter the number of days \(between 1 and 28\) after which your builds are automatically deleted.
-
-10. In the *Keep maximum* text field, enter the maximum number of builds \(between 1 and 99\) you want to keep. If your number of builds exceeds this maximum, the oldest ones are deleted automatically.
-
-11. From the *Configuration Mode* drop-down list, choose *Source Repository*.
+9.  From the *Configuration Mode* drop-down list, choose *Source Repository*.
 
     > ### Note:  
     > If you've already created a Kyma Runtime job in the job editor, you can export its configuration information to a YAML file. See [Export Job Configuration Data](export-job-configuration-data-60a76d7.md).
 
-12. \(Optional\) Enable build notifications through the SAP Alert Notification service for SAP BTP. See [Enable Build Notifications](enable-build-notifications-de2a6e3.md).
+10. \(Optional\) Enable build notifications through the SAP Alert Notification service for SAP BTP. See [Enable Build Notifications](enable-build-notifications-de2a6e3.md).
 
-13. Choose *Create*.
+11. Choose *Create*.
 
 
 <a name="task_b4v_4nx_1zb"/>
@@ -572,7 +561,7 @@ Configure the stages of your Kyma Runtime job in your source repository.
     By default, this stage executes linting with a general-purpose configuration. It doesn’t fail through lint findings but warns you against potential errors in the programming style.
 
     > ### Note:  
-    > You must have at least one JavaScript or TypeScript file in your project.
+    > You must have at least one JavaScript or TypeScript file in your project and a lint configuration file in your repository.
 
 
     

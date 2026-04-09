@@ -83,24 +83,13 @@ Create a job in the SAP Continuous Integration and Delivery job editor.
 
 6.  From the *Pipeline* drop-down list, choose *SAP Fiori for ABAP platform*.
 
-7.  Skip the *Version* drop-down list.
+7.  In the *Keep logs for* text field in the *Build Retention* section, enter the number of days after which your builds are automatically deleted. Choose a range between 1 and 28 days.
 
-    If you create a new job, the latest version is selected by default. If you edit an existing job, you can change the version by choosing an option from the drop-down list.
+8.  In the *Keep maximum* text field, enter the maximum number of builds you want to keep. If your number of builds exceeds this maximum, the oldest ones are deleted automatically. Choose a range between 1 and 99 builds.
 
-8.  To enable your job, choose *ON*.
+9.  From the *Configuration Mode* drop-down list, choose *Source Repository*.
 
-    By choosing *OFF*, you can deactivate your job without deleting its configuration.
-
-    > ### Note:  
-    > Jobs that are created in a trial account or using the Free service plan are automatically deactivated after remaining unchanged for one week. You can use this switch to reactivate them.
-
-9.  In the *Keep logs for* text field in the *Build Retention* section, enter the number of days after which your builds are automatically deleted. Choose a range between 1 and 28 days.
-
-10. In the *Keep maximum* text field, enter the maximum number of builds you want to keep. If your number of builds exceeds this maximum, the oldest ones are deleted automatically. Choose a range between 1 and 99 builds.
-
-11. From the *Configuration Mode* drop-down list, choose *Source Repository*.
-
-12. \(Optional\) Either switch the option *Send Build Notifications via SAP Alert Notification Service* on or off.
+10. \(Optional\) Either switch the option *Send Build Notifications via SAP Alert Notification Service* on or off.
 
     > ### Note:  
     > To use the *Send Build Notifications via SAP Alert Notification Service* option, you need to have enabled the SAP Alert Notification service and created a service key to authenticate your job against it. See [Initial Setup](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/initial-setup?version=Cloud) and [Credential Management](https://help.sap.com/docs/alert-notification/sap-alert-notification-for-sap-btp/credential-management?version=Cloud).
@@ -114,7 +103,7 @@ Create a job in the SAP Continuous Integration and Delivery job editor.
         Choose this service key credential from the *Service Key* drop-down list.
 
 
-13. To save your initial job configuration, choose *Create*.
+11. To save your initial job configuration, choose *Create*.
 
 
 <a name="task_igr_2xc_3bc"/>
@@ -294,7 +283,12 @@ By default, this stage executes linting with a general-purpose configuration. It
 </td>
 <td valign="top">
 
-You have at least one JavaScript or TypeScript file in your project.
+-   Your project contains at least one JavaScript or TypeScript file.
+
+-   Your repository includes a lint configuration file.
+
+
+
 
 </td>
 </tr>
@@ -811,7 +805,7 @@ You've set the `transportRequestUploadCts` parameter in the `Release` stage to `
 </table>
 
 > ### Note:  
-> You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see [Enhancing Jobs](enhancing-jobs-d581ab5.md).
+> You can add environment variables to provide additional configuration to each stage. They will only apply to the stage in which they're defined. For more information, see [Advanced Job Configuration](advanced-job-configuration-d581ab5.md).
 
 <a name="concept_fjn_r3v_xbc"/>
 

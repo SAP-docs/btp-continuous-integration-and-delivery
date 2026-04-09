@@ -13,13 +13,22 @@ Enable SAP Continuous Integration and Delivery in the SAP BTP cockpit.
 ## Prerequisites
 
 > ### Note:  
-> If you are using this service as part of SAP Build Code, follow the [SAP Build Code Initial Setup](https://help.sap.com/docs/build_code/d0d8f5bfc3d640478854e6f4e7c7584a/07698d7c31284e4db370acdf017cfd14.html?version=SHIP) instructions instead.
+> If you are using this service as part of SAP Build, follow the [Initial Setup of SAP Build](https://help.sap.com/docs/build-service/build-service-guide/initial-setup-of-sap-build?version=Cloud) instructions instead.
 
--   You've set up your global account and subaccount on SAP BTP in the Cloud Foundry environment. See [Getting Started in the Cloud Foundry Environment](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/b328cc89ea14484d9655b8cfb8efb508.html).
+-   You've set up your global account and subaccount on SAP BTP. See [Getting Started](https://help.sap.com/docs/btp/sap-business-technology-platform/btp-getting-started?version=Cloud).
 
 -   You’re an administrator of your global account and subaccount on SAP BTP.
 
--   **Customers:** You use the CPEA \(Cloud Platform Enterprise Agreement\) license model. See [What Is the Consumption-Based Commercial Model](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/7047eb4a15a84ac7be3c8612179e6d1f.html).
+-   **Customers:** You can use one of the following commercial models:
+
+    -   SAP BTPEA
+
+    -   Pay-As-You-Go for SAP BTP
+
+    -   CPEA
+
+
+    For more information, see [What Is the Consumption-Based Commercial Model](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/7047eb4a15a84ac7be3c8612179e6d1f.html).
 
     **Partners:** You have a Test, Demonstration, and Development License. See [SAP Partner Licensing Services](https://partneredge.sap.com/en/partnership/licenses/tdd.html).
 
@@ -47,9 +56,16 @@ Enable SAP Continuous Integration and Delivery in the SAP BTP cockpit.
 
 5.  From the *Plan* drop-down list, select one of the following options:
 
-    -   *Subscription: default*
+    -   *Subscriptions: default*
 
-    -   *Subscription: free*
+    -   *Subscriptions: build-runtime*
+
+        This service plan is recommended and is only applicable if you are using SAP Continuous Integration and Delivery as part of SAP Build. For more information, see [Changing Service Plans](https://help.sap.com/docs/build-service/build-service-guide/changing-service-plans?version=Cloud).
+
+        > ### Note:  
+        > You can also change from the *default* and *free* service plans to the *build-runtime* plan. See [Changing Service Plans](https://help.sap.com/docs/build-service/build-service-guide/changing-service-plans).
+
+    -   *Subscriptions: free*
 
         The free service plan is part of the free tier model for SAP BTP. It provides you access to learn, develop, and implement integrations and extensions in your enterprise account without time restrictions.
 

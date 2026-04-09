@@ -77,7 +77,7 @@ Recommended
 </td>
 <td valign="top">
 
-Security Monitoring and Forensics
+Security Monitoring & Forensics
 
 </td>
 <td valign="top">
@@ -131,17 +131,17 @@ Client Security
 </td>
 <td valign="top">
 
-REST API Service Keys
+API Service Keys
 
 </td>
 <td valign="top">
 
-Service keys serve as authentication mechanism for granting authorized access to the REST API of SAP Continuous Integration and Delivery. Service keys for REST API service instances don't expire.
+Service keys serve as authentication mechanism for granting authorized access to the API of SAP Continuous Integration and Delivery. Service keys for API service instances don't expire.
 
 </td>
 <td valign="top">
 
-Periodically rotate your service keys for the SAP Continuous Integration and Delivery REST API to mitigate the effects of a potential exposure.
+Periodically rotate your service keys for the SAP Continuous Integration and Delivery API to mitigate the effects of a potential exposure.
 
 See also [BTP-UAA-0004](https://help.sap.com/docs/btp/sap-btp-security-recommendations-c8a9bb59fe624f0981efa0eff2497d7d/sap-btp-security-recommendations?seclist-index=BTP-UAA-0004&version=Cloud).
 
@@ -175,7 +175,7 @@ Recommended
 </td>
 <td valign="top">
 
-Roles and Authorizations
+Roles & Authorizations
 
 </td>
 <td valign="top">
@@ -222,7 +222,7 @@ Recommended
 </td>
 <td valign="top">
 
-Roles and Authorizations
+Roles & Authorizations
 
 </td>
 <td valign="top">
@@ -232,12 +232,12 @@ API Roles
 </td>
 <td valign="top">
 
-REST API service instances grant authorizations corresponding to those of a user with the Administrator role.
+By default, API instances are assigned the Administrator role.
 
 </td>
 <td valign="top">
 
-Following the principle of least privilege, consider to create a REST API service instance with restricted authorizations corresponding to the Developer role.
+To follow the principle of least privilege, create instances with the Developer role assigned unless Administrator permissions are needed for your use case.
 
 </td>
 <td valign="top">
@@ -279,12 +279,12 @@ Credential List
 </td>
 <td valign="top">
 
-For jobs with repository-based configuration, all credentials managed by SAP Continuous Integration and Delivery can be used within a build.
+Jobs that were configured in the source repository can use all credentials managed by SAP Continuous Integration and Delivery.
 
 </td>
 <td valign="top">
 
-For jobs with repository-based configuration, users with the Administrator role should configure credential lists to define which credential can be used by a build.
+Administrators in SAP Continuous Integration and Delivery should create a job-specific credential list, which defines the credentials the job can use. This approach prevents users who have access to a job's source repository but do not have the Administrator role in the service from using credentials that were intended for other jobs.
 
 </td>
 <td valign="top">

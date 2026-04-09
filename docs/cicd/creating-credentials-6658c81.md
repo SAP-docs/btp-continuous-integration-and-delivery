@@ -191,7 +191,7 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     Certificate-Based Authentication for Custom IdP
 
     > ### Note:  
-    > To use this credential type, you must configure your custom identity provider \(IdP\). Once your credential is created, you can find the necessary information \(the *Pattern to Match the Distinguished Name \(DN\) Against* and the *Root Certificate*\) in the detail view of your credential. To access the detail view of your credential, go to the *Credentials* tab and click on the entry for your credential in the table.
+    > To use this credential type, you must configure your custom identity provider \(IdP\). Once your credential is created, you can find the necessary information \(the *Pattern to Match the Distinguished Name \(DN\) Against*\) in the detail view of your credential. To access the detail view of your credential, go to the *Credentials* tab and click on the entry for your credential in the table.
     > 
     > For more information, see [Configure X.509 Client Certificates for User Authentication](https://help.sap.com/docs/cloud-identity-services/cloud-identity-services/configure-x-509-client-certificates-for-user-authentication).
 
@@ -230,66 +230,6 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     <td valign="top">
     
     Enter the origin key to connect to Cloud Foundry. You can find it in your subaccount in the SAP BTP cockpit under *Cloud Foundry* \> *Org Members* in the *Origin* column.
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top" rowspan="4">
-    
-    OAuth
-
-    > ### Note:  
-    > For how to create an OAuth client, see **Create an OAuth Client** in [Using Platform APIs](https://help.sap.com/viewer/ea72206b834e4ace9cd834feed6c0e09/Cloud/en-US/392af9d162694d6595499f1549978aa6.html).
-    > 
-    > When creating an OAuth client for SAP Continuous Integration and Delivery, make sure that the API for **Solutions Lifecycle Management** is selected together with its scopes.
-
-
-    
-    </td>
-    <td valign="top">
-    
-    Client ID
-    
-    </td>
-    <td valign="top">
-    
-    Enter your client ID.
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Client Secret
-    
-    </td>
-    <td valign="top">
-    
-    Enter your client secret.
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Cloud Region
-    
-    </td>
-    <td valign="top">
-    
-    Enter the host of the service to which you want to connect SAP Continuous Integration and Delivery. See [Regions and Hosts Available for the Neo Environment](https://help.sap.com/viewer/ea72206b834e4ace9cd834feed6c0e09/Cloud/en-US/d722f7cea9ec408b85db4c3dcba07b52.html).
-    
-    </td>
-    </tr>
-    <tr>
-    <td valign="top">
-    
-    Service URL
-    
-    </td>
-    <td valign="top">
-    
-    The URL of the OAuth service is generated automatically.
     
     </td>
     </tr>
@@ -342,7 +282,7 @@ During each job, SAP Continuous Integration and Delivery connects to other servi
     </td>
     <td valign="top">
     
-    Enter the location ID of the Cloud Connector for your subaccount. You can find it in the SAP BTP cockpit under <span class="SAP-icons-V5"></span> *Connectivity* \> *Cloud Connectors*.
+    Enter the location ID of the Cloud Connector for your subaccount. You can find it in the SAP BTP cockpit under <span class="SAP-icons-V5"></span> *Connectivity* \> *Cloud Connectors*, where it is displayed in brackets next to the connected Cloud Connector instance.
     
     </td>
     </tr>

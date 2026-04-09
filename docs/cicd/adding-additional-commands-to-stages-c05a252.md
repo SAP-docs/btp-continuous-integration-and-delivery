@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/sap-icons.css"/>
 
-# Add Additional Commands to Stages
+# Adding Additional Commands to Stages
 
 Configure additional commands in the stages of your job.
 
@@ -12,9 +12,11 @@ Configure additional commands in the stages of your job.
 
 ## Context
 
-If you want to execute tasks other than the default ones provided in the SAP Continuous Integration and Delivery stages, you can configure your own additional commands. These commands can be configured to run at the beginning or the end of a specific stage. They will be executed on a Node.js Docker image using a version based on Node 20. For more details, refer to the Node.js information on [Docker Hub](https://hub.docker.com/_/node).
+To execute tasks beyond the default ones in SAP Continuous Integration and Delivery pipelines, you can add additional commands to their stages. These commands can be set to run either at the start \(as the first task\) or at the end \(as the last task\) of a specific stage.
 
-You can configure additional commands using either the job editor or the configuration file in your source code management system. If you choose to use the configuration file, ensure you follow the security guidelines outlined in the [Additional Commands](https://help.sap.com/docs/CONTINUOUS_DELIVERY/99c72101f7ee40d0b2deb4df72ba1ad3/8a57562c7d2d4f7db53a29b2f1e146e9.html?version=Cloud#additional-commands) section of the SAP Continuous Integration and Delivery security guide.
+Additional commands will be executed on a Node.js Docker image using a version based on Node 22. For more details, refer to the Node.js information on [Docker Hub](https://hub.docker.com/_/node).
+
+You can configure these additional commands either in the built-in job editor in the service interface or in your source repository. If you choose to use the configuration file, make sure to follow the security guidelines outlined in the [Additional Commands](https://help.sap.com/docs/CONTINUOUS_DELIVERY/99c72101f7ee40d0b2deb4df72ba1ad3/8a57562c7d2d4f7db53a29b2f1e146e9.html?version=Cloud#additional-commands) section of the SAP Continuous Integration and Delivery security guide.
 
 > ### Tip:  
 > Depending on which configuration mode you choose, expand one of the following sections for more information.
@@ -35,16 +37,16 @@ Add additional commands to your job using the job editor in the SAP Continuous I
 
 1.  In SAP Continuous Integration and Delivery, either create a new job or navigate to the job to which you want to add additional commands and choose *Edit*.
 
-2.  In the *Stages* section of your job, navigate to the stage to which you want to add a command and choose :heavy_plus_sign: next to *Additional Commands*.
+2.  In the *Stages* section of your job, navigate to the stage to which you want to add a command and choose :heavy_plus_sign: next to either *Advanced Configuration* \(if you're configuring a Cloud Foundry Environment job\) or *Additional Commands* \(if you're configuring an SAP Fiori for ABAP Platform job, an SAP Integration Suite Artifacts job, or a Kyma Runtime job\).
 
 3.  From the drop-down list, choose one of the following options:
 
-    -   *Run First in Stage* to run your command in the beginning of the stage
+    -   *Run First in Stage* to run your command at the beginning of the stage
 
     -   *Run Last in Stage* to run your command at the end of the stage
 
 
-4.  In the *Command* text field, enter the commands you want to run.
+4.  In the *Command* text field, enter the command you want your pipeline to execute.
 
 5.  Either choose *Create* to create your new job or choose *Save* to confirm your changes to an existing job.
 
@@ -57,17 +59,65 @@ Add additional commands to your job using the job editor in the SAP Continuous I
 
 [Next Level of Flexibility: Additional Commands in CI/CD Pipelines](https://blogs.sap.com/2023/06/22/next-level-of-flexibility-additional-commands-in-ci-cd-pipelines/)
 
-<a name="task_g5g_xnd_lxb"/>
+<a name="concept_qrj_jxg_vgc"/>
 
-<!-- task\_g5g\_xnd\_lxb -->
+<!-- concept\_qrj\_jxg\_vgc -->
 
 ## Configure Additional Commands in the Configuration File
 
 Add additional commands to your job using the configuration file in your source code management system.
 
+Depending on the pipeline type you're using, choose one of the following procedures:
+
+<a name="task_ksm_nxg_vgc"/>
+
+<!-- task\_ksm\_nxg\_vgc -->
+
+### Cloud Foundry Environment \(3.0\)
 
 
-<a name="task_g5g_xnd_lxb__steps_h5g_xnd_lxb"/>
+
+## Procedure
+
+1.  In your source repository, navigate to the `.sap_cid/config.yaml` file.
+
+2.  In the `stages` section, add a code block similar to the following examples to the stage where you want to include additional commands:
+
+    -   To run your command at the beginning of the stage, add the following code block:
+
+        > ### Sample Code:  
+        > ```
+        > ---
+        > stages:
+        >   build
+        >     ...
+        >     runFirst:
+        >       command: "cd helloWorld && npm install && npm hello-world.js"
+        > ```
+
+    -   To run your command at the end of the stage, add the following code block:
+
+        > ### Sample Code:  
+        > ```
+        > ---
+        > stages:
+        >   build
+        >     ...
+        >     runLast:
+        >       command: "cd helloWorld && npm install && npm hello-world.js"
+        > ```
+
+
+    Replace `"cd helloWorld && npm install && npm hello-world.js"` with the commands you want to execute. Using `&&` ensures that each subsequent command is only executed if the preceding command succeeds.
+
+
+<a name="task_jqv_kyg_vgc"/>
+
+<!-- task\_jqv\_kyg\_vgc -->
+
+### SAP Fiori for ABAP Platform, SAP Integration Suite Artifacts, Kyma Runtime, Cloud Foundry Environment \(2.0\)
+
+
 
 ## Procedure
 

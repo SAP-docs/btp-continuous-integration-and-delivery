@@ -42,20 +42,18 @@ For an overview of how to create a webhook in a repository, watch the demo video
 
 1.  In the *Repositories* tab in SAP Continuous Integration and Delivery, choose the Azure Repos repository for which you want to create a webhook.
 
-2.  In the detail view of your repository, choose *Webhook Data*.
+    As a result, the detail view of your repository opens. The Webhook Data section provides the information you need to create a webhook in Azure Repos.
 
-    As a result, the *Webhook Data* pop-up opens. This pop-up provides the information you need to create a webhook in Azure Repos.
+2.  In your project in Azure Repos, go to the *Project settings* tab.
 
-3.  In your project in Azure Repos, go to the *Project settings* tab.
+3.  Choose *Service hooks* and :heavy_plus_sign:*Create subscription*.
 
-4.  Choose *Service hooks* and :heavy_plus_sign:*Create subscription*.
+4.  In the *Service* section, choose *Web hooks* and choose *Next*.
 
-5.  In the *Service* section, choose *Web hooks* and choose *Next*.
+5.  In the *Trigger* section, choose and configure the *Code pushed* event. Enter the target repository and branch to which you want to push your code changes and choose *Next*.
 
-6.  In the *Trigger* section, choose and configure the *Code pushed* event. Enter the target repository and branch to which you want to push your code changes and choose *Next*.
+6.  In the *Settings* section, enter the *URL* and *Basic authentication username* from the *Webhook Data* section in SAP Continuous Integration and Delivery. For *Basic authentication password*, enter the *Secret* from the *Webhook Credential* you created.
 
-7.  In the *Settings* section, enter the *URL* and *Basic authentication username* from the *Webhook Data* pop-up in SAP Continuous Integration and Delivery. For *Basic authentication password*, enter the *Secret* from the *Webhook Credential* you created.
-
-8.  Choose *Finish*.
+7.  Choose *Finish*.
 
 

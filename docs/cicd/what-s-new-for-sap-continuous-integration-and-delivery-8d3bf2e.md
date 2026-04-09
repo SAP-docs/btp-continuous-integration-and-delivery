@@ -89,6 +89,2276 @@ Continuous Integration & Delivery
 </td>
 <td valign="top">
 
+Cloud Foundry Environment Pipeline: Migration to Version 3.0 Completed
+
+</td>
+<td valign="top">
+
+All Cloud Foundry Environment Pipeline jobs have been migrated to version 3.0. Version 2.0 has been removed.
+
+Required Actions:
+
+-   For API-based job creation, use version 3.0.
+-   If your job is configured in the source repository, update the configuration to the new specification \(see [Jobs Configured in the Job Editor](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/migrating-to-new-version-of-cloud-foundry-environment-pipeline-93203258b7b24ba7936a986b71271a77#jobs-configured-in-the-source-repository)\).
+
+
+
+</td>
+<td valign="top">
+
+Recommended
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-03-04
+
+</td>
+<td valign="top">
+
+2026-03-04
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Fix: Service UI Loading Issue Resolved
+
+</td>
+<td valign="top">
+
+An issue that occasionally prevented the service user interface from loading has been resolved. The UI now appears as expected.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-02-26
+
+</td>
+<td valign="top">
+
+2026-02-26
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Advanced Job Configuration: Post-Execution Step
+
+</td>
+<td valign="top">
+
+You can now add a command that runs at the end of a Cloud Foundry Environment job and configure environment variables using credentials or user-defined values.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-01-30
+
+</td>
+<td valign="top">
+
+2026-01-30
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the SAP Cloud Infrastructures US \(Sterling\) region and the Microsoft Azure UK South \(London\) region. See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-01-30
+
+</td>
+<td valign="top">
+
+2026-01-30
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in SAP Cloud Infrastructures regions UAE \(Dubai\), Australia \(Sydney\), Japan \(Tokyo\), US West \(Colorado\), and Europe \(Rot\) - SAP EU Access. See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-01-09
+
+</td>
+<td valign="top">
+
+2026-01-09
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Automatic Migration of Cloud Foundry Environment Pipeline Version 2.0 Jobs Postponed
+
+</td>
+<td valign="top">
+
+The previously announced migration of Cloud Foundry Environment pipeline version 2.0 jobs has been postponed. The jobs will be migrated no earlier than February 3, 2026.
+
+For more information about the migration, see [Migrating Jobs](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/migrating-to-new-version-of-cloud-foundry-environment-pipeline-93203258b7b24ba7936a986b71271a77?language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-01-13
+
+</td>
+<td valign="top">
+
+2026-01-13
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Webhook Payload Size Increased
+
+</td>
+<td valign="top">
+
+The webhook functionality now supports payloads of up to 262 KB, doubling the previous limit of 131 KB.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-12-05
+
+</td>
+<td valign="top">
+
+2025-12-05
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Timeouts for Malware Scans Increased
+
+</td>
+<td valign="top">
+
+The timeout setting for malware scans has been extended to 25 minutes to align with the [SAP Malware Scanning Service's standard timeout](https://help.sap.com/docs/malware-scanning-servce/sap-malware-scanning-service/developing-applications-with-sap-malware-scanning-service#timeouts).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-12-18
+
+</td>
+<td valign="top">
+
+2025-12-18
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Accessing On-Premises Sonar Instances
+
+</td>
+<td valign="top">
+
+An issue has been resolved that was preventing on-premises Sonar instances from being accessible through the [Cloud Connector setup](https://help.sap.com/docs/connectivity/sap-btp-connectivity-cf/cloud-connector) during the Compliance stage.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Optional Credential List for Cloud Foundry Environment Jobs
+
+</td>
+<td valign="top">
+
+An issue has been resolved that previously made the configuration of a [credential list](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/optional-configure-credential-list) mandatory for Cloud Foundry Environment jobs configured in the source repository. Credential lists are now optional again.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Migration of `runScripts` Parameter
+
+</td>
+<td valign="top">
+
+An issue has been resolved that prevented the migration of the `runScripts` parameter from working as expected when migrating Cloud Foundry Environment jobs from pipeline version 2.0 to pipeline version 3.0.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+`runScripts` Parameter Limited to One Script
+
+</td>
+<td valign="top">
+
+With the introduction of Cloud Foundry Environment pipeline version 3.0, the `runScripts` parameter now supports the configuration of only one script. If you need to execute multiple scripts, bundle them into a single script within the corresponding configuration file.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Region
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Amazon Web Services region Europe \(Milan\). See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+<td valign="top">
+
+2025-11-03
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Automatic Migration of Cloud Foundry Environment Pipeline Version 2.0
+
+</td>
+<td valign="top">
+
+Due to the recent update of the Cloud Foundry Environment pipeline to version 3.0, existing jobs in version 2.0 will be automatically migrated by January 15, 2026.
+
+Action: Jobs configured in the source repository require updates to their repository configuration to function properly after migration. See [Jobs Configured in the Source Repository](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/migrating-to-new-version-of-cloud-foundry-environment-pipeline-93203258b7b24ba7936a986b71271a77?language=en-US#jobs-configured-in-the-source-repository).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Announcement
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-01-15
+
+</td>
+<td valign="top">
+
+2026-01-15
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Support of Multitarget Application \(MTA\) Deployment Extension Descriptors
+
+</td>
+<td valign="top">
+
+You can now define MTA extension descriptor files in Cloud Foundry Environment jobs to include additional system-specific variations during development. For more information, see [Configure a Cloud Foundry Environment Job](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/configure-sap-cloud-application-programming-model-job-in-job-editor?language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-10-01
+
+</td>
+<td valign="top">
+
+2025-10-01
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Migration of Cloud Foundry Environment Pipeline Jobs Using the API PUT Method
+
+</td>
+<td valign="top">
+
+We have updated our API to allow you to use the PUT method for migrating existing Cloud Foundry Environment pipeline jobs from version 2.0 to 3.0. The request body must conform to the new format.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-10-21
+
+</td>
+<td valign="top">
+
+2025-10-21
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Bitbucket Cloud: IP-Based Model Disabled
+
+</td>
+<td valign="top">
+
+The IP-based model for Bitbucket Cloud webhook event receivers is no longer functional. Existing webhooks that do not have a valid secret need to be adjusted accordingly. For further instructions, see [Add a Webhook in Bitbucket Cloud](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/add-webhook-in-bitbucket-cloud#procedure).
+
+Any webhooks that are not adjusted by November 15, 2025, will be deleted.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-10-21
+
+</td>
+<td valign="top">
+
+2025-10-21
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Bug Fix: Extension of Allowed Characters in Service Key Credentials
+
+</td>
+<td valign="top">
+
+Service key credentials are no longer restricted in length.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-10-23
+
+</td>
+<td valign="top">
+
+2025-10-23
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Cloud Foundry Environment Pipeline Version \(3.0\)
+
+</td>
+<td valign="top">
+
+The Cloud Foundry Environment pipeline has been updated to version 3.0 to enhance functionality and user experience. Depending on their configuration mode, existing Cloud Foundry Environment jobs in version 2.0 require specific actions for a smooth transition to pipeline version 3.0:
+
+-   **Job Editor:**
+
+    Cloud Foundry Environment jobs configured in the job editor do not require any manual configuration changes for their migration to pipeline version 3.0. They can be migrated using the *Migrate* button in the detail view of the respective job. See [Migrating Jobs Configured in the Job Editor](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/migrating-to-new-version-of-cloud-foundry-environment-pipeline-93203258b7b24ba7936a986b71271a77?version=Cloud#jobs-configured-in-the-job-editor).
+
+-   **Source Repository:**
+
+    Cloud Foundry Environment jobs configured in the source repository require updates to their repository configuration to function properly after migration. Their configuration can be adapted with the help of a converter tool in the service's user interface. See [Migrating Jobs Configured in the Source Repository](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/migrating-to-new-version-of-cloud-foundry-environment-pipeline-93203258b7b24ba7936a986b71271a77?version=Cloud#jobs-configured-in-the-source-repository).
+
+
+
+
+</td>
+<td valign="top">
+
+Required
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-10-01
+
+</td>
+<td valign="top">
+
+2025-10-01
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Google Cloud region Japan \(Tokyo\) as well as in the SAP Cloud Infrastructure region Europe \(Frankfurt\) - EU Access Only.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-09-19
+
+</td>
+<td valign="top">
+
+2025-09-19
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Automatic Version Selection in Job Creation
+
+</td>
+<td valign="top">
+
+When creating a new job, the latest pipeline version is now automatically selected. To simplify the job creation process, the version selection drop-down has been removed.
+
+</td>
+<td valign="top">
+
+Required
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-08-12
+
+</td>
+<td valign="top">
+
+2025-08-12
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Bitbucket Cloud: Adjust the Event Receiver Configuration
+
+</td>
+<td valign="top">
+
+Bitbucket Cloud now supports authentication for webhooks.
+
+Action: Please update your Bitbucket Cloud event receiver configuration by using a webhook secret instead of the Bitbucket Cloud Repository UUID. The webhook secret must be provided in the Bitbucket webhook configuration. These updates need to be completed by September 30, 2025.
+
+</td>
+<td valign="top">
+
+Required
+
+</td>
+<td valign="top">
+
+Deprecated
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-07-11
+
+</td>
+<td valign="top">
+
+2025-07-11
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Changes for Credential Type “Certificate-Based Authentication for Custom IdP”
+
+</td>
+<td valign="top">
+
+As certificates have become obsolete in the SAP custom IdP, the Certificate-Based Authentication for Custom IdP credential no longer displays one. In addition, the subject has been extended to include the user’s email address in the format `CN=${mail:user@example.com}`.
+
+Action: We highly recommend updating the settings in the custom IdP’s Trusted Certificate Configuration to improve security.
+
+</td>
+<td valign="top">
+
+Recommended
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-07-11
+
+</td>
+<td valign="top">
+
+2025-07-11
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Discontinuation of the SAP Fiori for the Neo Environment Pipeline
+
+</td>
+<td valign="top">
+
+The SAP Fiori for the Neo Environment pipeline has been deleted. Existing jobs will no longer function, but you can still download their configuration. See [Export Job Configuration Data](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/export-job-configuration-data).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Discontinuation of Node 18 Jobs
+
+</td>
+<td valign="top">
+
+Jobs that use Node 18 build tool versions no longer work.
+
+Action: Please upgrade your jobs to newer build tool versions. See [Supported Tools](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/export-job-configuration-data).
+
+</td>
+<td valign="top">
+
+Required
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Discontinuation of OAuth Credential Type
+
+</td>
+<td valign="top">
+
+The OAuth credential type is now obsolete and can no longer be created. All existing OAuth credentials have been migrated to the Secret Text credential type. For more information, see [Creating Credentials](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/creating-credentials?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+Deleted
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Update of Toolbox Image
+
+</td>
+<td valign="top">
+
+The image used to execute additional commands now runs with a Node 22 version. For more information on additional commands, see [Add Additional Commands to Stages](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/additional-commands?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+<td valign="top">
+
+2025-06-18
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Audit Log Events for Credentials with Each Build
+
+</td>
+<td valign="top">
+
+Audit log entries are now also written for the credentials used during a build.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Deployments without Passwords
+
+</td>
+<td valign="top">
+
+Use the capabilities of SAP BTP to establish secure authentication between SAP Continuous Integration and Delivery and the Cloud Foundry runtime without sharing any kind of secrets. For more information, see the blog post [Deployments without passwords with SAP Continuous Integration and Delivery](https://community.sap.com/t5/technology-blog-posts-by-sap/deployments-without-passwords-with-sap-continuous-integration-and-delivery/ba-p/14089250).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Webhook Secrets for Bitbucket Cloud
+
+</td>
+<td valign="top">
+
+Bitbucket Cloud now also allows the definition of a secret for webhooks. As a result, the service behavior has been adjusted so that a secret is created whenever a webhook is created. The old IP-based model will still work but will be deprecated at a later time.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Webhook Data Moved
+
+</td>
+<td valign="top">
+
+You can now find the data needed to configure a webhook in the detail view of the corresponding repository, located in the Repositories tab.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+<td valign="top">
+
+2025-04-24
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Region
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Amazon Web Services region US West \(Oregon\). See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-05-13
+
+</td>
+<td valign="top">
+
+2025-05-13
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Google Cloud regions Brazil \(São Paulo\), Japan \(Osaka\), and KSA \(Dammam - KSA Regulated Customers\) as well as in the Microsoft Azure region Canada \(Toronto\). See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud&language=en-US).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-15
+
+</td>
+<td valign="top">
+
+2025-04-15
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+User Interface Support for Longer Git Clone URLs
+
+</td>
+<td valign="top">
+
+An issue has been resolved that prevented the SAP Continuous Integration and Delivery user interface from accepting longer Git Clone URLs. You can now enter Git Clone URLs up to 255 characters.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-08
+
+</td>
+<td valign="top">
+
+2025-04-08
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Detection of Leading and Trailing Whitespaces in Cloud Foundry Deployment Configuration
+
+</td>
+<td valign="top">
+
+An issue has been resolved where the SAP Continuous Integration and Delivery user interface did not recognize leading and trailing whitespaces mistakenly included in the 'Org Name' or 'Space' configuration values for Cloud Foundry deployments. Now, leading and trailing whitespaces are detected and flagged as incorrect values in the UI.
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+Changed
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2025-04-08
+
+</td>
+<td valign="top">
+
+2025-04-08
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
 Deprecation of Node 18-Based Build Tool Versions
 
 </td>
@@ -755,7 +3025,7 @@ Deprecation of the SAP Fiori for the Neo Environment Pipeline
 </td>
 <td valign="top">
 
-Due to the legacy Neo environment sunset on December 31, 2028, the SAP Fiori in the Neo Environment pipeline has been deprecated and is no longer available for new jobs. Existing jobs will continue to wosolved that caused npm scripts in the Additional Unit Tests stage in the Kyma Runtime pipeline to be executed even when the stage was disabled. Now, the scripts will only be executed when thrk until March 31st, 2025.
+Due to the legacy Neo environment sunset on December 31, 2028, the SAP Fiori in the Neo Environment pipeline has been deprecated and is no longer available for new jobs. Existing jobs will continue to work until March 31st, 2025.
 
 </td>
 <td valign="top">

@@ -26,6 +26,3 @@ The Continuous Integration and Delivery Introduction Guide provides you with bas
 
 The Continuous Integration and Delivery Introduction Guide addresses **customers who are new to CI/CD and want to get a basic understanding** of it as well as **those who want to refresh and deepen their knowledge in CI/CD**.
 
-> ### Tip:  
-> For a full overview of the different solutions SAP provides for CI/CD, see [SAP Solutions for Continuous Integration and Delivery](https://help.sap.com/viewer/8cacec64ed854b2a88e9a0973e0f97a2/Cloud/en-US/e9fa320181124fa9808d4446a1bf69dd.html).
-

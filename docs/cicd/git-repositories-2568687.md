@@ -38,7 +38,7 @@ To learn more about how to connect SAP Continuous Integration and Delivery with 
 
 ## Repository Webhooks
 
-SAP Continuous Integration and Delivery allows you to establish secure webhook connections from the supported source code management systems.
+SAP Continuous Integration and Delivery allows you to establish secure webhook connections from supported source code management systems.
 
-To allow SAP Continuous Integration and Delivery to validate and authenticate webhook requests, webhook endpoint secrets are required. In combination with the HTTPS protocol, webhook endpoint secrets ensure that your SAP Continuous Integration and Delivery service instance is only receiving the expected Git repository requests and that its content is not tampered with. For more information, see [Creating Webhooks](https://help.sap.com/viewer/SAP-Cloud-Platform-Continuous-Integration-and-Delivery/a273cffe863b4663b23942a9bb73071d.html).
+To ensure that SAP Continuous Integration and Delivery can validate and authenticate webhook requests, webhook endpoint secrets are required. When used with the HTTPS protocol, these secrets guarantee that your SAP Continuous Integration and Delivery service instance only receives expected requests from your Git repository and that the content is not tampered with. For more information, see [Creating Webhooks](creating-webhooks-a273cff.md).
 

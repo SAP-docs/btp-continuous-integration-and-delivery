@@ -74,6 +74,258 @@ Technical Key of Build Execution IaaS Provider
 <tr>
 <td valign="top">
 
+SAP Cloud Infrastructure
+
+</td>
+<td valign="top">
+
+ae01
+
+</td>
+<td valign="top">
+
+UAE \(Dubai\)
+
+</td>
+<td valign="top">
+
+cf-ae01
+
+</td>
+<td valign="top">
+
+ap-ae-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Mumbai\)
+
+</td>
+<td valign="top">
+
+ap-south-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+us11
+
+</td>
+<td valign="top">
+
+US West \(Oregon\)
+
+</td>
+<td valign="top">
+
+cf-us11
+
+</td>
+<td valign="top">
+
+us-west-2
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+US East \(VA\)
+
+</td>
+<td valign="top">
+
+us-east-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+br30
+
+</td>
+<td valign="top">
+
+Brazil \(São Paulo\)
+
+</td>
+<td valign="top">
+
+cf-br30
+
+</td>
+<td valign="top">
+
+southamerica-east1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+South America \(São Paulo\)
+
+</td>
+<td valign="top">
+
+sa-east-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+jp30
+
+</td>
+<td valign="top">
+
+Japan \(Osaka\)
+
+</td>
+<td valign="top">
+
+cf-jp30
+
+</td>
+<td valign="top">
+
+asia-northeast2
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Tokyo\)
+
+</td>
+<td valign="top">
+
+ap-northeast-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+sa31
+
+</td>
+<td valign="top">
+
+KSA \(Dammam - KSA Non-Regulated Customers\)
+
+</td>
+<td valign="top">
+
+cf-sa31
+
+</td>
+<td valign="top">
+
+me-central2
+
+</td>
+<td valign="top">
+
+Google Cloud
+
+</td>
+<td valign="top">
+
+KSA \(Dammam - KSA Non-Regulated Customers\)
+
+</td>
+<td valign="top">
+
+me-central2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+ca20
+
+</td>
+<td valign="top">
+
+Canada Central \(Toronto\)
+
+</td>
+<td valign="top">
+
+cf-ca20
+
+</td>
+<td valign="top">
+
+canadacentral
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Canada \(Montreal\)
+
+</td>
+<td valign="top">
+
+ca-central-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Amazon Web Services
 
 </td>
@@ -368,6 +620,48 @@ me-central2
 <tr>
 <td valign="top">
 
+SAP Cloud Infrastrucutre
+
+</td>
+<td valign="top">
+
+ap01
+
+</td>
+<td valign="top">
+
+Australia \(Sydney\)
+
+</td>
+<td valign="top">
+
+cf-ap01
+
+</td>
+<td valign="top">
+
+ap-au-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Sydney\)
+
+</td>
+<td valign="top">
+
+ap-southeast-2
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Google Cloud
 
 </td>
@@ -494,6 +788,48 @@ sa-east-1
 <tr>
 <td valign="top">
 
+SAP Cloud Infrastructure
+
+</td>
+<td valign="top">
+
+eu02
+
+</td>
+<td valign="top">
+
+Europe \(Rot\) - SAP EU Access
+
+</td>
+<td valign="top">
+
+cf-eu02
+
+</td>
+<td valign="top">
+
+eu-de-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Europe \(Ireland\)
+
+</td>
+<td valign="top">
+
+eu-west-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Amazon Web Services
 
 </td>
@@ -546,7 +882,7 @@ eu11
 </td>
 <td valign="top">
 
-Europe \(Frankfurt\) EU Access
+Europe \(Frankfurt\) - SAP EU Access
 
 </td>
 <td valign="top">
@@ -572,6 +908,48 @@ Europe \(Ireland\)
 <td valign="top">
 
 eu-west-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+eu13
+
+</td>
+<td valign="top">
+
+Europe \(Milan\)
+
+</td>
+<td valign="top">
+
+cf-eu13
+
+</td>
+<td valign="top">
+
+eu-south-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Europe \(Ireland\)
+
+</td>
+<td valign="top">
+
+eu-westt-1
 
 </td>
 </tr>
@@ -656,6 +1034,90 @@ Europe \(Ireland\)
 <td valign="top">
 
 eu-west-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Microsoft Azure
+
+</td>
+<td valign="top">
+
+uk20
+
+</td>
+<td valign="top">
+
+UK South \(London\)
+
+</td>
+<td valign="top">
+
+cf-uk20
+
+</td>
+<td valign="top">
+
+uksouth
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Europe \(Ireland\)
+
+</td>
+<td valign="top">
+
+eu-west-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SAP Cloud Infrastructure
+
+</td>
+<td valign="top">
+
+us01
+
+</td>
+<td valign="top">
+
+US \(Sterling\)
+
+</td>
+<td valign="top">
+
+cf-us01
+
+</td>
+<td valign="top">
+
+na-us-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+US East \(VA\)
+
+</td>
+<td valign="top">
+
+us-east-1
 
 </td>
 </tr>
@@ -782,6 +1244,48 @@ US East \(VA\)
 <td valign="top">
 
 us-east-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SAP Cloud Infrastrucutre
+
+</td>
+<td valign="top">
+
+jp01
+
+</td>
+<td valign="top">
+
+Japan \(Tokyo\)
+
+</td>
+<td valign="top">
+
+cf-jp01
+
+</td>
+<td valign="top">
+
+ap-jp-1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Japan \(Tokyo\)
+
+</td>
+<td valign="top">
+
+ap-northeast-1
 
 </td>
 </tr>
@@ -1023,17 +1527,101 @@ asia-south1
 </td>
 <td valign="top">
 
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Asia Pacific \(Mumbai\)
+
+</td>
+<td valign="top">
+
+ap-south-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
 Google Cloud
 
 </td>
 <td valign="top">
 
-India \(Mumbai\)
+jp31
 
 </td>
 <td valign="top">
 
-asia-south1
+Japan \(Tokyo\)
+
+</td>
+<td valign="top">
+
+cf-jp31
+
+</td>
+<td valign="top">
+
+asia-northeast1
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Japan \(Tokyo\)
+
+</td>
+<td valign="top">
+
+ap-northeast-1
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+SAP Cloud Infrastructure
+
+</td>
+<td valign="top">
+
+eu01
+
+</td>
+<td valign="top">
+
+Europe \(Frankfurt\) - EU Access Only
+
+</td>
+<td valign="top">
+
+cf-eu01
+
+</td>
+<td valign="top">
+
+eu-de-2
+
+</td>
+<td valign="top">
+
+Amazon Web Services
+
+</td>
+<td valign="top">
+
+Europe \(Ireland\)
+
+</td>
+<td valign="top">
+
+eu-west-1
 
 </td>
 </tr>

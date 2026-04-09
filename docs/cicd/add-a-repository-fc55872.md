@@ -211,11 +211,6 @@ Have a look at the following demo video for an overview of how to add a reposito
     </tr>
     </table>
     
-    > ### Note:  
-    > If you choose *Bitbucket Cloud* in the *Type* field, a *Bitbucket Cloud Repository UUID* parameter appears.
-    > 
-    > You can find the UUID of your Bitbucket Cloud repository by navigating to your repository settings in [https://bitbucket.org/](https://bitbucket.org/). From the navigation pane, choose *Repository details* and, from the *Advanced* section, copy the whole UUID including the curly brackets.
-
 4.  Choose *Add*.
 
 

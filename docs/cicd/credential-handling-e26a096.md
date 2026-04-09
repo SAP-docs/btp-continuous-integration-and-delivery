@@ -19,7 +19,7 @@ Credentials stored in one service subscription can be directly used by all users
 > ### Recommendation:  
 > From a security perspective, it is strongly recommended that you do not use an SAP Continuous Integration and Delivery subscription on company or department level, but rather have one subscription per team.
 
-As described in the previous section, SAP Continuous Integration and Delivery securely stores credentials at rest and uses them when the pipeline is running. Thus, during a pipeline run, also users with write access to the connected repository can indirectly use the credentials. You can find out more about how to mitigate potential security risks implied by SAP Continuous Integration and Delivery pipeline credentials in the next chapter.
+As described in the previous section, SAP Continuous Integration and Delivery securely stores credentials at rest and uses them when the pipeline is running. Thus, during a pipeline run, also users with write access to the connected repository can indirectly use the credentials. You can find out more about how to mitigate potential security risks implied by SAP Continuous Integration and Delivery pipeline credentials in the following chapter.
 
 <a name="loio649880c2cfcc43baa9341fb005af584e"/>
 
@@ -91,20 +91,14 @@ We strongly recommend that you put the following operational countermeasures in 
 
 -   Only provide minimal privileges for technical users.
 
--   Restrict write access to your source code repository only to trusted contributors of the project.
-
--   Secure your source code repository with state of the art security techniques, for example, multi-factor authentication.
-
-    The source code repository plays a key role in SAP Continuous Integration and Delivery. You can find useful information on how to secure each source code repository supported by SAP Continuous Integration and Delivery on the Internet.
-
--   Apply the four-eyes principle and make sure each commit is reviewed by someone who is not the commit author.
+-   Secure your Git source repositories. For more information, see [Git Repositories](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/git-repositories?version=Cloud#security-recommendations).
 
 -   Rotate credentials used in your SAP Continuous Integration and Delivery jobs regularly.
 
-    SAP Continuous Integration and Delivery allows you to change credentials at any time without affecting the already running builds. Before changing your credentials, please verify that they are valid for the corresponding Git source repository or SAP BTP service.
+    SAP Continuous Integration and Delivery allows you to change credentials at any time without affecting the already running builds.
 
 -   Configure a credential list to specify which credentials to pass to the build. See [Configure a Credential List](configure-a-credential-list-907b44a.md).
 
--   For deploying to Cloud Foundry in the Acceptance and/or Release stages of a [Cloud Foundry environment job](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9), we recommend using a Certificate-Based Authentication for Custom IdP credential. This type of credential avoids the need for sharing secrets and supports automatic credential rotation. For more information, see [Credential Handling](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9).
+-   For deploying to Cloud Foundry in the Acceptance and/or Release stages of a [Cloud Foundry environment job](credential-handling-e26a096.md#loioe26a096409e344ad8a134a6eb39d8ee9), we recommend using a Certificate-Based Authentication for Custom IdP credential. This type of credential avoids the need for sharing secrets and supports automatic credential rotation. For more information, see [Creating Credentials](creating-credentials-6658c81.md).
 
 

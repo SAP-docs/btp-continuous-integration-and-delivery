@@ -201,7 +201,7 @@ Make sure that the engines section in your `package.json` file contains the foll
   "name": "...",
   "description": "...",
   "engines": {
-    "node": "^14.0.0"
+    "node": "^<latest Node version>"
   },
   ...
 }
@@ -292,4 +292,36 @@ The detailed log of your build is cut off and shows the following error message:
 There is a limit of logs that are persisted. Please check whether you're writing too many logs, for example, in your test scripts.
 
 If this issue persists, please open a ticket as described in [Support](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/support-feature-requests-and-feedback?version=Cloud).
+
+
+
+<a name="loioc3919d786e924fe38ae075e98e83553c__section_hjm_lw3_hdc"/>
+
+## `Error response from CI/CD Service: 429 - Too Many Requests: A resource limit was temporarily exceeded.`
+
+
+
+### Symptom
+
+You are using SAP Continuous Integration and Delivery together with ABAP landscape portal. You have triggered a job as described in [Running and Monitoring CI/CD Jobs](https://help.sap.com/docs/CONTINUOUS_DELIVERY/99c72101f7ee40d0b2deb4df72ba1ad3/db8521cc85924f78b7e92b1ea69fdf94.html?version=Cloud) and get the following error message:
+
+> ### Output Code:  
+> ```
+> Error response from CI/CD Service: 429 - Too Many Requests: A resource limit was temporarily exceeded.
+> ```
+
+
+
+### Solution
+
+This error message is shown if at least one restriction for the free and trial service plans are met:
+
+-   You can only create two jobs.
+
+-   You can only run one build at a time.
+
+-   The amount of computing hours is limited to 10 hours in a rolling period of 30 days.
+
+
+Once you’ve reached these limits, you can update to a paid service plan. For more information, see [Using Free Service Plans](https://help.sap.com/docs/btp/sap-business-technology-platform/using-free-service-plans).
 

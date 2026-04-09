@@ -42,20 +42,18 @@ For an overview of how to create a webhook in a repository, watch the demo video
 
 1.  In the *Repositories* tab in SAP Continuous Integration and Delivery, choose the Bitbucket Server repository for which you want to create a webhook.
 
-2.  In the detail view of your repository, choose *Webhook Data*.
+    As a result, the detail view of your repository opens. The Webhook Data section provides the information you need to create a webhook in Bitbucket Server.
 
-    As a result, the *Webhook Data* pop-up opens. This pop-up provides the information you need to create a webhook in Bitbucket Server.
+2.  In your repository in Bitbucket Server, choose :gear:.
 
-3.  In your repository in Bitbucket Server, choose :gear:.
+3.  Choose *Webhooks* \> *Create webhook*.
 
-4.  Choose *Webhooks* \> *Create webhook*.
+4.  Freely choose a name for your webhook and enter the *URL* from the *Webhook Data* section in SAP Continuous Integration and Delivery. Enter the *Secret* from the *Webhook Credential* you created.
 
-5.  Freely choose a name for your webhook and enter the *URL* from the *Webhook Data* pop-up in SAP Continuous Integration and Delivery. Enter the *Secret* from the *Webhook Credential* you created.
+5.  In the *Events* field, choose *Repository push*.
 
-6.  In the *Events* field, choose *Repository push*.
+6.  Ensure that the *Active* check box is selected.
 
-7.  Ensure that the *Active* check box is selected.
-
-8.  Choose *Create*.
+7.  Choose *Create*.
 
 

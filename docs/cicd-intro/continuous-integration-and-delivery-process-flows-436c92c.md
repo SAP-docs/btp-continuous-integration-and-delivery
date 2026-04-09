@@ -25,7 +25,7 @@ Create a code change that is based on the latest version of your source code mai
 
 The first step in a CI/CD process builds on the [Use Version Control](continuous-integration-principles-30b2e1d.md#loio1ea1bfb719754cfea34a2b4cf7289595) principle: Use a source code management system to manage different versions and define a main line.
 
-The developer fetches the latest version of the main line from the source code repository. Based on this version, he or she creates a code change. Later, this code changed is pushed into the source code management system to merge it with the main line again.
+The developer fetches the latest version of the main line from the source code repository. Based on this version, he or she creates a code change. Later, this code change is pushed into the source code management system to merge it with the main line again.
 
 <a name="loio02b031ca95f14605a43efc4d50b23089"/>
 
@@ -57,7 +57,7 @@ At the beginning of the voter build process, the source code is fetched. This pr
 
 Integrate your code change into the main line to create a new basis for further development.
 
-If the code change has successfully passed the voter build and tests and meets all other prerequisites you have defined \(for example, we recommend a four-eyes code review\), it can be merged into the main line. Depending on the policies within the development team, this process is either triggered automatically or manually, for example, by the responsible developer him- or herself, the reviewer, or the team architect.
+If the code change has successfully passed the voter build and tests and meets all other prerequisites you have defined \(for example, we recommend a four-eyes code review\), it can be merged into the main line. Depending on the policies within the development team, this process is either triggered automatically or manually, for example, by the responsible developer, the reviewer, or the team architect.
 
 > ### Tip:  
 > Use collaboration tools \(for example, [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [Gerrit Code Review](https://www.gerritcodereview.com/)\) to collect the feedback of human code reviewers together with the voter build and test results.
@@ -95,9 +95,9 @@ Execute acceptance tests to ensure that your software could be deployed to produ
 
 In a continuous delivery scenario, the change does not only have to be successfully integrated into the main line but after each change, the product must be of such high quality that it could potentially be released and deployed to production. To ensure this quality, the change is deployed to an acceptance test system, which corresponds to the productive runtime system. See [Test in a Production Environment Clone](continuous-integration-principles-30b2e1d.md#loio6e6e2b7e62ec4d48abf2545a94af055f).
 
-Acceptance tests are rather time-consuming and during their execution, the system must me stable and undisturbed by any additional changes. Therefore, not all built changes are acceptance tested. Instead, there are two options on how to decide which of them to check:
+Acceptance tests are rather time-consuming and during their execution, the system must be stable and undisturbed by any additional changes. Therefore, not all built changes are acceptance tested. Instead, there are two options on how to decide which of them to check:
 
--   Implement an automatism, which at a fixed time each date, tests the last successful CI build.
+-   Implement an automatism, which at a fixed date and time, tests the last successful CI build.
 
 -   The quality manager \(or any other responsible person\) consciously chooses the test candidates and manually triggers their acceptance testing.
 

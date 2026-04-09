@@ -40,22 +40,20 @@ For an overview of how to create a webhook in a repository, watch the demo video
 
 1.  In the *Repositories* tab in SAP Continuous Integration and Delivery, choose the GitHub repository for which you want to create a webhook.
 
-2.  In the detail view of your repository, choose *Webhook Data*.
+    As a result, the detail view of your repository opens. The *Webhook Data* section provides the information you need to create a webhook in GitHub.
 
-    As a result, the *Webhook Data* pop-up opens. This pop-up provides the information you need to create a webhook in GitHub.
+2.  In your project in GitHub, go to the *Settings* tab.
 
-3.  In your project in GitHub, go to the *Settings* tab.
+3.  From the navigation pane, choose *Webhooks*.
 
-4.  From the navigation pane, choose *Webhooks*.
+4.  Choose *Add webhook*.
 
-5.  Choose *Add webhook*.
+5.  Enter the *Payload URL* and the *Content type* from the *Webhook Data* section in SAP Continuous Integration and Delivery, as well as the *Secret* from the *Webhook Credential* you created.
 
-6.  Enter the *Payload URL* and the *Content type* from the *Webhook Data* pop-up in SAP Continuous Integration and Delivery, as well as the *Secret* from the *Webhook Credential* you created.
+6.  On the same page, choose *Just the push event*.
 
-7.  On the same page, choose *Just the push event*.
+7.  Ensure that the *Active* check box is selected.
 
-8.  Ensure that the *Active* check box is selected.
-
-9.  Choose *Add webhook*.
+8.  Choose *Add webhook*.
 
 

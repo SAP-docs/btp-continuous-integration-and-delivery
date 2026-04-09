@@ -92,7 +92,7 @@ Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipel
 
 -   [**Cloud Foundry Environment**](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--   [**SAP Fiori for the ABAP Platform**](configure-an-sap-fiori-for-the-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
+-   [**SAP Fiori for the ABAP Platform**](configure-an-sap-fiori-for-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
 
 -   [**SAP Integration Suite Artifacts**](configure-an-sap-integration-suite-artifacts-job-3d5573f.md)
 

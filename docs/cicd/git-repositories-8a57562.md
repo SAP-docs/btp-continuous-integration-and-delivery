@@ -20,7 +20,7 @@ Users with write permissions to an associated repository can manipulate build an
 
 ## Additional Commands
 
-With the Additional Commands feature, users with the administrator role can define arbitrary command sequences that will be executed before or after a given stage. See [Add Additional Commands to Stages](add-additional-commands-to-stages-c05a252.md).
+With the Additional Commands feature, users with the administrator role can define arbitrary command sequences that will be executed before or after a given stage. See [Adding Additional Commands to Stages](adding-additional-commands-to-stages-c05a252.md).
 
 Due to length limitations and for the sake of simplicity, administrators could decide to add references to more complex scripts located in Git repositories. In this case, however, users who only have write access in the Git repository could edit the scripts that are executed as part of the additional command.
 
@@ -53,17 +53,17 @@ With SAP Continuous Integration and Delivery, you can configure your jobs direct
 
 ## Security Recommendations
 
-The source code repository plays a key role in SAP Continuous Integration and Delivery. We strongly recommend that you put the following operational countermeasures in place:
+The source code repository plays a key role in SAP Continuous Integration and Delivery. We strongly recommend that you implement the following operational measures:
 
--   Secure your source code repository with state of the art security techniques, for example, multi-factor authentication.
+-   Secure your source code repository using state-of-the-art security techniques, such as multi-factor authentication.
 
--   Provide repository write permissions only to persons you trust.
+-   Restrict write access to your source code repository only to trusted contributors of the project.
 
--   Do not use the source repository configuration mode if you have concerns that users with only write access to the repository might tamper the job configuration. In this case, use the job editor configuration mode. This ensures that only users with administrator role can edit the job configuration.
+-   Avoid using the source repository configuration mode if you have concerns that users with only write access to the repository might tamper with job configurations. Instead, use the job editor configuration mode to ensure that only users with the administrator role can edit job configurations.
 
--   Apply the four-eyes principle and make sure each commit is reviewed by someone who is not the commit author.
+-   Apply the four-eyes principle to ensure that each commit is reviewed by someone other than the commit author.
 
--   Look for information on how to secure a specific source code repository supported by SAP Continuous Integration and Delivery in its respective documentation.
+-   Refer to the specific documentation for the source code repositories supported by SAP Continuous Integration and Delivery for more information on securing them.
 
 
 

@@ -8,16 +8,32 @@ The following demo video provides an overview of this procedure:
 
 
 
+
+
+<a name="loioe293286b06df426ab1cfa235332a2606__section_jmh_ypp_y2c"/>
+
+## Pipelines
+
+SAP Continuous Integration and Delivery offers predefined CI/CD pipelines for SAP-specific development scenarios. These pipelines consist of various stages, which are tasks executed sequentially. Your own configuration of a pipeline, including the stages you activate, is referred to as a 'job.'
+
+Depending on the type of development scenario you have, you can choose between different predefined pipelines. The information you need to provide to configure your pipeline varies depending on which pipeline you choose.
+
 Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipelines for the following use cases:
 
 -   [**Cloud Foundry Environment**](configure-a-cloud-foundry-environment-job-6bd27c0.md#loio6bd27c07ee3b428f9ad5a2e89084f3a3)
 
--   [**SAP Fiori for ABAP Platform**](configure-an-sap-fiori-for-the-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
+-   [**SAP Fiori for ABAP Platform**](configure-an-sap-fiori-for-abap-platform-job-4c26bfb.md#loio4c26bfbeb6444805a933ca48a470b217)
 
 -   [**SAP Integration Suite Artifacts**](configure-an-sap-integration-suite-artifacts-job-3d5573f.md)
 
 -   [**Kyma Runtime**](configure-a-kyma-runtime-job-0700ecb.md)
 
+
+
+
+<a name="loioe293286b06df426ab1cfa235332a2606__section_rrs_dqp_y2c"/>
+
+## Configuration Modes
 
 There are two ways to configure jobs in SAP Continuous Integration and Delivery: You can either use the built-in **job editor** in the service user interface, which is our recommended approach, or you can configure it in your **source repository**.
 

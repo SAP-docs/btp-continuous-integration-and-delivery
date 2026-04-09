@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/sap-icons.css"/>
 
-# Add Additional Credentials to Stages
+# Adding Additional Credentials to Stages
 
 Add environment variables that store values injected from credentials to the stages of your job.
 
@@ -25,24 +25,32 @@ Add additional credentials to your job using the job editor in the SAP Continuou
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, either create a new job or navigate to the job to which you want to add credentials variables and choose *Edit*.
+1.  In SAP Continuous Integration and Delivery, either create a new job or navigate to the job to which you want to add additional credentials and choose *Edit*.
 
-2.  In the *Stages* section of your job, navigate to the stage to which you want to add additional credentials and choose :heavy_plus_sign: next to *Additional Credentials*.
+2.  In the *Stages* section of your job, navigate to the stage to which you want to add additional credentials and choose :heavy_plus_sign:** \> *Additional Credentials* next to *Advanced Configuration* \(if you're configuring a Cloud Foundry Environment job\) or :heavy_plus_sign: next to *Additional Credentials* \(if you're configuring an SAP Fiori for ABAP Platform job, an SAP Integration Suite Artifacts job, or a Kyma Runtime job\).
 
 3.  In the *Name* text field, enter a name for the environment variable you want to add. Use only letters, digits, and underscores.
 
-4.  In the *Credentials Name* field, either choose a credential you've created in SAP Continuous Integration and Delivery from the dropdown list, or choose *Create Credential* to create a new one. You can use a Basic Authentication, Secret Text, or Service Key credential. See [Creating Credentials](creating-credentials-6658c81.md).
+4.  In the *Credential Name* field, either choose an existing credential in SAP Continuous Integration and Delivery from the dropdown list, or choose *Create Credential* to create a new one. You can create a Basic Authentication, Secret Text, or Service Key credential. See [Creating Credentials](creating-credentials-6658c81.md).
 
 5.  Choose *Create*.
 
+
+<a name="concept_ztp_zxm_xgc"/>
+
+<!-- concept\_ztp\_zxm\_xgc -->
+
+## Configure Additional Credentials in the Configuration File
+
+Add additional credentials to your job using the configuration file in your source code management system.
+
+Depending on the pipeline type you're using, choose one of the following procedures:
 
 <a name="task_j3h_t3w_dwb"/>
 
 <!-- task\_j3h\_t3w\_dwb -->
 
-## Configure Additional Credentials in the Configuration File
-
-Add additional credentials to your job using the configuration file in your source code management system.
+### Cloud Foundry Environment \(3.0\)
 
 
 
@@ -50,26 +58,58 @@ Add additional credentials to your job using the configuration file in your sour
 
 ## Procedure
 
+1.  In your source code repository, navigate to the `.sap_cid/config.yaml` file.
+
+2.  In the `service` section, add a code block similar to the following example to the stage where you want to include additional credentials:
+
+    ```
+    ---
+    stages:
+      build:
+        ...
+        _additional:
+          credentialVariables:
+          - name: "BasicAuth"
+            valueSource: "myCredentials"
+    ```
+
+    Replace `build` with the name of the stage to which you want to add your credential variables.
+
+    For `name`, enter a name for your environment variable. For `valueSource`, enter the *Credential Name* of the credential you've created in SAP Continuous Integration and Delivery. See [Creating Credentials](creating-credentials-6658c81.md).
+
+    For `valueSource`, use only letters, digits, and underscores.
+
+
+<a name="task_g2t_5bn_xgc"/>
+
+<!-- task\_g2t\_5bn\_xgc -->
+
+### SAP Fiori for ABAP Platform, SAP Integration Suite Artifacts, Kyma Runtime, Cloud Foundry Environment \(2.0\)
+
+
+
+## Procedure
+
 1.  In your source code repository, navigate to the `.pipeline/config.yml` file.
 
-2.  In the `service` section, depending on the stage in which you want to set the commands, insert a code block as follows. In this example, the additional command is added to the Build stage:
+2.  In the service section, depending on the stage in which you want to set the commands, insert a code block as follows. In this example, the additional command is added to the Build stage:
 
-    ```
-    service:
-      stages:
-        Build:
-          credentialVariables:
-            - name: "BasicAuth"
-              credentialId: "myCredentials"
-    
-    ```
+    > ### Sample Code:  
+    > ```
+    > service:
+    >   stages:
+    >     Build:
+    >       credentialVariables:
+    >         - name: "BasicAuth"
+    >           credentialId: "myCredentials"
+    > 
+    > ```
 
     Replace `Build` with the name of the stage to which you want to add your credential variables. If the name of the stage you want to use has spaces in it, put quotes around the stage name, for example `'Additional Unit Tests'` or `"Additional Unit Tests"`.
 
     For `name`, enter a name for your environment variable. For `credentialID`, enter the *Credential Name* of the credential you've created in SAP Continuous Integration and Delivery. See [Creating Credentials](creating-credentials-6658c81.md).
 
-    > ### Note:  
-    > For `name`, use only letters, digits, and underscores.
+    For `name`, use only letters, digits, and underscores.
 
 
 <a name="concept_wyj_fg4_42c"/>

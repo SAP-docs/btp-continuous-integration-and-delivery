@@ -25,9 +25,9 @@ Add environment variables to your job using the job editor in the SAP Continuous
 
 ## Procedure
 
-1.  In SAP Continuous Integration and Delivery, either create a new job or navigate to the job to which you want to add credentials variables and choose *Edit*.
+1.  In SAP Continuous Integration and Delivery, either create a new job or navigate to the job to which you want to add additional credentials and choose *Edit*.
 
-2.  In the *Stages* section of your job, navigate to the stage to which you want to add environment variables and choose :heavy_plus_sign: next to *Additional Variables*.
+2.  In the *Stages* section of your job, navigate to the stage where you want to add environment variables and choose :heavy_plus_sign:** \> *Additional Variables* \(if you're configuring a Cloud Foundry Environment job\) or :heavy_plus_sign: next to *Additional Variables* \(if you're configuring an SAP Fiori for ABAP Platform job, an SAP Integration Suite Artifacts job, or a Kyma Runtime job\).
 
 3.  In the *Name* text field, enter a name for your variable. Use only letters, digits, and underscores.
 
@@ -36,13 +36,50 @@ Add environment variables to your job using the job editor in the SAP Continuous
 5.  Choose *Create*.
 
 
-<a name="task_j3h_t3w_dwb"/>
+<a name="concept_c1s_q2n_xgc"/>
 
-<!-- task\_j3h\_t3w\_dwb -->
+<!-- concept\_c1s\_q2n\_xgc -->
 
 ## Configure Additional Variables in the Configuration File
 
 Add environment variables to your job using the configuration file in your source code management system.
+
+Depending on the pipeline type you're using, choose one of the following procedures:
+
+<a name="task_m5t_x2n_xgc"/>
+
+<!-- task\_m5t\_x2n\_xgc -->
+
+### Cloud Foundry Environment \(3.0\)
+
+
+
+## Procedure
+
+1.  In your source code repository, navigate to the `.sap_cid/config.yaml` file.
+
+2.  In the `stages` section, add a code block similar to the following example to the stage where you want to include additional variables:
+
+    > ### Sample Code:  
+    > ```
+    > ---
+    > stages:
+    >   build:
+    >     ...
+    >     _additional:
+    >       stringVariables:
+    >       - name: "myVar"
+    >         value: "blogs.sap.com"
+    > ```
+
+    Assign your own values to the `name` and `value` parameters. For `name`, use only letters, digits, and underscores.
+
+
+<a name="task_j3h_t3w_dwb"/>
+
+<!-- task\_j3h\_t3w\_dwb -->
+
+### SAP Fiori for ABAP Platform, SAP Integration Suite Artifacts, Kyma Runtime, Cloud Foundry Environment \(2.0\)
 
 
 
@@ -52,7 +89,7 @@ Add environment variables to your job using the configuration file in your sourc
 
 1.  In your source code repository, navigate to the `.pipeline/config.yml` file.
 
-2.  In the service section, depending on the stage in which you want to set the variable \(in this example, we used the "Build" stage\), insert the following code block. Assign your own values to the `name` and `value` parameters:
+2.  In the `service` section, depending on the stage in which you want to set the variable \(in this example, we used the `Build` stage\), insert the following code block. Assign your own values to the `name` and `value` parameters:
 
     ```
     service:
@@ -63,8 +100,7 @@ Add environment variables to your job using the configuration file in your sourc
               value: "blogs.sap.com"
     ```
 
-    > ### Note:  
-    > For `name`, use only letters, digits, and underscores.
+    For `name`, use only letters, digits, and underscores.
 
 
 <a name="concept_prh_zh4_42c"/>

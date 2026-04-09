@@ -33,6 +33,8 @@ Depending on your configuration, your Kyma Runtime job can comprise the followin
 > ### Note:  
 > When the pipeline run is complete, an additional **Declarative: Post Actions** stage is executed to perform finalization tasks. The outcome of the **Declarative: Post Actions** stage doesn't influence the success of your build.
 
+For an overview of how to configure a job in SAP Continuous Integration and Delivery, have a look at the demo video in [Configuring Jobs](configuring-jobs-e293286.md).
+
 
 
 ## Procedure
@@ -286,6 +288,9 @@ Depending on your configuration, your Kyma Runtime job can comprise the followin
         Switch the execution of the Lint Check step *On* or *Off*.
 
         Lint check verifies the syntax of your JavaScript code.
+
+        > ### Note:  
+        > For the *Lint Check*, your project must contain at least one JavaScript or TypeScript file, and your repository must include a lint configuration file.
 
         If you want your build to fail when the Lint check reveals errors, select *Fail on Error*.
         

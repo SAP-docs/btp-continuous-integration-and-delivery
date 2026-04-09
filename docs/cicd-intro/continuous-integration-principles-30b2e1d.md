@@ -45,7 +45,7 @@ The following figure shows the basic flow when working with a main line:
 
 For each developer contributing to a collaborative development project, working with a main line in the SCM comprises the following steps:
 
-1.  The developer pulls the current version of the mail line into his or her local SCM repository.
+1.  The developer pulls the current version of the main line into his or her local SCM repository.
 
 2.  Based on this copy of the main line, the developer creates a code change on his or her local workspace.
 3.  To integrate his or her code change with the main line and thereby create a new version that serves as a basis for further development, the developer pushes it to the main line on the SCM repository server, into which it is merged.
@@ -85,7 +85,7 @@ Test your changes through an automated build.
 
 Set up an automated and standardized central build to get feedback on your changes. Building them is the only way to find out whether your project is clean or broken from a build perspective. Automating this process makes it more convenient and motivates for executing it. If you build and test frequently, you can enhance the quality of your code and, at the same time, save valuable working time as you do not have to cumbersomely look for error sources at the end of your development process.
 
-Make sure that in the build description, you specify the conditions under which you have achieved your build result. Documenting your build environment as well as the tools and parameters you have used makes your build result reproducible, if necessary. This might be the case, for example, if you have to find our why your build was successful on your local machine but does not work on another.
+Make sure that in the build description, you specify the conditions under which you have achieved your build result. Documenting your build environment as well as the tools and parameters you have used makes your build result reproducible, if necessary. This might be the case, for example, if you have to find out why your build was successful on your local machine but does not work on another.
 
 > ### Tip:  
 > Use a **build scheduler** to operate your build infrastructure. It offers a convenient UI to both trigger and monitor your builds and provides interfaces to integrate them with other components of the CI process. One of the most prominent build schedulers is [Jenkins](https://jenkins.io/).
@@ -106,7 +106,7 @@ There are different test types from which you can choose. The following ones are
 
 -   **Unit tests** or **component tests** check individual code units such as individual functions or procedures for their functionality. They build the basis for **integration tests**, which check the interplay between several combined code units.
 
--   **System tests** check both front-end and back-end and make sure that all pieces work well together. See, for example, [Add Automated System Tests with the SAPUI5 Test Recorder to Your CI/CD Pipeline](https://developers.sap.com/tutorials/cp-cicd-systemtest-recorder.html).
+-   **System tests** check both front-end and back-end and make sure that all pieces work well together. See, for example, [Create Automated System Tests for SAP Cloud Application Programming Model Projects](https://developers.sap.com/tutorials/cicd-wdi5-cap.html).
 
 -   **Scenario tests** install the newly built application and test it within a hypothetical scenario whose outcome they evaluate.
 
@@ -225,7 +225,7 @@ To make sure that voter builds and CI builds are reliable, they must run on a se
 
 Keep your main line clean and do not accumulate errors.
 
-If you find that your code contains errors, for example, if one of your builds fails, make sure that you react on them immediately. Each error, once integrated into the main line, affects the entire development team and, at worst, prevents them from working. Also follow this principle when using voter builds to make sure that you don't accumulate more issues from change to change.
+If you find that your code contains errors, for example, if one of your builds fails, make sure that you react to them immediately. Each error, once integrated into the main line, affects the entire development team and, at worst, prevents them from working. Also follow this principle when using voter builds to make sure that you don't accumulate more issues from change to change.
 
 Bearing this in mind, the developer workflow should be the following:
 
@@ -279,7 +279,7 @@ Different setups and environments at various stages of a production pipeline oft
 
 This production environment clone, however, is difficult to achieve: When using traditional physical hardware with manually installed and configured software, it’s almost impossible to avoid discrepancies. Across time, production and test machines, or any two different environments, automatically diverge.
 
-To address this issue, treat setup and configuration the same way as writing code \(this principle is sometimes referred to as **Infrastructure as Code \(IaC\)**, which is an important cornerstone of DevOps\): Describe any software and configuration installed on a machine in source files. This procedure enables you to re-create the machine setup at any time. If you use automation tools such as [SaltStack](https://www.saltstack.com/), you can roll out changes in a controlled and reproducible way, which is especially well suited when working with virtual hardware: Setting up new virtual machines, providing them with the necessary software, and putting them into production can be completely automated.
+To address this issue, treat setup and configuration the same way as writing code \(this principle is sometimes referred to as **Infrastructure as Code \(IaC\)**, which is an important cornerstone of DevOps\): Describe any software and configuration installed on a machine in source files. This procedure enables you to re-create the machine setup at any time. If you use automation tools, you can roll out changes in a controlled and reproducible way, which is especially well suited when working with virtual hardware: Setting up new virtual machines, providing them with the necessary software, and putting them into production can be completely automated.
 
 > ### Tip:  
 > Run your applications in containers that are instantiated from predefined images \(like in [Docker](https://www.docker.com/?utm_medium=PPC&utm_source=Adwords&utm_term=docker&utm_target=aud-558719800540:kwd-43721580&utm_campaign=1894083085&utm_content=Homepage&gclid=Cj0KCQjwi43oBRDBARIsAExSRQFlGCXzLd8GCL2WBiHrt3X-Lxx5XgjWSZMwkNDarMImkkp_6dtNao0aAm-yEALw_wcB)\) instead of installing them directly on your hardware. This approach makes the setup of the machine reproducible at any time.

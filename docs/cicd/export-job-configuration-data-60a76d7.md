@@ -12,7 +12,7 @@ Export editor-based job configuration information as a YAML file. This allows yo
 
 -   You’re an administrator of SAP Continuous Integration and Delivery. See [Assigning Roles and Permissions](assigning-roles-and-permissions-c679ebd.md).
 
--   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](enhancing-jobs-d581ab5.md).
+-   You have an existing job in SAP Continuous Integration and Delivery. See [Configuring a Job](advanced-job-configuration-d581ab5.md).
 
 -   In the repository of your project, you have a folder named `.pipeline`, which contains a file named `config.yml`. If you don't have this folder and file, yet, create them.
 

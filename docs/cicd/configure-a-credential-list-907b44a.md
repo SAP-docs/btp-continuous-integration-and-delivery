@@ -4,7 +4,7 @@
 
 # Configure a Credential List
 
-Specify the credentials that are passed to the build in repository-configured SAP Continuous Integration and Delivery jobs..
+Specify the credentials that are passed to the build in repository-configured SAP Continuous Integration and Delivery jobs.
 
 
 

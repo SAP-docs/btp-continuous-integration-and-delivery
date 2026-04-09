@@ -44,20 +44,18 @@ For an overview of how to create a webhook in a repository, watch the demo video
 
 1.  In the *Repositories* tab in SAP Continuous Integration and Delivery, choose the GitLab repository for which you want to create a webhook.
 
-2.  In the detail view of your repository, choose *Webhook Data*.
+    As a result, the detail view of your repository opens. The *Webhook Data* section provides the information you need to create a webhook in GitLab.
 
-    As a result, the *Webhook Data* pop-up opens. This pop-up provides the information you need to create a webhook in GitLab.
+2.  In your project in GitLab, go to the *Settings* tab.
 
-3.  In your project in GitLab, go to the *Settings* tab.
+3.  From the navigation pane, choose *Webhooks*.
 
-4.  From the navigation pane, choose *Webhooks*.
+4.  Enter the *URL* from the *Webhook Data* section in SAP Continuous Integration and Delivery and the *Secret token* from the *Webhook Credential* you created.
 
-5.  Enter the *URL* from the *Webhook Data* pop-up in SAP Continuous Integration and Delivery and the *Secret token* from the *Webhook Credential* you created.
+5.  In the *Trigger* section, choose *Push events*.
 
-6.  In the *Trigger* section, choose *Push events*.
+6.  Choose *Enable SSL verification*.
 
-7.  Choose *Enable SSL verification*.
-
-8.  Choose *Add webhook*.
+7.  Choose *Add webhook*.
 
 
