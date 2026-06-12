@@ -28,6 +28,8 @@ Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipel
 
 -   [**Kyma Runtime**](configure-a-kyma-runtime-job-0700ecb.md)
 
+-   [**gCTS for ABAP Development**](configure-a-gcts-for-abap-development-job-bd1ea89.md)
+
 
 
 

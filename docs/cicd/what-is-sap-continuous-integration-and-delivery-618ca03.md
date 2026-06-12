@@ -98,6 +98,8 @@ Currently, SAP Continuous Integration and Delivery offers predefined CI/CD pipel
 
 -   [**Kyma Runtime**](configure-a-kyma-runtime-job-0700ecb.md)
 
+-   [**gCTS for ABAP Development**](configure-a-gcts-for-abap-development-job-bd1ea89.md)
+
 
 
 
@@ -124,7 +126,7 @@ For information on the tools and tool versions supported by SAP Continuous Integ
 
 [Supported Tools](supported-tools-5949283.md "Learn more about the build tools and build tool versions supported by SAP Continuous Integration and Delivery pipelines.")
 
-[SAP Continuous Integration and Delivery in the SAP Discovery Center](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/continuous-integration--delivery?region=all "Learn more about the service in the SAP Discovery Center.")
+[Discovery Center: Pricing, Regions, and Resource Information in the Discovery Center](https://discovery-center.cloud.sap/protected/index.html#/serviceCatalog/continuous-integration--delivery?region=all "Learn more about SAP Continuous Integration and Delivery in the SAP Discovery Center.")
 
 [What Are Continuous Integration and Continuous Delivery?](https://help.sap.com/viewer/ee5a61247061455ab232c19179fe4c3b/Cloud/en-US/5ba483a2c97b4ad5ab0148f4a6c5a9ee.html "Get an overview of the continuous integration and delivery concepts.")
 

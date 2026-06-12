@@ -73,23 +73,19 @@ Cloud MTA Build Tool \(MBT\)
 </td>
 <td valign="top">
 
--   `MBTJ11N18` \(MBT with Java 11 and Node 18\)
-
 -   `MBTJ11N20` \(MBT with Java 11 and Node 20\)
-
--   `MBTJ17N18` \(MBT with Java 17 and Node 18\)
 
 -   `MBTJ17N20` \(MBT with Java 17 and Node 20\)
 
 -   `MBTJ17N22` \(MBT with Java 17 and Node 22\)
 
--   `MBTJ19N18` \(MBT with Java 19 and Node 18\)
-
--   `MBTJ21N18` \(MBT with Java 21 and Node 18\)
+-   `MBTJ17N24` \(MBT with Java 17 and Node 24\)
 
 -   `MBTJ21N20` \(MBT with Java 21 and Node 20\)
 
--   `MBTJ21N22` \(MBT with Java 21 Node 22\)
+-   `MBTJ21N22` \(MBT with Java 21 and Node 22\)
+
+-   `MBTJ21N24` \(MBT with Java 21 and Node 24\)
 
 
 
@@ -124,11 +120,11 @@ npm
 </td>
 <td valign="top">
 
--   `N18` \(Node 18\)
-
 -   `N20` \(Node 20\)
 
 -   `N22` \(Node 22\)
+
+-   `N24` \(Node 24\)
 
 
 

@@ -31,3 +31,8 @@ With the Additional Commands feature, users with administrator role can define a
 
 Due to length limitations and for the sake of simplicity, administrators could decide to add references to more complex scripts located in Git repositories. However, the SAP Continuous Integration and Delivery audit log does not cover changes in scripts located in Git repositories. Changes to such scripts must be logged separately, for example, through the Git commit history.
 
+**Related Information**  
+
+
+[Audit Log Events](audit-log-events-c5ef445.md "Learn about the audit log events emitted by SAP Continuous Integration and Delivery and review example log messages.")
+

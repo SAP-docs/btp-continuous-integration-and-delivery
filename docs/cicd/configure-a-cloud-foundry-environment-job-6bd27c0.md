@@ -436,6 +436,14 @@ In the **Release** stage, the changes are released to the targets you've defined
 
 \(Optional\) Enhance the functionality of your job by configuring [*Additional Commands*](adding-additional-commands-to-stages-c05a252.md), [*Additional Credentials*](adding-additional-credentials-to-stages-af2d1a2.md), and [*Additional Variables*](add-additional-variables-to-stages-74fe540.md).
 
+<a name="concept_xmd_ww4_c3c"/>
+
+<!-- concept\_xmd\_ww4\_c3c -->
+
+### Advanced Configuration
+
+Optionally, you can add commands that run at the end of your job and configure environment variables using credentials or user-defined values. See [Adding a Post-Execution Step to Your Cloud Foundry Environment Job](adding-a-post-execution-step-to-your-cloud-foundry-environment-job-1512244.md).
+
 <a name="task_ptx_zlh_1zb"/>
 
 <!-- task\_ptx\_zlh\_1zb -->

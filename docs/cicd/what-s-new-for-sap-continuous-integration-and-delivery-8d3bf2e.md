@@ -89,6 +89,271 @@ Continuous Integration & Delivery
 </td>
 <td valign="top">
 
+New Pipeline Type
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery now provides a predefined pipeline for ABAP development using the Git-Enabled Change and Transport System \(gCTS\). For more information, see [Configure a gCTS for ABAP Development Job](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/configure-gcts-for-abap-development-job?version=Cloud).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-05-28
+
+</td>
+<td valign="top">
+
+2026-05-28
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Regions
+
+</td>
+<td valign="top">
+
+SAP Continuous Integration and Delivery can now also be consumed in the Microsoft Azure Europe \(Frankfurt\) region. See [Regional Availability](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/regional-availability?version=Cloud).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-04-29
+
+</td>
+<td valign="top">
+
+2026-04-29
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+New Build Tool Versions Supported
+
+</td>
+<td valign="top">
+
+New build tool versions are available for the MTA and npm build tools:
+
+-   Java 17 Node 24
+
+-   Java 21 Node 24
+
+-   Node 24
+
+
+For more information, see [Supported Tools](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/supported-tools?version=Cloud).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-04-29
+
+</td>
+<td valign="top">
+
+2026-04-29
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
+Post-Execution Step for Cloud Foundry Environment Jobs
+
+</td>
+<td valign="top">
+
+You can now configure a post-execution step for Cloud Foundry Environment jobs. This step runs after the job completes and allows you to perform additional custom tasks beyond the default job execution. See [Adding a Post-Execution Step to Your Cloud Foundry Environment Job](https://help.sap.com/docs/continuous-integration-and-delivery/sap-continuous-integration-and-delivery/adding-post-execution-steps-to-your-job?version=Cloud).
+
+</td>
+<td valign="top">
+
+Info only
+
+</td>
+<td valign="top">
+
+General Availability
+
+</td>
+<td valign="top">
+
+New
+
+</td>
+<td valign="top">
+
+Technology
+
+</td>
+<td valign="top">
+
+Not applicable
+
+</td>
+<td valign="top">
+
+ 
+
+</td>
+<td valign="top">
+
+2026-04-29
+
+</td>
+<td valign="top">
+
+2026-04-29
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+Continuous Integration & Delivery
+
+</td>
+<td valign="top">
+
+-   Cloud Foundry
+
+
+
+</td>
+<td valign="top">
+
 Cloud Foundry Environment Pipeline: Migration to Version 3.0 Completed
 
 </td>
